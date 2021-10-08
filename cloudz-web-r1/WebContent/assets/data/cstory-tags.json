@@ -1,0 +1,188 @@
+{
+  "data": [
+    {
+      "label": "경영관리시스템",
+      "recommended": true
+    },
+    {
+      "label": "고객관리시스템",
+      "recommended": true
+    },
+    {
+      "label": "데이터센터",
+      "recommended": true
+    },
+    {
+      "label": "렌탈",
+      "fixed": true,
+      "recommended": true
+    },
+    {
+      "label": "마케팅",
+      "recommended": true
+    },
+    {
+      "label": "물류",
+      "fixed": true,
+      "recommended": true
+    },
+    {
+      "label": "바이오",
+      "fixed": true,
+      "recommended": true
+    },
+    {
+      "label": "반도체",
+      "fixed": true,
+      "recommended": true
+    },
+    {
+      "label": "보안",
+      "fixed": true,
+      "recommended": true
+    },
+    {
+      "label": "식품",
+      "recommended": true
+    },
+    {
+      "label": "아키텍처",
+      "recommended": true
+    },
+    {
+      "label": "유통",
+      "recommended": true
+    },
+    {
+      "label": "의료",
+      "fixed": true,
+      "recommended": true
+    },
+    {
+      "label": "정유",
+      "fixed": true,
+      "recommended": true
+    },
+    {
+      "label": "제조",
+      "recommended": true
+    },
+    {
+      "label": "차세대배터리",
+      "recommended": true
+    },
+    {
+      "label": "컨설팅",
+      "recommended": true
+    },
+    {
+      "label": "플랫폼",
+      "recommended": true
+    },
+    {
+      "label": "호텔",
+      "fixed": true,
+      "recommended": true
+    },
+    {
+      "label": "화학",
+      "recommended": true
+    },
+    {
+      "label": "ApplicationGateway",
+      "recommended": true
+    },
+    {
+      "label": "AWS",
+      "recommended": true
+    },
+    {
+      "label": "Azure",
+      "recommended": true
+    },
+    {
+      "label": "BigData",
+      "recommended": true
+    },
+    {
+      "label": "CDM",
+      "recommended": true
+    },
+    {
+      "label": "CloudZ",
+      "recommended": true
+    },
+    {
+      "label": "Cloud방법론",
+      "recommended": true
+    },
+    {
+      "label": "Cloud보안",
+      "recommended": true
+    },
+    {
+      "label": "ContainerService",
+      "recommended": true
+    },
+    {
+      "label": "DataLake",
+      "recommended": true
+    },
+    {
+      "label": "DevOps",
+      "recommended": true
+    },
+    {
+      "label": "DR",
+      "recommended": true
+    },
+    {
+      "label": "IaaS",
+      "recommended": true
+    },
+    {
+      "label": "Kubernetes",
+      "recommended": true
+    },
+    {
+      "label": "LandingZone",
+      "recommended": true
+    },
+    {
+      "label": "MachineLearning",
+      "recommended": true
+    },
+    {
+      "label": "Microservice",
+      "recommended": true
+    },
+    {
+      "label": "Migration",
+      "recommended": true
+    },
+    {
+      "label": "Modernization",
+      "recommended": true
+    },
+    {
+      "label": "PaaS",
+      "recommended": true
+    },
+    {
+      "label": "Recovery",
+      "recommended": true
+    },
+    {
+      "label": "Retail",
+      "recommended": true
+    },
+    {
+      "label": "WebApp",
+      "recommended": true
+    },
+    {
+      "label": "Windows",
+      "recommended": true
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+    xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://mybatis.org/schema/mybatis-spring
+    http://mybatis.org/schema/mybatis-spring-1.2.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+    http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-sop-4.3.xsd">
+    
+    <!-- Root Context: defines shared resources visible to all other web components -->
+    <bean id="jsonUtil" class="com.sk.cloudz.util.JsonUtil"/>
+    <bean id="objectMapper" class="com.fasterxml.jackson.databind.ObjectMapper"/>
+    <bean id="restTemplate" class="org.springframework.web.client.RestTemplate">
+		<property name="requestFactory">
+			<bean class="org.springframework.http.client.SimpleClientHttpRequestFactory">
+				<property name="connectTimeout" value="15000" />
+				<property name="readTimeout" value="15000" />
+			</bean>
+		</property>
+		<property name="messageConverters">
+			<list>
+				<bean class="org.springframework.http.converter.StringHttpMessageConverter" />
+				<bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter" />
+			</list>
+		</property>
+		<property name="errorHandler">
+			<bean class="com.sk.cloudz.cmmn.error.RestTemplateResponseErrorHandler" />
+		</property>
+	</bean>
+    <bean id="restTemplateUtil" class="com.sk.cloudz.util.RestTemplateUtil">
+		<property name="restTemplate" ref="restTemplate" />
+		<property name="objectMapper" ref="objectMapper" />
+		<property name="jsonUtil" ref="jsonUtil" />
+	</bean>
+	
+	
+	
+	<!-- mybatis SqlSessionFactoryBean -->
+<!-- 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean"> -->
+<!-- 		<property name="dataSource" ref="dataSource" /> -->
+<!-- 		<property name="configLocation" value="classpath:/com.sk.cloudz/mybatis-config.xml" /> -->
+<!-- 		<property name="mapperLocations" value="classpath:/com.sk.cloudz/mappers/*Mapper.xml" /> -->
+<!-- 	</bean> -->
+	
+	<!-- 쿼리전달 객체 -->
+<!-- 	<bean id='sqlSession' class='org.mybatis.spring.SqlSessionTemplate'> -->
+<!-- 		<constructor-arg index='0' name="sqlSessionFactory" ref='sqlSessionFactory'/> -->
+<!-- 	</bean> -->
+	
+<!-- 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer"> -->
+<!-- 	  <property name="basePackage" value="com.sk.cloudz.mappers" /> -->
+<!-- 	</bean> -->
+	
+<!-- 	<mybatis-spring:scan base-package="com.sk.cloudz.mappers" /> -->
+<!-- 	<context:component-scan base-package="com.sk.cloudz.service.SearchService"></context:component-scan> -->
+	
+<!-- 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer"> -->
+<!-- 	  <property name="basePackage" value="com.sk.cloudz.service.impl" /> -->
+<!-- 	</bean> -->
+</beans>

@@ -1,0 +1,132 @@
+
+
+[data-guide] {
+  position: relative;
+}
+[data-guide] h2, [data-guide] p, [data-guide] ul {
+  position: relative;
+  z-index: 2;
+}
+[data-guide] .sub-header {
+  position: relative;
+}
+[data-guide] .sub-header:hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #E02121;
+  opacity: 0.15;
+  z-index: 1;
+}
+[data-guide] .sub-header .inner-wrap {
+  z-index: 9;
+}
+[data-guide] .entry-content .inner-wrap {
+  position: relative;
+}
+[data-guide] .entry-content .inner-wrap:hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #E02121;
+  opacity: 0.15;
+  z-index: 1;
+}
+[data-guide] .entry-content .section-label,
+[data-guide] .entry-content .section-header,
+[data-guide] .entry-content .section-body {
+  position: relative;
+  z-index: 2;
+}
+[data-guide] .view-pub-source,
+[data-guide] .create-popup-layer {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 9;
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  padding: 0.35rem;
+}
+[data-guide] .view-pub-source:hover,
+[data-guide] .create-popup-layer:hover {
+  border-color: #111;
+}
+[data-guide] .view-pub-source:hover + .inner-wrap,
+[data-guide] .create-popup-layer:hover + .inner-wrap {
+  outline: 2px solid #111;
+}
+[data-guide] .create-popup-layer {
+  right: 38px;
+}
+[data-guide] .create-popup-layer input, [data-guide] .create-popup-layer button {
+  vertical-align: middle;
+}
+[data-guide].container > .view-pub-source {
+  position: fixed;
+  bottom: 0;
+  top: auto;
+  left: 0;
+  right: auto;
+  z-index: 99;
+}
+[data-guide]:hover > .view-pub-source,
+[data-guide]:hover > .create-popup-layer {
+  display: block;
+}
+
+.pub-guide-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pub-guide-layer .pub-guide-layer-inner {
+  position: relative;
+  background-color: #FFF;
+  width: 80vw;
+  height: 80vh;
+}
+.pub-guide-layer .pub-guide-layer-inner textarea {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+}
+.pub-guide-layer .pub-guide-layer-inner .pub-guide-close {
+  position: absolute;
+  top: 0;
+  right: -30px;
+  color: #FFF;
+}
+
+.section.popup-layer-box {
+  padding: 2rem !important;
+  width: 100% !important;
+  background-color: #f4f4f4 !important;
+}
+.section .popup-layer {
+  display: block !important;
+  position: relative !important;
+  margin: 0 auto !important;
+  top: auto !important;
+  left: auto !important;
+  transform: none !important;
+  z-index: 1 !important;
+}
+.section .popup-layer .popup-layer-inner {
+  max-height: none;
+}
+/*# sourceMappingURL=sub-guide.css.map */

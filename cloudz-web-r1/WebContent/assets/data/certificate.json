@@ -1,0 +1,372 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "category": "AWS",
+      "tid": "aws",
+      "title": "AWS 500 Certified",
+      "slug": "aws-500-certified",
+      "clsname": "aws",
+      "image1": "/assets/imgs/main/iso_cert/img-iso-01.png",
+      "image2": "/assets/imgs/about-us/certs/img-u06-v02-t01-02.png",
+      "ulist": [
+        "AWS 공인자격증을 500개 이상 보유한 역량 우수 파트너사에게만 제공하는 Certificate 입니다.",
+        "SK주식회사 C&C는 우수한 공인 AWS 기술 전문가를 대규모 보유하고 있습니다.",
+        "당사 AWS 전문가들은 빅데이터, 인공지능, 머신러닝, 네트워크, 보안 등 스페셜티 역량까지 보유하였습니다."
+      ]
+    },
+    {
+      "id": 2,
+      "category": "AWS",
+      "tid": "aws",
+      "title": "AWS Managed Service",
+      "slug": "aws-managed-service",
+      "clsname": "aws",
+      "image1": "/assets/imgs/main/iso_cert/img-iso-02.png",
+      "image2": "/assets/imgs/about-us/certs/img-u06-v02-t01-03.png",
+      "ulist": [
+        "Cloud 설계, 구축, 마이그레이션, 운영, 최적화까지 모든 Life Cycle를 다룰 수 있는 파트너를 공인합니다.",
+        "당사는 여러 AWS 파트너 중에서도 최고 수준의 높은 평가를 받고, AWS로부터 Certificate를 취득했습니다.",
+        "SK주식회사 C&C는 Enterprise급, 대규모 Cloud사업까지 아우를 수 있는 역량과 경험을 보유하였습니다."
+      ]
+    },
+    {
+      "id": 3,
+      "category": "AWS",
+      "tid": "aws",
+      "title": "AWS Well-Architecture Partner Program",
+      "slug": "aws-well-architecture-partner-program",
+      "clsname": "aws",
+      "image1": "/assets/imgs/main/iso_cert/img-iso-03.png",
+      "image2": "/assets/imgs/about-us/certs/img-u06-v02-t01-04.png",
+      "ulist": [
+        "AWS 기반의 모범적인 Architecture구성 및 고품질의 솔루션을 구축할 수 있는 파트너를 인증합니다.",
+        "당사는 AWS의 Well Architected Framework에 따른 시스템 구현 역량을 AWS로부터 인정받았습니다.",
+        "고객의 비즈니스 특성 및 고객 니즈에 맞도록 아키텍처를 구성하고 점검해드립니다."
+      ]
+    },
+    {
+      "id": 4,
+      "category": "AWS",
+      "tid": "aws",
+      "title": "AWS DevOps Competency",
+      "slug": "aws-devops-competency",
+      "clsname": "aws",
+      "image1": "/assets/imgs/main/iso_cert/img-iso-05.png",
+      "image2": "/assets/imgs/about-us/certs/img-u06-v02-t01-05.png",
+      "ulist": [
+        "AWS DevOps 솔루션 제공에 필요한 전문성과 역량을 보유한 파트너를 공인합니다.",
+        "당사는 고객의 SW 최적화, 프로비저닝, 배포, 프로세스 자동화 등 DevOps 운영까지 가능하도록 구축해드립니다."
+      ]
+    },
+    {
+      "id": 5,
+      "category": "AWS",
+      "tid": "aws",
+      "title": "AWS Solution Provider",
+      "slug": "aws-solution-provider",
+      "clsname": "aws",
+      "image1": "/assets/imgs/main/iso_cert/img-iso-06.png",
+      "image2": "/assets/imgs/about-us/certs/img-u06-v02-t01-06.png",
+      "ulist": [
+        "SK주식회사 C&C는 AWS로부터 공인 받은 공식 Solution Provider 파트너입니다.",
+        "고객의 요구사항을 충족해드릴 수 있는 안정적 기술역량과 서비스 옵션으로 고객을 만족시켜드립니다."
+      ]
+    },
+    {
+      "id": 6,
+      "category": "AWS",
+      "tid": "aws",
+      "title": "AWS Public Sector Partner",
+      "slug": "aws-public-sector-partner",
+      "clsname": "aws",
+      "image1": "/assets/imgs/main/iso_cert/img-iso-04.png",
+      "image2": "/assets/imgs/about-us/certs/img-u06-v02-t01-07.png",
+      "ulist": [
+        "AWS는 정부, 교육, 비영리 분야 등의 클라우드 기반 솔루션과 경험을 갖춘 AWS 파트너를 공인합니다.",
+        "SK주식회사 C&C는 공공 분야의 고객들을 위한 Cloud 전환 및 운영 역량을 보유하고 있습니다."
+      ]
+    },
+    {
+      "id": 7,
+      "category": "AWS",
+      "tid": "aws",
+      "title": "AWS Public Sector Solution Provider",
+      "slug": "aws-public-sector-solution-provider",
+      "clsname": "aws",
+      "image1": "/assets/imgs/main/iso_cert/img-iso-07.png",
+      "image2": "/assets/imgs/about-us/certs/img-u06-v02-t01-08.png",
+      "ulist": [
+        "AWS는 공공 분야에서의 충분한 전환/구축 역량과 경험을 지닌 파트너만을 Public Sector Provider로 인증합니다.",
+        "SK주식회사 C&C는 공공 분야에 대해 Cloud 전환부터 운영까지의 차별화된 전문성을 보유하고 있습니다."
+      ]
+    },
+    {
+      "id": 8,
+      "category": "Azure",
+      "tid": "ms",
+      "title": "MS Azure Expert MSP",
+      "slug": "ms-azure-expert-msp",
+      "clsname": "ms",
+      "image1": "/assets/imgs/main/iso_cert/img-iso-24.png",
+      "image2": "/assets/imgs/about-us/certs/img-u06-v02-t02-02.png",
+      "ulist": [
+        "SK주식회사 C&C는 MS MSP로서 엄격한 전문성을 공인 받은 파트너 입니다.",
+        "당사는 Cloud 도입 계획/설계, 구현, 운영 최적화까지 End-to-End 라이프사이클 관리 역량을 보유하고 있습니다.",
+        "Hyper-scale Cloud 설계 및 구현 뿐만 아니라, 숙련된 기술전문가를 통한 컨설팅 서비스까지 제공합니다."
+      ]
+    },
+    {
+      "id": 9,
+      "category": "Azure",
+      "tid": "ms",
+      "title": "Advanced Specialization Kubernetes<br/>on MS Azure",
+      "slug": "adv-kubernetes-on-ms-azure",
+      "clsname": "ms",
+      "image1": "/assets/imgs/main/iso_cert/img-iso-25.png",
+      "image2": "/assets/imgs/about-us/certs/img-u06-v02-t02-03.png",
+      "ulist": [
+        "Cloud Container를 적용한 배포 및 관리 등 전문 역량을 갖춘 솔루션 파트너에게 부여하는 인증입니다.",
+        "고도의 역량과 경험을 지닌 당사 전문가들이 고객의 Container 및 Kubernetes을 구축/관리합니다."
+      ]
+    },
+    {
+      "id": 10,
+      "category": "Azure",
+      "tid": "ms",
+      "title": "MS Azure Application Integration",
+      "slug": "ms-azure-application-integration",
+      "clsname": "ms",
+      "image1": "/assets/imgs/main/iso_cert/img-iso-08.png",
+      "image2": "/assets/imgs/about-us/certs/img-u06-v02-t02-04.png",
+      "ulist": [
+        "MS는 Enterprise 기업의 시스템 및 프로세스를 Cloud로 전환/구축할 수 있는 파트너를 공인합니다.",
+        "SK주식회사 C&C는 고객 맞춤형 Azure Cloud로 전환하며, 통합/구축 해드릴 수 있는 역량을 보유하였습니다."
+      ]
+    },
+    {
+      "id": 11,
+      "category": "Azure",
+      "tid": "ms",
+      "title": "MS Azure DevOps",
+      "slug": "ms-azure-devops",
+      "clsname": "ms",
+      "image1": "/assets/imgs/main/iso_cert/img-iso-09.png",
+      "image2": "/assets/imgs/about-us/certs/img-u06-v02-t02-05.png",
+      "ulist": [
+        "MS는 Cloud 운영의 핵심인 DevOps 역량을 보유한 파트너를 공인합니다.",
+        "당사는 Azure DevOps를 고객에게 최적의 환경으로 구축, 적용해드릴 수 있는 최상의 파트너입니다."
+      ]
+    },
+    {
+      "id": 12,
+      "category": "Azure",
+      "tid": "ms",
+      "title": "MS Azure Data Analytics",
+      "slug": "ms-azure-data-analytics",
+      "clsname": "ms",
+      "image1": "/assets/imgs/main/iso_cert/img-iso-10.png",
+      "image2": "/assets/imgs/about-us/certs/img-u06-v02-t02-06.png",
+      "ulist": [
+        "MS는 Cloud를 넘어, 고객의 데이터 분석까지 고려하여, 구축 및 운영할 수 있는 파트너를 공인합니다.",
+        "SK주식회사 C&C는 Cloud환경에서 고객의 데이터를 효과적으로 비즈니스에 반영할 수 있도록 지원해드립니다."
+      ]
+    },
+    {
+      "id": 13,
+      "category": "Azure",
+      "tid": "ms",
+      "title": "MS Azure Data Platform",
+      "slug": "ms-azure-data-platform",
+      "clsname": "ms",
+      "image1": "/assets/imgs/main/iso_cert/img-iso-11.png",
+      "image2": "/assets/imgs/about-us/certs/img-u06-v02-t02-07.png",
+      "ulist": [
+        "Azure 기반 Data Platform 환경까지 구축할 수 있는 역량을 공인 받았습니다.",
+        "SK주식회사 C&C는 전문적인 역량으로 고객의 DT 전환까지 고려하여 Cloud를 구축/운영합니다."
+      ]
+    },
+    {
+      "id": 14,
+      "category": "Azure",
+      "tid": "ms",
+      "title": "MS Azure Application Development",
+      "slug": "ms-azure-application-development",
+      "clsname": "ms",
+      "image1": "/assets/imgs/main/iso_cert/img-iso-12.png",
+      "image2": "/assets/imgs/about-us/certs/img-u06-v02-t02-08.png",
+      "ulist": [
+        "Azure의 가장 큰 장점인 효율적 Application을 개발/구축할 수 있는 역량을 인증 받았습니다.",
+        "SK주식회사 C&C와 함께 고객은 Azure의 특장점인 성능, 속도, 안정성 등을 누릴 수 있습니다."
+      ]
+    },
+    {
+      "id": 15,
+      "category": "Azure",
+      "tid": "ms",
+      "title": "MS Azure Cloud Platform",
+      "slug": "ms-azure-cloud-platform",
+      "clsname": "ms",
+      "image1": "/assets/imgs/main/iso_cert/img-iso-13.png",
+      "image2": "/assets/imgs/about-us/certs/img-u06-v02-t02-09.png",
+      "ulist": [
+        "당사는 고객의 미션 크리티컬한 시스템을 최적의 아키텍처로 구축할 수 있는 역량을 공인 받았습니다.",
+        "많은 경험을 지닌 비즈니스별 전문가들이 고객이 원하는 플랫폼을 구축해드립니다."
+      ]
+    },
+    {
+      "id": 16,
+      "category": "Azure",
+      "tid": "ms",
+      "title": "MS Azure Datacenter",
+      "slug": "ms-azure-datacenter",
+      "clsname": "ms",
+      "image1": "/assets/imgs/main/iso_cert/img-iso-14.png",
+      "image2": "/assets/imgs/about-us/certs/img-u06-v02-t02-10.png",
+      "ulist": [
+        "MS는 최적의 Hybrid 환경을 구축할 수 있는 경험과 역량을 지닌 파트너를 공인합니다.",
+        "SK주식회사 C&C는 전세계 Cloud Data Center와 연결하여, 고객 IT환경을 최적으로 구축해드립니다."
+      ]
+    },
+    {
+      "id": 17,
+      "category": "Azure",
+      "tid": "ms",
+      "title": "MS Azure Productivity",
+      "slug": "ms-azure-productivity",
+      "clsname": "ms",
+      "image1": "/assets/imgs/main/iso_cert/img-iso-15.png",
+      "image2": "/assets/imgs/about-us/certs/img-u06-v02-t02-11.png",
+      "ulist": [
+        "Azure 외에 모든 Microsoft 서비스를 적용하여 고객의 생산성을 높일 수 있는 전문 역량을 인증 받았습니다.",
+        "당사는 Cloud를 넘어, 모든 DT기술까지 이해하고 고객의 비즈니스를 빠르게 성장시킬 수 있도록 지원합니다."
+      ]
+    },
+    {
+      "id": 18,
+      "category": "Azure",
+      "tid": "ms",
+      "title": "MS Azure Security",
+      "slug": "ms-azure-security",
+      "clsname": "ms",
+      "image1": "/assets/imgs/main/iso_cert/img-iso-16.png",
+      "image2": "/assets/imgs/about-us/certs/img-u06-v02-t02-12.png",
+      "ulist": [
+        "MS는 안전하게 보안환경까지 구축할 수 있는 역량을 지닌 파트너를 인증합니다.",
+        "SK주식회사 C&C는 고객의 정보 자산과 보안을 철저히 보호하고자 노력하고 있습니다."
+      ]
+    },
+    {
+      "id": 19,
+      "category": "Etc.",
+      "tid": "etc",
+      "title": "Google Cloud Partner",
+      "slug": "google-cloud-partner",
+      "clsname": "google",
+      "image1": "/assets/imgs/main/iso_cert/img-iso-17.png",
+      "image2": "/assets/imgs/about-us/certs/img-u06-v02-t03-02.png",
+      "ulist": [
+        "Google은 AWS, Azure와 함께 글로벌 Top 3 CSP로 SK주식회사 C&C와 협력하는 주요 파트너입니다.",
+        "고객이 원하며, 고객에게 잘 맞는 파트너를 제안해 드리며, 파트너와 함께 최선의 서비스를 제공합니다."
+      ]
+    },
+    {
+      "id": 20,
+      "category": "Etc.",
+      "tid": "etc",
+      "title": "Naver Cloud Paltform (Silver Partners)",
+      "slug": "naver-cloud-paltform-silver",
+      "clsname": "naver",
+      "image1": "/assets/imgs/main/iso_cert/img-iso-18.png",
+      "image2": "/assets/imgs/about-us/certs/img-u06-v02-t03-03.png",
+      "ulist": [
+        "SK주식회사 C&C는 Naver Cloud와 파트너십을 맺고 최고의 서비스를 제공하고자 노력하고 있습니다.",
+        "당사는 고객이 원하는 CSP와 함께 국내 환경에 맞게, 산업별 최적화된 서비스를 제공하고 있습니다."
+      ]
+    },
+    {
+      "id": 21,
+      "category": "Etc.",
+      "tid": "etc",
+      "title": "IBM Business Parner (Premium Reseller)",
+      "slug": "ibm-business-parner-reseller",
+      "clsname": "ibm",
+      "image1": "/assets/imgs/main/iso_cert/img-iso-19.png",
+      "image2": "/assets/imgs/about-us/certs/img-u06-v02-t03-04.png",
+      "ulist": [
+        "SK주식회사 C&C는 IBM과 함께 국내 Cloud 시장을 선도하여, 개척하며 많은 경험과 역량을 축적하였습니다.",
+        "IBM Cloud 기술을 잘 이해하는 SK는 고객을 위해 필요한 솔루션을 제공합니다."
+      ]
+    },
+    {
+      "id": 22,
+      "category": "Etc.",
+      "tid": "etc",
+      "title": "Alibaba Cloud (Silver Channel Partner)",
+      "slug": "alibaba-cloud-silver",
+      "clsname": "alibaba",
+      "image1": "/assets/imgs/main/iso_cert/img-iso-26.png",
+      "image2": "/assets/imgs/about-us/certs/img-u06-v02-t03-05.png",
+      "ulist": [
+        "Alibaba Cloud는 SK주식회사 C&C와 2016년 부터 공인 파트너로 함께 사업을 추진하고 있습니다.",
+        "SK주식회사 C&C는 중국과의 사업 시 Alibaba Group의 역량을 통해 고객이 성공할 수 있도록 지원해드립니다."
+      ]
+    },
+    {
+      "id": 23,
+      "category": "Etc.",
+      "tid": "etc",
+      "title": "ISO IT 서비스 관리 (ITSM) - 20000",
+      "slug": "iso-itsm-20000",
+      "clsname": "",
+      "image1": "/assets/imgs/main/iso_cert/img-iso-20.png",
+      "image2": "/assets/imgs/about-us/certs/img-u06-v02-t03-06.png",
+      "ulist": [
+        "SK주식회사 C&C는 Cloud 영역에서의 서비스 품질까지도 국제표준인증을 받고, 대외 공신력을 확보하였습니다.",
+        "당사의 Cloud 서비스는 국제규격에 맞는 우수한 품질을 고객에게 제공하고 있습니다."
+      ]
+    },
+    {
+      "id": 24,
+      "category": "Etc.",
+      "tid": "etc",
+      "title": "ISO 정보보호 관리체계 - ISO27001",
+      "slug": "iso-isms-iso27001",
+      "clsname": "",
+      "image1": "/assets/imgs/main/iso_cert/img-iso-21.png",
+      "image2": "/assets/imgs/about-us/certs/img-u06-v02-t03-07.png",
+      "ulist": [
+        "ISO 정보보호관리체계는 국제 인증 규격에 따라 정보보호관리 체계를 인증합니다.",
+        "당사의 정보보관리체계는 엄격한 국제 심사원들의 심사와 검증을 통해 우수한 체계로 인정받았습니다."
+      ]
+    },
+    {
+      "id": 25,
+      "category": "Etc.",
+      "tid": "etc",
+      "title": "그린데이터 센터 (Silver)",
+      "slug": "green-data-center-silver",
+      "clsname": "",
+      "image1": "/assets/imgs/main/iso_cert/img-iso-22.png",
+      "image2": "/assets/imgs/about-us/certs/img-u06-v02-t03-08.png",
+      "ulist": [
+        "SK주식회사 C&amp;C Datacenter는 온실가스 배출까지 고려한 친환경 Datacenter로 공인 받았습니다.",
+        "당사 Datacenter는 최고의 에너지 효율화 장비/환경으로 고객의 비용을 절감해드립니다."
+      ]
+    },
+    {
+      "id": 26,
+      "category": "Etc.",
+      "tid": "etc",
+      "title": "ISMS 정보보호 관리체계",
+      "slug": "isms",
+      "clsname": "",
+      "image1": "/assets/imgs/main/iso_cert/img-iso-23.png",
+      "image2": "/assets/imgs/about-us/certs/img-u06-v02-t03-09.png",
+      "ulist": [
+        "ISMS는 미래창조과학부에서 주관하며, 국제표준에 따른 정보보호관리체계 인증입니다.",
+        "SK주식회사 C&C는 최고의 보안 수준과 관리체계로 고객의 정보자산 및 개인정보 등을 안전하게 보호합니다."
+      ]
+    }
+  ]
+}

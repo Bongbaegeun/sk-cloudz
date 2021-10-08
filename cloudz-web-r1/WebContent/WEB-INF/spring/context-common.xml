@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+
+    <context:component-scan base-package="com.sk.cloudz">
+       <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller" />
+    </context:component-scan>
+    
+	<!-- <beans profile="local,staging,service,home,newservice,idc,ha"> -->
+	<beans profile="idc">
+	    <bean id="sysProps" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+	        <property name="locations">
+	        	<list>
+	        		<value>/WEB-INF/properties/system.idc.properties</value>
+	        	</list>
+	        </property>
+	    </bean>
+	</beans>
+	<beans profile="dev">
+	    <bean id="sysProps" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+	    	<property name="locations">
+	        	<list>
+	        		<value>/WEB-INF/properties/system.dev.properties</value>
+	        	</list>
+	        </property>
+	    </bean>
+	</beans>
+	<beans profile="local">
+	    <bean id="sysProps" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+	    	<property name="locations">
+	        	<list>
+	        		<value>/WEB-INF/properties/system.local.properties</value>
+	        	</list>
+	        </property>
+	    </bean>
+	</beans>
+</beans>
