@@ -1,0 +1,139 @@
+
+
+#landing {
+  display: flex;
+  padding: 160px 0 320px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #999;
+}
+#landing > .icon-wrap {
+  font-size: 60px;
+  line-height: 0;
+  color: #CCC;
+}
+#landing > .text-wrap {
+  font-size: 20px;
+  letter-spacing: -0.65px;
+}
+#landing > div + div {
+  margin-top: 40px;
+}
+
+#landing {
+  display: none;
+}
+#landing.loading {
+  display: flex;
+}
+
+#tabNav {
+  align-items: center;
+  justify-content: space-between;
+  flex: 1 1 auto;
+}
+#tabNav > li {
+  flex-grow: 1;
+}
+#tabNav > li > a {
+  display: block;
+  padding: 15px;
+  font-size: 18px;
+  text-align: center;
+  color: #555;
+  border: 1px solid #DDD;
+}
+#tabNav > li > a.active {
+  background-color: #38A1DB;
+  border-color: #38A1DB;
+  color: #FFF;
+}
+#tabNav > li:not(:first-child) > a {
+  border-left: none;
+}
+
+#tabList .tab-contents {
+  display: none;
+}
+#tabList .tab-contents.active {
+  display: block;
+}
+#tabList .tab-contents > .tab-item {
+  display: flex;
+  flex: 1 1 auto;
+}
+#tabList .tab-contents > .tab-item > a[name] {
+  margin-top: -60px;
+}
+#tabList .tab-contents > .tab-item > .img-wrap {
+  width: 404px;
+  flex-shrink: 0;
+}
+#tabList .tab-contents > .tab-item > .img-wrap > img {
+  width: 100%;
+}
+#tabList .tab-contents > .tab-item > .divider {
+  flex-shrink: 0;
+  width: 120px;
+  position: relative;
+}
+#tabList .tab-contents > .tab-item > .divider > .v-line {
+  position: absolute;
+  top: -30px;
+  bottom: -30px;
+  background-color: #CCC;
+  width: 1px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+#tabList .tab-contents > .tab-item > .text-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 0.25rem;
+}
+#tabList .tab-contents > .tab-item > .text-wrap .title {
+  position: relative;
+  font-size: 32px;
+  line-height: 32px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+#tabList .tab-contents > .tab-item > .text-wrap .title:before {
+  position: absolute;
+  top: 50%;
+  left: -66px;
+  transform: translate(0, -50%);
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 12px;
+  border: 2px solid #192F66;
+  background-color: #FFF;
+}
+#tabList .tab-contents > .tab-item > .text-wrap .desc {
+  color: #555;
+}
+#tabList .tab-contents > .tab-item > .text-wrap .desc ul.list.dot > li {
+  margin-left: 0.25rem;
+  padding-bottom: 0;
+}
+#tabList .tab-contents > .tab-item > .text-wrap .desc ul.list.dot > li::before {
+  font-weight: bold;
+  top: 0;
+}
+#tabList .tab-contents > .tab-item > .text-wrap .desc ul.list.dot > li + li {
+  margin-top: 0.25rem;
+}
+#tabList .tab-contents > .tab-item:first-child > .divider > .v-line {
+  top: 22px;
+}
+#tabList .tab-contents > .tab-item:last-child > .divider > .v-line {
+  bottom: 138px;
+}
+#tabList .tab-contents > .tab-item + .tab-item {
+  margin-top: 60px;
+}
+/*# sourceMappingURL=sk-cnc.css.map */

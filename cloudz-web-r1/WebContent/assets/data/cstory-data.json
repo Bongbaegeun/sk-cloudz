@@ -1,0 +1,475 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "SK네트웍스",
+      "desc": "SK네트웍스는 SK계열의 종합상사로 통신 단말기 관련 정보통신 사업, 자동차 경정비, 화학소재/철강/자동차의 글로벌 트레이딩, 호텔&amp;리조트, 자동차/가전 렌털 등의 서비스를 기반으로 고객 중심의 가치를 찾아 다양한 영역으로 사업을 확장해 나가는 기업입니다.",
+      "tags": [
+        { "label": "Retail", "main": true },
+        { "label": "렌탈", "main": true },
+        { "label": "유통", "main": false },
+        { "label": "마케팅", "main": false },
+        { "label": "AWS", "main": true },
+        { "label": "아키텍처", "main": false },
+        { "label": "플랫폼", "main": false },
+        { "label": "DataLake", "main": true },
+        { "label": "LandingZone", "main": true },
+        { "label": "Migration", "main": true }
+      ],
+      "banner": "img-u03-02-v01-02.png",
+      "bizOverview": "DW Data Migration 및 Data 분석을 위해 AWS 기반의 Data Platform을 도입하였으며, SK(주) C&amp;C를 통해 In-Depth Assessment부터 Migration까지 안정적인 운영을 고려한 최적의 아키텍처를 수립하였습니다.",
+      "introBg": [
+        "SK네트웍스의 다양한 데이터 관련 업무 처리 시 모델링, 표준관리, 품질관리 프로세스의 부재로 어려움을 겪어 On-Premise의 DW 환경을 Cloud로 Migration 하면서 Data 분석 영역을 확대하고, 탄력적인 자원 사용 및 자동화로 효율적인 분석 환경 관리가 필요",
+        "ITMS 기반의 공통된 실행체계 운영 및 Governance를 수립하여 운영 품질을 향상시키고자 함"
+      ],
+      "useCase": [
+        "SK네트웍스 데이터모델서비스",
+        "SK렌터카 모델도구서비스",
+        "SK매직 품질관리서비스"
+      ],
+      "results": [
+        "SKN, SK렌터카, SK매직 3사 데이터 관리체계 (정책/프로세스, 표준사전)를 기반으로 공통 솔루션을 적용하여 확장 가능한 분석 플랫폼 및 Data Governance 실행 체계마련",
+        "시각화 플랫폼을 통해서 셀프 분석 환경 제공하여 고객 마케팅에 활용 가능한 분석 역량 내재화"
+      ],
+      "interview": {
+        "name": "채승우 매니저",
+        "position": "DT추진팀",
+        "youtube": "fIoAQbQTjt8",
+        "body": "",
+        "header": "전사적 Data Platform을 AWS 기반으로 DW Data Migration 및 Data 분석 환경을 훌륭히 통합하였습니다. <br/>SK㈜ C&amp;C의 Managed 서비스는 In-depth assessment부터  Migration까지 안정적인 운영을 고려하여 <br/>아키텍처를 수립하며 전환 전 단계에 걸쳐서 Enterprise의 고민을 함께 해주셨습니다.",
+        "qna": [
+          {
+            "q": "담당하시는 업무 소개를 부탁드립니다.",
+            "a": "SK네트웍스에서 Digital Transformation을 위한 새로운 기술을 검토 하고 Cloud 전환 로드맵에 따라 전환을 이행하며, 운영을 위한 관리 체계를 수립하고 있습니다."
+          },
+          {
+            "q": "SK네트웍스에서 <strong>Data Platform</strong>을 추친하게 된 배경과 해결하고자 했던 <strong>Pain Point</strong>는 무엇이었나요?",
+            "a": "Legacy DW는 여러 Data들이 모델 및 형태가 다양하고 산재해 있어서 그 데이터를 분석하여 업무에 활용하기에는 역부족이었습니다. SK네트웍스 및 패밀리 회사와의 향후 플랫폼 확장성을 고려한 새로운 분석 환경이 필요했습니다."
+          },
+          {
+            "q": "해당 프로젝트에서 <strong>C&amp;C가 제안한 내용</strong>은 어떤 거였나요?",
+            "a": "현업 담당자들이 시각화 플랫폼을 통해서 셀프 분석이 가능한 환경을 제공하고, 자동화를 통해 인프라 관리 포인트를 최소화 했으며, 정보보호센터의 보안 규정을 준수하여 클라우드 환경의 보안 위협 요소를 제거, 탄력적인 자원 스케쥴링을 통해 비용최적화를 할 수 있는 아키텍쳐를 제안 하였습니다."
+          },
+          {
+            "q": "어떤 <strong>AWS Service</strong>가 적용되었나요?",
+            "a": "Amazon Elasticsearch Service, Glue, Athena, Kibana, SageMaker를 활용하여 표준화된 데이터를 활용하고 시각화 서비스를 제공합니다. Machine learning Model Build, 훈련 및 배포에 활용 중입니다."
+          },
+          {
+            "q": "AWS Cloud 도입 후 어떤 <strong>기대 효과</strong>를 얻으셨나요?",
+            "a": "Datalake 기반의 공통된 실행 체계하에 분석에 필요한 데이터의 수집 및 통합을 위한 거버넌스를 수립하고, 사업을 확장하며 운영 품질을 향상 시킬 수 있었습니다."
+          }
+        ],
+        "footer": ""
+      }
+    },
+    {
+      "id": 2,
+      "name": "SK실트론",
+      "desc": "SK실트론은 일본, 독일 등 소수기업만이 제조 기술을 보유한 실리콘 웨이퍼를 제조하는 기업으로 국내 기업으로는 유일하게 글로벌 반도체 기업에 제품을 공급하고 있습니다.",
+      "tags": [
+        { "label": "제조", "main": true },
+        { "label": "반도체", "main": true },
+        { "label": "경영관리시스템", "main": false },
+        { "label": "Azure", "main": true },
+        { "label": "아키텍처", "main": false },
+        { "label": "Cloud방법론", "main": false },
+        { "label": "Windows", "main": true },
+        { "label": "Migration", "main": true }
+      ],
+      "banner": "img-u03-02-v02-02.png",
+      "bizOverview": "반도체 산업의 성장세에 따라 신속한 서비스 제공과 비즈니스 확장성이 요구되었습니다. 이를 위해 Azure Cloud로 Migration하였으며, 다년간 축적한 Azure 방법론과 아키텍처를 활용하여 빠르게 시스템을 구축할 수 있었습니다.",
+      "introBg": [
+        "SK실트론 Public Cloud 전환 사업으로 경영관리시스템을 Cloud로 Migration함"
+      ],
+      "useCase": [
+        "MAP(Microsoft Assessment and Planning) ToolKit 활용한 Discovery 및 Assessment 로 기존 시스템 평가 분석",
+        "Assessment를 통한 OS 및 Application의 Rehost, Refactor Migration 진행",
+        "Azure 적용 서비스: VM, Storage Account, MAP Tool, Firewall, NSG, Load Balancer, Azure Policy, Landing Zone"
+      ],
+      "results": [
+        "Cloud 전환에 따른 서비스 제공의 신속성과 비즈니스 확장성 효과",
+        "표준 인프라 수립 및 적용으로 개발/운영의 용이성 증대",
+        "Scale-Out을 통한 유연한 확장성 보장"
+      ],
+      "interview": {
+        "name": "",
+        "position": "",
+        "youtube": "",
+        "body": "",
+        "header": "",
+        "qna": [],
+        "footer": ""
+      }
+    },
+    {
+      "id": 3,
+      "name": "삼양홀딩스",
+      "desc": "삼양그룹은 2011년 11월 지주회사 체제 출범 이후 핵심 성장축인 화학, 식품, 의약바이오, 패키징 사업의 고도화 및 스페셜티화로 글로벌 경쟁력을 강화하기 위해 변화와 혁신을 추구하는 기업입니다.",
+      "tags": [
+        { "label": "화학", "main": true },
+        { "label": "식품", "main": false },
+        { "label": "바이오", "main": false },
+        { "label": "AWS", "main": true },
+        { "label": "Kubernetes", "main": true },
+        { "label": "DevOps", "main": true },
+        { "label": "Migration", "main": true },
+        { "label": "Modernization", "main": true }
+      ],
+      "banner": "img-u03-02-v03-02.png",
+      "bizOverview": "비즈니스 Agility 확보와 미래성장을 위한 기반을 마련하고자 5개 핵심 시스템을 On-Premise VM에서 Public Cloud인 AWS로 Migration 하였습니다. 고객에게 Kubernetes를 이용한 최적 방안을 제시하여, 고객사는 질적 성장의 기반을 확보하고 비용절감이 가능했습니다.",
+      "introBg": [
+        "기존 On-Premise VM 기반으로 운영되던 시스템을 Kubernetes 환경으로 Migration 및 Application 고도화 필요"
+      ],
+      "useCase": [
+        "삼양의 모바일 오피스, 홈페이지, 화학물질관리 시스템 등 총 5개의 주요 시스템을 AWS 기반 Cloud로 전환",
+        "ITSM (IT Service Management) Migration 추진",
+        "AWS 적용 서비스 : AWS Kubernetes, ECR, CodeDeploy"
+      ],
+      "results": [
+        "도출된 Cloud 최적 전환 방안의 실행을 통해 삼양그룹 미래성장기반 구축 및 질적 성장 추진 토대 마련",
+        "특정 DB에 종속적인 데이터 연계 방식을 탈피하고 유연하게 데이터를 연계",
+        "기존의 배포 환경을 유지하면서 원활하게 서비스 배포 가능"
+      ],
+      "interview": {
+        "name": "김성현 SM 사업부장",
+        "position": "",
+        "youtube": "",
+        "body": "",
+        "header": "저희 회사에서 AWS 클라우드 이관 프로젝트가 처음이어서 초기에 우려와 걱정이 많았지만, <br/>즉각적이고 헌신적인 기술 지원을 해 주셔서 5개 시스템을 온타임에 이관 완료하였습니다.\r\n<br/>도출해주신 클라우드 최적 전환 방안 실행을 통해 비용 절감 및 질적 성장 추진 기반을 마련하였습니다.",
+        "qna": [
+          {
+            "q": "'삼양 홀딩스'는 어떤 회사인가요?",
+            "a": "삼양홀딩스는 삼양사, 삼양바이오팜, 삼양패키징 등의 자회사를 거느린 지주회사로서 화학, 식품, 의약바이오 사업 등 다양한 사업을 영위하고 있는 기업입니다."
+          },
+          {
+            "q": "삼양 홀딩스에서 ITSM Migration을 <strong>추진하게 된 배경</strong>과 해결하고자 했던 <strong>Pain Point</strong>는 무엇이었나요?",
+            "a": "클라우드 전환을 추진하게 된 배경은 클라우드 기반을 통해 비즈니스 Agility 확보 및 미래성장 및 질적 성장 추진 기반을 만들고자 해당 프로젝트를 진행하게 되었습니다. 온프레미스 VM기반으로 운영되던 시스템을 Kubernetes 환경으로 마이그레이션을 진행을 통한 고도화 작업이 필요하였습니다."
+          },
+          {
+            "q": "해당 프로젝트에서 C&amp;C가 <strong>제안한 내용</strong>은 어떤 거였나요?",
+            "a": "Renewal 중인 ITSM/ITAM은 Refactoring 방식을 채택하여 App. Modernization의 기반인 Container(EKS)로 선제적 적용 및 모바일 오피스, 홈페이지, 인천2공장WMS, 화학물질관리 4개 시스템은 Rehost 방식으로 클라우드 전환, Rehost를 통한 빠른 클라우드 전환 추진 후 단계적 전환 통해 삼양그룹 클라우드 성숙도를 높이는 전략을 제안하셨습니다."
+          },
+          {
+            "q": "어떤 <strong>AWS Service</strong>가 적용되었나요?",
+            "a": "AWS 서비스로는 AWS ECR 및 CodeDeploy가 사용되었습니다. 데이터 연동 방식을 REST API 기반으로 변경 및 Gitlab, Jenkins를 사용하되 원할한 배포를 위한 ECR, CodeDeploy 사용하였습니다."
+          },
+          {
+            "q": "AWS 클라우드 도입 후 어떤 <strong>결과 및 기대효과</strong>를 얻으셨나요?",
+            "a": "저희 회사에서 AWS 클라우드 이관 프로젝트가 처음이어서 초기에 우려와 걱정이 많았지만, 즉각적이고 헌신적인 기술 지원을 해 주셔서 5개 시스템을 온타임에 이관 완료 하였습니다. 도출해주신 클라우드 최적 전환 방안 실행을 통해 비용 절감 및 질적 성장 추진 기반을 마련 하였습니다. 또한, AWS Cloud Architecting, 구축, Migration 및 운영 역량을 확보 하였습니다. 해당 프로젝트를 통해 특정 데이터 베이스에 종속적인 데이터 연계 방식을 탈피하면서 유연하게 데이터 연계를 할 수 있게 되었습니다. 또한, 기존의 배포 환경을 유지하면서 원활하게 서비스 배포를 할 수 있게 되었습니다."
+          }
+        ],
+        "footer": ""
+      }
+    },
+    {
+      "id": 4,
+      "name": "아주대학교병원(의료정보학과)",
+      "desc": "1994년에 3월에 오픈한 상급종합병원으로 1995년에 3차진료기관, 2000년 경기 남부권역의 응급의료센터로 지정되었습니다. 개원 이후 다양한 국책사업에 참여하고 국내 최초로 병원 중심의 산·학·연·병 융합 연구를 주도하면서 첨단기술을 선진적으로 도입하고 있습니다.",
+      "tags": [
+        { "label": "의료", "main": true },
+        { "label": "AWS", "main": true },
+        { "label": "CloudZ", "main": false },
+        { "label": "컨설팅", "main": false },
+        { "label": "플랫폼", "main": false },
+        { "label": "CDM", "main": true },
+        { "label": "BigData", "main": true }
+      ],
+      "banner": "img-u03-02-v04-02.png",
+      "bizOverview": "보건의료 빅데이터 관련 국제 심포지엄에서 공통데이터모델(CDM)을 활용하는 방법에 대한 시연 및 실습을 위해 Cloud 도입 검토를 의뢰 받았습니다. Cloud Z의 컨설팅 및 기술지원으로 최적화 된 Big Data 도구를 AWS 환경에서 빠르고 안정적으로 구현하여 세계적인 의료 데이터 전문가들에게 기술력을 인정 받았습니다.",
+      "introBg": [
+        "Health 데이터를 저장하고 분석하기 위한 데이터 표준 및 오픈소스 솔루션인 오디세이(OHDSI) 프로그램을 만들었으나, Big Data 도구를 실행하는 데 필요한 인프라 및 비용 이슈 존재",
+        "On-Premise 환경에서 시스템 구성 및 개발에 여러움을 겪음"
+      ],
+      "useCase": [
+        "OHDSI on AWS",
+        "AWS EC2",
+        "AWS RDS Postgre",
+        "Amazon Redshift"
+      ],
+      "results": [
+        "AWS 환경에 최적화된 오디세이(OHDSI) 시스템 구성으로 빠른 시스템 구축이 가능해짐",
+        "시스템 구성 과정에서 AWS 파트너사의 기술지원 및 컨설팅을 통해 예상 시스템 규모 및 서비스 가능여부를 빠르게 파악함",
+        "수요예측에 따라 탄력적인 인프라 구성이 가능해져 이를 통한 대규모 심포지엄 개최"
+      ],
+      "interview": {
+        "name": "황성욱 의료정보학과 팀장",
+        "position": "",
+        "youtube": "",
+        "body": "<div class=\"imgbox\">\n<img src=\"/assets/imgs/customerstory/img-u03-02-v04-04.png\"/>\n</div>\n<p>보건의료 빅데이터 관련 분산연구망인 오딧세이(OHDSI) 관련 국제 심포지엄에 국내외 400명의 전문가가 참석하여 공통데이터모델(CDM)을 활용하는 방법에 대한 시연 및 실습하는 자리를 가졌으며, SK C&amp;C의 기술지원을 통해 대용량의 데이터를 클라우드 인프라에서 안정적으로 운영하여 성공적으로 심포지엄을 마무리 했습니다.</p>",
+        "header": "빅데이터 툴을 실행하는 데 필요한 인프라 및 비용 이슈들이 있었지만, Cloud Z의 기술지원 및 컨설팅을 통하여<br/> AWS 클라우드 환경에 최적화된 오디세이(OHDSI) 시스템 구성으로 빠른 시스템 구축이 가능해졌습니다. <br/> 아주대병원 주관하에 진행된 '빅데이터를 활용한 질환 연구 및 신약 개발 심포지엄'에 많은 해외 연좌분들이 참석하셨고, <br/>원할한 행사 진행에 대해 아주대 교수님들께 감사의 표시를 보내주셨습니다.",
+        "qna": [],
+        "footer": ""
+      }
+    },
+    {
+      "id": 5,
+      "name": "워커힐 NGS",
+      "desc": "1963년 개관 이후 호텔, 숙박, 관광 산업 분야 비즈니스를 중심으로 사업영역을 확대하였으며 현재는 비스타워커힐, 그랜드워커힐, 다락휴, 포도호텔 등의 브랜드로 호텔리조트 부문 국가브랜드 대상을 5년 연속 수상하였습니다.",
+      "tags": [
+        { "label": "호텔", "main": true },
+        { "label": "고객관리시스템", "main": false },
+        { "label": "Azure", "main": true },
+        { "label": "DevOps", "main": false },
+        { "label": "LandingZone", "main": true },
+        { "label": "Migration", "main": false }
+      ],
+      "banner": "img-u03-02-v05-02.png",
+      "bizOverview": "Azure Cloud로 전환하여 서버 자원의 유연성을 확보하고 최신 OS 업데이트로 보안 취약점을 개선하였습니다. 또한 AKS를 통해 효율적 자원 활용 및 DevOps 지원이 가능하였으며 On-Premise 대비 적은 비용으로 인프라 확장이 가능했습니다.",
+      "introBg": [
+        "2009년 호텔 고객 멤버십 통합/관리를 위해 NGS 고객관리 시스템을 도입 / 운영중인 서버 노후화",
+        "OS의 EoS로 인한 보안 취약, 유지관리 비용 개선 needs를 만족할 수 있는 클라우드 마이그레이션 도입"
+      ],
+      "useCase": [
+        "On-Premise 시스템 Discovery &amp; Assessment 및 Rehost Migration 진행",
+        "Azure 적용 서비스: VM, AKS, Azure MySQL, Storage account, Application gateway",
+        "Azure Landing Zone 구축"
+      ],
+      "results": [
+        "Azure Cloud로 전환하여 서버 자원의 유연성 확보와 최신 OS 업데이트로 보안 취약점 개선",
+        "AKS를 통해 효율적 자원 활용 및 DevOps 지원 가능",
+        "On-Premise 대비 적은 비용으로 인프라 확장 가능"
+      ],
+      "interview": {
+        "name": "",
+        "position": "",
+        "youtube": "",
+        "body": "",
+        "header": "",
+        "qna": [],
+        "footer": ""
+      }
+    },
+    {
+      "id": 6,
+      "name": "FSK L&amp;S",
+      "desc": "FSK L&amp;S는 SK그룹과 Hon Hai그룹(Foxconn)의 공동투자로 설립되었으며 사물인터넷, 클라우드, 빅데이터, 인공지능 등의 ICT 역량과 다양한 Industry에서 얻은 물류 역량의 융합을 통해 고객에게 스마트 물류 서비스를 제공하는 기업입니다.",
+      "tags": [
+        { "label": "물류", "main": true },
+        { "label": "AWS", "main": true },
+        { "label": "CloudZ", "main": false },
+        { "label": "플랫폼", "main": false },
+        { "label": "PaaS", "main": false },
+        { "label": "DevOps", "main": false },
+        { "label": "Migration", "main": true },
+        { "label": "Modernization", "main": false },
+        { "label": "ContainerService", "main": true },
+        { "label": "Microservice", "main": false }
+      ],
+      "banner": "img-u03-02-v06-02.png",
+      "bizOverview": "기존의 노후화 된 서버에 운영하였던 융합 물류 시스템을 Azure로 Migration하여, 물류량에 따라 Cloud 사용량을 탄력적으로 운영하여 비용을 절감하게 되었습니다.",
+      "introBg": [
+        "기존 서비스의 EOS에 따른 Common, Master 서비스를 단기간 내 안정적인 서비스로 이관이 필요함",
+        "PaaS를 이용하면서 안정적인 운영이 필요함"
+      ],
+      "useCase": [
+        "FSK L&amp;S 글로벌 융합 물류 시스템 '케롤(KEROL)＇을 Cloud Container로 전환",
+        "Cloud Z Modernization Platform on AWS 를 적용하여 수입∙통관∙창고∙배송∙정산 등 물류 서비스 전반을 포괄",
+        "AWS 적용 서비스: EC2, RDS, ELB, VPC, S3, EKS, EFS"
+      ],
+      "results": [
+        "Microservice 개발, 시스템 통합, 장애 관리 편의성 제고",
+        "서비스 수요에 따른 Cloud 이용량 자동 조절 및 자동 백업 기능 적용",
+        "물류 서비스별 AI, IoT, 로봇 등 디지털 기술 및 서비스 접목 추진 기반 마련"
+      ],
+      "interview": {
+        "name": "FSK 융합물류 담당자",
+        "position": "",
+        "youtube": "",
+        "body": "",
+        "header": "Cloud Z CP on AWS를 통하면 클라우드 종류에 관계 없이 <br/>저희가 원하는 클라우드 컨테이너 서비스를 손쉽게 구축하고 통합 관리 할 수 있습니다.",
+        "qna": [
+          {
+            "q": "'<strong>FSK L&amp;S</strong>'은 어떤 회사인가요?",
+            "a": "SK텔레콤의 글로벌 물류 자회사로 반도체 제품 및 정밀 장비, 배터리 및 화학 설비·제품, 식료품, 해외 직구·역직구 등 물류 BPO 사업 및 국제 물류 포워딩 사업을 수행합니다."
+          },
+          {
+            "q": "'<strong>KEROL(케롤)</strong>'은 어떤 서비스인가요?",
+            "a": "글로벌 융합 물류 시스템 'KEROL(케롤)'은 국내외 화주 및 글로벌 물류 기업을 대상으로 수입∙통관∙창고∙배송∙정산 등 물류 전구간에 걸쳐 한눈에 현황을 파악할 수 있는 가시성(Visibility)을 제공하며, 물류 서비스 전반을 관리할 수 있는 시스템입니다."
+          },
+          {
+            "q": "FSK에서 해당 Migration을 <strong>추진하게 된 배경</strong>과 해결하고자 했던 Pain Point는 무엇이었나요? 해당 <strong>Pain Point</strong>를 해결하기 위해 어떤 서비스를 제안 받으셨나요?",
+            "a": "기존에 사용하고 있는 서비스가 EOS 됨에 따라 Common/Master 서비스를 기한 내 안정적으로 AWS로 이관이 필요하였으며, 기존 서비스와 같이 PaaS 를 이용하면서 안정적인 운영이 필요하여 프로젝트를 추진하게 되었습니다. SK C&amp;C로 부터 ZCP on AWS 로 Migration을 제안 받았습니다."
+          },
+          {
+            "q": "어떤<strong> AWS Service</strong>를 적용하셨나요?",
+            "a": "KEROL(케롤)' 시스템은 중단없이 빠르게 신규 애플리케이션(서비스) 적용이 가능하도록 아마존 EKS(일래스틱 쿠버네티스 서비스, Elastic Kubernetes Service)를 기본 수용하면서 마이크로 서비스 아키텍처를 적용한 컨테이너 기반의 개발과 배포를 진행하였습니다."
+          },
+          {
+            "q": "'KEROL(케롤)'의 클라우드 컨테이너 서비스 <strong>구축 과정, 결과 </strong>및 <strong>기대효과</strong>는 어땠나요?",
+            "a": "SK㈜ C&amp;C는 SK텔레콤이 주사업자로 나선 이번 사업에서 'Cloud Z CP(Container Platform) on AWS'를 활용해 'KEROL(케롤)'의 클라우드 컨테이너 서비스 구축을 개발 돌입 후 2개월만에 완료했고, AWS와 전략적 파트너십을 바탕으로 안정적이고 경제적인 사업 수행을 뒷받침 했습니다. 기존에는 AWS 쿠버네티스를 활용해 개발·운영을 하려면 자체 기술 역량을 기반으로 여러 서비스들을 직접 구성해야 했습니다.  클라우드 컨테이너 서비스 구축으로 이제는 통합 장애 관리 환경도 구현하고,웹과 모바일을 이용해 대시보드 형태로 한 화면에서 KEROL(케롤)의 클라우드 서비스를 모니터링합니다. 장애 발생 시, 사람의 개입 없이 운영 담당자 및 분야별 기술전문인력들에게 전화, SNS, 이메일로 상황을 전파 가능하며, 장애 발생 후에도 고객과의 SLA기준에 따라 ▲장애원인 ▲조치내역 ▲재발방지 내용들이 포함된 RCA(Root Cause Analysis, 근본원인분석) 리포트를 제공할 수 있습니다.\r\n 또한 시스템 설정을 잘못 했을 경우도 자동으로 인지해 알람이 울리며, 갑작스런 물류 수요 증가에 따른 시스템 트래픽 폭증 문제도 해결했습니다. 컨테이너화된 구성 요소별 상태를 파악해 트래픽 분산 및 자동 복구 기능을 제공하고 서비스 수요에 따라 규모를 자동으로 늘리고 줄이는 오토스케일링 기능도 구현했습니다."
+          },
+          {
+            "q": "'<strong>FSK L&amp;S</strong>'의 <strong>향후 계획</strong>은 무엇인가요? (사업 및 서비스 등)",
+            "a": "'KEROL(케롤)'의 물류 서비스 전반에 걸쳐 AI를 통한 정형·비정형 데이터 분석, IoT, 블록체인을 통한 표준화, 물류 절차 간소화 및 효율화 등 디지털 혁신 기술 및 서비스 접목을 진행할 계획입니다."
+          }
+        ],
+        "footer": "<div class=\"btn-group\"><a class=\"button pill aqua has-arrow-right-icon\" href=\"https://www.cloudz.co.kr/cloudz/prcenter/detail/187\" target=\"detail_187\">\n<span class=\"label\">[관련기사]  SK㈜ C&amp;C, FSK L&amp;S 물류 시스템 클라우드 컨테이너로 전환</span>\n</a></div>"
+      }
+    },
+    {
+      "id": 7,
+      "name": "ADT캡스",
+      "grpDesc": "보안전문 회사인 ADT 캡스의 다양한 보안관련 시스템에 Public Cloud 및 Operation Modernization을 도입하여 비용 절감, 신속한 장애 대응, 빠른 개선과 업데이트가 가능하게 되었으며 Cloud 기반의 플랫폼을 기반으로 다양한 영역으로 사업을 확대할 수 있는 계기가 되었습니다.",
+      "subName": "빌딩 통합 보안관제 서비스",
+      "desc": "ADT캡스는 사이버 보안 및 물리보안 서비스를 전문으로 제공하는 회사로, 보안 컨설팅, 모의해킹 및 취약점 진단, 정보 보안, 무인 경비, 출입보안 등의 종합 서비스를 제공합니다.",
+      "tags": [
+        { "label": "보안", "main": true },
+        { "label": "Azure", "main": true },
+        { "label": "CloudZ", "main": false },
+        { "label": "플랫폼", "main": false },
+        { "label": "PaaS", "main": false },
+        { "label": "Modernization", "main": false },
+        { "label": "WebApp", "main": true },
+        { "label": "MachineLearning", "main": true }
+      ],
+      "banner": "img-u03-02-v07-t01-02.png",
+      "bizOverview": "코로나 시대에 건물 내의 혼잡도 관리, 외부인 출입통제 등을 포함한 빌딩의 물리 보안관제를 빠르고 효율적으로 제공하고자 함. 이를 위한 빌딩 통합 보안관제 서비스(*TSO)를 Public Cloud로 빠르게 구축하고, 안정적 운영 위해 Cloud Z Ops Modernization 서비스를 도입했으며, 이 플랫폼 기반으로 사업 영역을 확대해가고 있음. \r\n*TSO(Total Security Outsourcing) : 빌딩(건물) 통합 보안 관제/관리 서비스 플랫폼",
+      "introBg": [
+        "빌딩 보안관제 통합관리 플랫폼 필요",
+        "코로나19 대응 위한 혼잡도 알람(식당, 헬스장), 사회적 거리두기, 외부인 출입, 침입탐지, 설비관리 등 중요",
+        "다양한 서비스 확장 요구에 대비하여 Public Cloud 도입 필요성 대두"
+      ],
+      "useCase": [
+        "WebApp PaaS를 사용하여 다양한 고객환경에 맞는 유연한 개발/운영이 가능하도록 빠른 개발도구/실행환경 제공",
+        "RBAC(Role-Based Access Control) 및 Access제한을 통한 안전한 보안 관리",
+        "Cloud Z Hybrid Monitoring 및 Hybrid Incident Management 사용하여 Metric 기반 Custom 가능한 통합 모니터링/전파 체계 구현",
+        "Azure MachineLearning/DevOps/DataFactory 기술로 데이터를 분석하여 빌딩측(End User)에 예측을 제공하고 필요한 실행을 자동화",
+        "가용성 보장 위해 Instance 포함한 주요 자원의 HA(High Availability) 아키텍처 적용",
+        "긴급 이벤트를 우선적으로 신속 처리하기 위해 일반 및 긴급 Queue을 분리하여 관리"
+      ],
+      "results": [
+        "Azure Native Service 기반으로 인프라의 안정적인 성능을 제공",
+        "추가 요건에 의한 개발 시 종량제(pay-as-you-go) 방식으로 개발 Infra 비용 절감 (필요 기간만 사용)",
+        "표준화된 기술사용 및 유연한 자원 확장으로 신규 고객 증가 및 요구사항에 유연하게 대응 가능",
+        "TSO P/F 개발 프로세스 표준화를 통해 빌드/배포를 자동화하여 구성하여 효율적 운영 가능",
+        "Grafana를 통해 Azure Application Service Plan에서 제공하는 metric을 모니터링하고 Grafana로 통합관리"
+      ],
+      "interview": {
+        "name": "",
+        "position": "",
+        "youtube": "",
+        "body": "",
+        "header": "",
+        "qna": [],
+        "footer": ""
+      }
+    },
+    {
+      "id": 8,
+      "name": "ADT캡스",
+      "grpDesc": "보안전문 회사인 ADT 캡스의 다양한 보안관련 시스템에 Public Cloud 및 Operation Modernization을 도입하여 비용 절감, 신속한 장애 대응, 빠른 개선과 업데이트가 가능하게 되었으며 Cloud 기반의 플랫폼을 기반으로 다양한 영역으로 사업을 확대할 수 있는 계기가 되었습니다.",
+      "subName": "모바일 출입통제 시스템",
+      "desc": "ADT캡스는 사이버 보안 및 물리보안 서비스를 전문으로 제공하는 회사로, 보안 컨설팅, 모의해킹 및 취약점 진단, 정보 보안, 무인 경비, 출입보안 등의 종합 서비스를 제공합니다.",
+      "tags": [
+        { "label": "보안", "main": true },
+        { "label": "Cloud보안", "main": false },
+        { "label": "Azure", "main": true },
+        { "label": "CloudZ", "main": false },
+        { "label": "Modernization", "main": false },
+        { "label": "ApplicationGateway", "main": true }
+      ],
+      "banner": "img-u03-02-v07-t01-02.png",
+      "bizOverview": "앱카드의 발급 및 삭제, 출입이력조회가 가능한 시스템을 통해 간편한 출입관리가 가능해짐",
+      "introBg": [
+        "모바일 출입통제 시스템을 구축하여 실물카드 대신 스마트폰 앱카드를 활용하고자 함. 모바일카드는 분실 위험이나 관리 비용을 줄임",
+        "개인 정보를 Cloud에 저장할 경우 정보보안이 필수",
+        "향후 중대형 기업, 관공서, 대학교 등의 대형 고객 중심으로 사업 확산 대비한 유연한 확장성 필요"
+      ],
+      "useCase": [
+        "Azure 기반으로 구축하여 확장 유연성 확보",
+        "Application Gateway의 WAF(Web Application Firewall) 기능을 통해 Inbound Web Traffic을 검사하여 SQL Injections, Cross-Site Scripting, DDoS공격 등 다양한 외부 위협으로부터 Web Application을 보호",
+        "Application Gateway의 SSL(Secure socket layer) 오프로딩 기능을 통한 VM부하 경감",
+        "고가용성을 위한 Azure Availability Set(가용성 집합) 구성으로 VM 안정성 확보"
+      ],
+      "results": [
+        "유연한 자원 관리를 통해 사업 변화에 신속하게 대응",
+        "L7 LB(Load Balancer), WAF(Web Application Firewall) 활용 및 네트워크 분리를 통한 보안성 강화",
+        "사전 등록한 방문객들에게도 RFID 실물카드 아닌 스마트폰 앱카드를 발급, 등록, 회수, 출입 통제하여 효율적인 출입관리 및 비대면 업무처리가 가능해짐"
+      ],
+      "interview": {
+        "name": "",
+        "position": "",
+        "youtube": "",
+        "body": "",
+        "header": "",
+        "qna": [],
+        "footer": ""
+      }
+    },
+    {
+      "id": 9,
+      "name": "ADT캡스",
+      "grpDesc": "보안전문 회사인 ADT 캡스의 다양한 보안관련 시스템에 Public Cloud 및 Operation Modernization을 도입하여 비용 절감, 신속한 장애 대응, 빠른 개선과 업데이트가 가능하게 되었으며 Cloud 기반의 플랫폼을 기반으로 다양한 영역으로 사업을 확대할 수 있는 계기가 되었습니다.",
+      "subName": "포인트캠 서비스 Cloud Migration",
+      "desc": "ADT캡스는 사이버 보안 및 물리보안 서비스를 전문으로 제공하는 회사로, 보안 컨설팅, 모의해킹 및 취약점 진단, 정보 보안, 무인 경비, 출입보안 등의 종합 서비스를 제공합니다.",
+      "tags": [
+        { "label": "보안", "main": false },
+        { "label": "IaaS", "main": false },
+        { "label": "Migration", "main": false }
+      ],
+      "banner": "img-u03-02-v07-t01-02.png",
+      "bizOverview": "스마트폰과 PC로 원격지 CCTV 영상을 실시간으로 확인하거나 불법침입을 감지하여 SMS로 자동 알람을 발송하는 \u000b시스템으로, Cloud로 전환하여 TCO 절감 및 더 신속한 장애 대응 서비스로의 지속적 개선이 가능해짐",
+      "introBg": [
+        "On-Premise 시스템을 Cloud로 전환",
+        "2개월이라는 한정된 시간 안에 On-Premise 시스템을 Cloud로 전환하고자 함"
+      ],
+      "useCase": [
+        "포인트캠 사용자 및 관리자 포탈을 개편하고 Cloud로 전환",
+        "2개월이라는 촉박한 일정 내에 Refactoring 통한 Application 개선, Cloud 구축, DBMS 전환(Oracle -> Maria), Legacy 연동시스템과의 interface까지 구축 완료"
+      ],
+      "results": [
+        "다중 보안 솔루션 적용으로 보안 강화 (WAF, IPS, FW, Security Group 적용 제공)",
+        "효율적 Network 구성 통한 회선 비용 절감",
+        "유연한 자원 관리를 통해 시장 변화에 신속하게 대응"
+      ],
+      "interview": {
+        "name": "",
+        "position": "",
+        "youtube": "",
+        "body": "",
+        "header": "",
+        "qna": [],
+        "footer": ""
+      }
+    },
+    {
+      "id": 10,
+      "name": "SK이노베이션",
+      "desc": "SK이노베이션은 대표적인 에너지기업에서 배터리 사업을 필두로 하는 Green Energy &amp; Materials Company로 진화하고 있습니다.",
+      "tags": [
+        { "label": "정유", "main": false },
+        { "label": "차세대배터리", "main": true },
+        { "label": "Azure", "main": true },
+        { "label": "아키텍처", "main": false },
+        { "label": "DR", "main": true },
+        { "label": "데이터센터", "main": false },
+        { "label": "Recovery", "main": false }
+      ],
+      "banner": "img-u03-02-v08-02.png",
+      "bizOverview": "노후화된 재해복구시스템(Disaster Recovery)을 On-Premise에서 Cloud로 전환하여 손쉬운 백업 및 복구, 이중화 서비스를 구현했습니다.",
+      "introBg": [
+        "On-Premise DR시스템은 장비 노후화로 인한 EoS, 유지보수 및 부품수급 제한으로 재해 발생 시 서비스 가동이 담보되지 않음",
+        "데이터센터의 상면비, 유지보수비 등 고정비 증가 부담",
+        "사업환경이 급변하는 상황에서 On-Premise 기반의 DR시스템의 효용성에 의문 제기"
+      ],
+      "useCase": [
+        "DR 필수적인 업무 재선정 및 아키텍처 전면 재설계",
+        "Azure Site Recovery 활용하여 데이터 복제 구성",
+        "운영 환경과 분리된 DR 모의훈련 환경 확충하여 주기적 점검 통한 신뢰성 증대"
+      ],
+      "results": [
+        "장비 관리 부담 해소 및 안정성 확보",
+        "평상시에는 Data복제 기능만 사용하고 복구 사유 발생 시에만 서버 및 자원 추가하여 TCO 절감"
+      ],
+      "interview": {
+        "name": "",
+        "position": "",
+        "youtube": "",
+        "body": "",
+        "header": "",
+        "qna": [],
+        "footer": ""
+      }
+    }
+  ]
+}

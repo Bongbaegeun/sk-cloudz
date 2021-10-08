@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration shutdownHook="disable">
+	<Properties>
+	    <Property name="logdir">${sys:catalina.home}/logs</Property>
+	    <Property name="layout">[%d{yyyy/MM/dd HH:mm:ss.SSS}] %-5p: [%c - %L] - %m%n</Property>
+	  </Properties>
+    <Appenders>
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout pattern="${layout}" />
+        </Console>
+        <RollingFile name="file-log" fileName="${logdir}/catalina.out"
+			filePattern="${logdir}/daily_log/oneboxmgr_log-%d{yyyy-MM-dd}.log"
+			 append="false">
+			<PatternLayout>
+				<pattern>${layout}</pattern>
+			</PatternLayout>
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+			</Policies>
+		</RollingFile>
+    </Appenders>
+    
+    
+    <Loggers>
+        <Logger name="java.sql" level="DEBUG"/>
+        <Logger name="skcloudz" level="DEBUG"/>
+          <!-- log SQL with timing information, post execution -->
+        <Logger name="jdbc.resultsettable" level="DEBUG"/>
+		<Logger name="jdbc.audit" level="DEBUG"/>
+        <Logger name="jdbc.resultset" level="DEBUG"/>
+        <Logger name="jdbc.sqltiming" level="DEBUG"/>
+        <Logger name="org.springframework" level="DEBUG"/>
+        <Root level="DEBUG">
+        	<!-- 로컬 테스트용 (로컬 테스트시 아래 주석 풀고 사용) -->
+        	<!-- 아래 풀고 커밋 하지 말것 -->
+			<AppenderRef ref="console"/>
+			<!-- 서버용  -->
+<!-- 			<AppenderRef ref="file-log"/> -->
+        </Root>
+    </Loggers>
+</Configuration>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sk.cloudz.service.impl.SearchMapper">
+	<!-- group count query : select service, count(service) from search group by service -->
+	
+	<!-- <select id="getSearchCategory" parameterType="map" resultType="com.sk.cloudz.service.SearchCategoryVO"> -->
+	<select id="getSearchCategory" parameterType="java.util.List" resultType="com.sk.cloudz.service.SearchCategoryVO">
+		select service, count(service) serviceCnt
+		from search
+		where 
+			<foreach collection="list" item="item" index="index" separator=" or ">
+			title like CONCAT('%',#{item},'%') or contents like CONCAT('%',#{item},'%')
+			</foreach>
+			
+		group by service
+	</select>
+	
+	<select id="getSearch" parameterType="map" resultType="com.sk.cloudz.service.SearchVO">
+		select service, title, description as content, url
+		from search
+		where service = #{Cate}
+				and (
+					<foreach collection="Lists" item="item" index="index" separator=" or ">
+					title like CONCAT('%',#{item},'%') or contents like CONCAT('%',#{item},'%')
+					</foreach>
+				)
+	</select>
+	
+	<select id="getKeyword" parameterType="map" resultType="com.sk.cloudz.service.KeywordVO">
+		select * 
+		from search_keyword 
+		where pair_code in (
+					select pair_code from search_keyword where keyword_txt = #{search_txt}
+				)
+	</select>
+	
+	<select id="getKeywordAll" resultType="com.sk.cloudz.service.KeywordVO">
+		select keyword_txt, pair_code from search_keyword
+	</select>
+</mapper>

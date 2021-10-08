@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+
+.notice {
+  border-top: 1px solid #111;
+  border-bottom: 1px solid #111;
+}
+.notice .notice-header h3 {
+  font-size: 26px;
+}
+.notice .notice-header h3 .tag {
+  position: relative;
+  top: -2px;
+  font-size: 16px;
+  margin-left: 0;
+  font-weight: normal;
+  margin-right: 10px;
+}
+.notice.list .notice-header h3 {
+  margin-bottom: 15px;
+}
+.notice.detail .notice-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 0 40px;
+  border-bottom: 1px solid #DDD;
+}
+.notice.detail .notice-body {
+  min-height: 540px;
+  padding: 95px 80px;
+  color: #555;
+}
+.notice.detail .notice-body a {
+  color: #38A1DB;
+  text-decoration: underline;
+}
+.notice.detail .notice-footer {
+  border-top: 1px solid #DDD;
+  padding: 30px 0;
+}
+.notice.detail .notice-footer .notice-nav {
+  display: flex;
+  justify-content: space-between;
+}
+.notice.detail .notice-footer .notice-nav .notice-link {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+.notice.detail .notice-footer .notice-nav .notice-link::before, .notice.detail .notice-footer .notice-nav .notice-link::after {
+  font-size: 30px;
+}
+.notice.detail .notice-footer .notice-nav .notice-link .label {
+  display: block;
+  font-size: 16px;
+  color: #555;
+}
+.notice.detail .notice-footer .notice-nav .notice-link.prev-link::before {
+  font-family: "xeicon";
+  content: "";
+  margin-left: -5px;
+  margin-right: 15px;
+}
+.notice.detail .notice-footer .notice-nav .notice-link.prev-link .link {
+  text-align: left;
+}
+.notice.detail .notice-footer .notice-nav .notice-link.next-link::after {
+  font-family: "xeicon";
+  content: "";
+  margin-right: -5px;
+  margin-left: 15px;
+}
+.notice.detail .notice-footer .notice-nav .notice-link.next-link .link {
+  text-align: right;
+}
+
+.notice-bottom-box {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.notice-list li {
+  position: relative;
+  padding: 60px 0 60px 100px;
+}
+.notice-list li .notice-date {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.notice-list li .notice-date > span {
+  display: block;
+}
+.notice-list li .notice-date > span.date {
+  color: #555;
+}
+.notice-list li .notice-date > span.day {
+  font-size: 54px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+.notice-list li .notice-content a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.notice-list li .notice-content a:hover ~ .notice-header {
+  color: #38A1DB;
+}
+.notice-list li .notice-content p {
+  color: #555;
+}
+.notice-list li + li {
+  border-top: 1px solid #ccc;
+}
+/*# sourceMappingURL=notice.css.map */

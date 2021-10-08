@@ -1,0 +1,70 @@
+
+
+.support-header {
+  padding-bottom: 50px;
+}
+.support-header .inner-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.support-header .inner-wrap .heading-msg h3 {
+  font-size: 32px;
+  line-height: 38px;
+  letter-spacing: -0.01em;
+  margin-bottom: 20px;
+}
+.support-header .inner-wrap .heading-msg .msg {
+  font-size: 26px;
+  color: #555;
+}
+.support-header .inner-wrap .heading-msg .msg a {
+  color: #38A1DB;
+  text-decoration: underline;
+}
+.support-header .inner-wrap .heading-msg .msg + .button {
+  margin-top: 60px;
+}
+
+.support-guide .support-guide-content {
+  background-color: #f4f4f4;
+  padding: 60px 80px;
+}
+.support-guide .support-guide-content .guide-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.support-guide .support-guide-content .guide-header h3 {
+  display: inline-block;
+  font-size: 26px;
+  font-weight: normal;
+  text-decoration: underline;
+}
+.support-guide .support-guide-content .guide-body .guide-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+}
+.support-guide .support-guide-content .guide-body .guide-section:last-child {
+  padding-bottom: 0;
+}
+.support-guide .support-guide-content .guide-body .guide-section + .guide-section {
+  border-top: 1px dashed #ccc;
+}
+.support-guide .support-guide-content .guide-body .guide-section .guide-desc {
+  flex: 1;
+}
+.support-guide .support-guide-content .guide-body .guide-section .guide-desc h3 {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+.support-guide .support-guide-content .guide-body .guide-section .guide-desc .list {
+  color: #555;
+}
+.support-guide .support-guide-content .guide-body .guide-section .guide-desc .list a {
+  color: #38A1DB;
+}
+.support-guide .support-guide-content .guide-body .guide-section .guide-img {
+  margin-left: 160px;
+}
+/*# sourceMappingURL=support.css.map */
