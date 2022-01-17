@@ -17,4 +17,21 @@ $(function () {
   $(TOP_NAVBAR_ID)
     .find(NAV_ITEM + '>a[data-name=' + getCurrentURI() + ']')
     .addClass('active')
+
+  /**
+   * 마켓 플레이스 모바일 탭 컨트롤
+   */
+  if( $('body').hasClass('mobile') ) {
+    $('#MktTopNavbar a').on('click', function(e){
+      if( $(this).hasClass('active') ) {
+        e.preventDefault();
+        if( !$(this).parents('.navbar').hasClass('active') ) {
+          $(this).parents('.navbar').addClass('active')
+        } else {
+          $(this).parents('.navbar').removeClass('active')
+        }
+      }
+    })
+  }
+
 })

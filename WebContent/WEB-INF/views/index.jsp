@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
-<!-- build: 20211001-1430 -->
+<!-- build: 20220117-1347 -->
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -38,7 +38,7 @@
         </a>
       </li>
       <li class="nav-item" data-name="services" data-sid="2">
-        <a href="/services/cloud-transformation/sk-aws-landing-zone">
+        <a href="/services/cloud-transformation">
           <span class="label">서비스</span>
         </a>
       </li>
@@ -81,7 +81,10 @@
             <ul class="sub-list d1 has-items">
               <li class="nav-item n0" data-name="cloud-transformation" data-sid="2.1">
                 <div class="title">
-                  <span class="text">Cloud Transformation</span>
+                  <div data-init-page="/services/cloud-transformation/sk-aws-landing-zone.html">
+                    <a href="/services/cloud-transformation"> <span class="text">Cloud Transformation</span>
+                    </a>
+                  </div>
                 </div>
                 <ul class="sub-list d2 flex-col">
                   <li class="nav-item" data-name="sk-aws-landing-zone" data-sid="2.1.1">
@@ -110,7 +113,10 @@
             <ul class="sub-list d1 has-items">
               <li class="nav-item n1" data-name="app-modernization" data-sid="2.2">
                 <div class="title">
-                  <span class="text">Application Modernization</span>
+                  <div data-init-page="/services/app-modernization/app-modernization-factory.html">
+                    <a href="/services/app-modernization"> <span class="text">Application Modernization</span>
+                    </a>
+                  </div>
                 </div>
                 <ul class="sub-list d2 flex-col">
                   <li class="nav-item" data-name="app-modernization-factory" data-sid="2.2.1">
@@ -151,7 +157,10 @@
             <ul class="sub-list d1 has-items">
               <li class="nav-item n2" data-name="ops-modernization" data-sid="2.3">
                 <div class="title">
-                  <span class="text">Ops Modernization</span>
+                  <div data-init-page="/services/ops-modernization/cowork-notification.html">
+                    <a href="/services/ops-modernization"> <span class="text">Ops Modernization</span>
+                    </a>
+                  </div>
                 </div>
                 <ul class="sub-list d2 flex-col">
                   <li class="nav-item" data-name="mcmp" data-sid="2.3.1">
@@ -204,6 +213,11 @@
                       <span class="label">Azure Virtual Desktop</span>
                     </a>
                   </li>
+                  <li class="nav-item" data-name="private-cloud-daas" data-sid="2.3.11">
+                    <a href="/services/ops-modernization/private-cloud-daas">
+                      <span class="label">Private Cloud DaaS</span>
+                    </a>
+                  </li>
                 </ul>
               </li>
             </ul>
@@ -212,7 +226,10 @@
             <ul class="sub-list d1 has-items">
               <li class="nav-item n3" data-name="cloud-operation" data-sid="2.4">
                 <div class="title">
-                  <span class="text">Cloud Operation</span>
+                  <div data-init-page="/services/cloud-operation/iaas-msp.html">
+                    <a href="/services/cloud-operation"> <span class="text">Cloud Operation</span>
+                    </a>
+                  </div>
                 </div>
                 <ul class="sub-list d2 flex-col">
                   <li class="nav-item" data-name="iaas-msp" data-sid="2.4.1">
@@ -246,7 +263,10 @@
             <ul class="sub-list d1 has-items">
               <li class="nav-item n4" data-name="cloud-datacenter" data-sid="2.5">
                 <div class="title">
-                  <span class="text">Cloud Data Center</span>
+                  <div data-init-page="/services/cloud-datacenter/hybrid-zone-service.html">
+                    <a href="/services/cloud-datacenter"> <span class="text">Cloud Data Center</span>
+                    </a>
+                  </div>
                 </div>
                 <ul class="sub-list d2 flex-col">
                   <li class="nav-item" data-name="hybrid-zone-service" data-sid="2.5.1">
@@ -275,14 +295,22 @@
           </div>
           <div class="list-wrap d-flex">
             <ul class="sub-list d1 has-items">
-              <li class="nav-item n5" data-name="cloud-partners" data-sid="2.6">
+              <li class="nav-item n5" data-name="multi-cloud-partners" data-sid="2.6">
                 <div class="title">
-                  <span class="text">Cloud Partners</span>
+                  <div data-init-page="/services/multi-cloud-partners">
+                    <a href="/services/multi-cloud-partners"> <span class="text">Multi-Cloud Partners</span>
+                    </a>
+                  </div>
                 </div>
                 <ul class="sub-list d2 flex-col">
-                  <li class="nav-item" data-name="multi-cloud-partners" data-sid="2.6.1">
-                    <a href="/services/cloud-partners/multi-cloud-partners">
-                      <span class="label">Multi-Cloud Partners</span>
+                  <li class="nav-item" data-name="aws" data-sid="2.6.1">
+                    <a href="/services/multi-cloud-partners/aws">
+                      <span class="label">AWS</span>
+                    </a>
+                  </li>
+                  <li class="nav-item" data-name="azure" data-sid="2.6.2">
+                    <a href="/services/multi-cloud-partners/azure">
+                      <span class="label">Azure</span>
                     </a>
                   </li>
                 </ul>
@@ -401,7 +429,8 @@
             <div class="visual-content">
               <div class="inner-wrap">
                 <header>
-                  <img src="/assets/imgs/main/copy/main_copy.png" alt="">
+                  <img src="/assets/imgs/main/copy/main_copy_1.png" alt="">
+                  <img src="/assets/imgs/main/copy/main_copy_2.png" alt="">
                 </header>
               </div>
             </div>
@@ -451,62 +480,67 @@
       <div class="inner-wrap">
         <header class="section-header">
           <h2 class="title">Cloud Z의 서비스를 만나보세요</h2>
-          <p>최적의 고객 Cloud Journey 를 이끌어 낼 수 있는 서비스를 소개합니다.</p>
+          <p>최적의 고객 Cloud Journey를 이끌어 낼 수 있는 서비스를 소개합니다.</p>
         </header>
         <div class="section-body">
           <ul class="grid fluid">
             <li class="col-8">
-              <div class="card service-card">
+              <a href="/services/cloud-transformation/" class="card service-card">
                 <div class="card-img">
                   <img src="/assets/imgs/main/service_01.png" alt="">
                 </div>
                 <div class="card-content">
                   <h4 class="title">Cloud Transformation</h4>
                   <p>고객에게 최적화된 Cloud 전환 방법론과 컨설팅 전문 역량으로 안정적인 Cloud 구축-전환 서비스를 제공합니다.</p>
+                  <i class="xi-arrow-right"></i>
                 </div>
-              </div>
+              </a>
             </li>
             <li class="col-4">
-              <a href="#url" class="card service-card column">
+              <a href="/services/app-modernization/" class="card service-card column">
                 <div class="card-img">
                   <img src="/assets/imgs/main/service_02.png" alt="">
                 </div>
                 <div class="card-content">
                   <h4 class="title">Application Modernization</h4>
                   <p>Cloud Z의 Modernization Platform을 사용하시면 Kubernetes 기반의 MSA를 손쉽게 적용할 수 있습니다.</p>
+                  <i class="xi-arrow-right"></i>
                 </div>
               </a>
             </li>
             <li class="col-6">
-              <a href="#url" class="card service-card inverse">
+              <a href="/services/ops-modernization/" class="card service-card inverse">
                 <div class="card-img">
                   <img src="/assets/imgs/main/service_03.png" alt="">
                 </div>
                 <div class="card-content">
                   <h4 class="title">Ops Modernization</h4>
                   <p>선제적 장애 감지와 전파, 최적의 모니터링 컨설팅, 신속한 대응 및 협업까지 자동화된 운영서비스를 이용하실 수 있습니다.</p>
+                  <i class="xi-arrow-right"></i>
                 </div>
               </a>
             </li>
             <li class="col-6">
-              <a href="#url" class="card service-card inverse">
+              <a href="/services/cloud-operation/" class="card service-card inverse">
                 <div class="card-img">
                   <img src="/assets/imgs/main/service_04.png" alt="">
                 </div>
                 <div class="card-content">
                   <h4 class="title">Cloud Operation</h4>
                   <p>글로벌 CSP Partnership으로 검증된 최상의 운영 서비스를 제공합니다. Cloud 운영의 통합 서비스를 합리적인 가격으로 이용하세요.</p>
+                  <i class="xi-arrow-right"></i>
                 </div>
               </a>
             </li>
             <li>
-              <a href="#url" class="card service-card">
+              <a href="/services/cloud-datacenter/" class="card service-card">
                 <div class="card-img">
                   <img src="/assets/imgs/main/service_05.png" alt="">
                 </div>
                 <div class="card-content">
                   <h4 class="title">Cloud Data Center</h4>
                   <p>Multi/Hybrid-Cloud를 제공하는 맞춤형 Data Center로 국내외 Top 수준의 안정성과 성능, 안정적인 관리 서비스를 제공합니다.</p>
+                  <i class="xi-arrow-right"></i>
                 </div>
               </a>
             </li>
@@ -625,11 +659,11 @@
               <div class="card-content">
                 <div class="grid">
                   <div class="col-4">
-                    <h3 class="title">ADT캡스</h3>
+                    <h3 class="title">SK쉴더스</h3>
                   </div>
                   <div class="col-8">
                     <h4 class="sub-title">빠른 대응 및 업데이트가 가능한 Cloud 기반 플랫폼 도입</h4>
-                    <p>보안전문 회사인 ADT 캡스의 다양한 보안관련 시스템에 Public Cloud 및 Operation Modernization을 도입하여 비용 절감, 신속한 장애 대응, 빠른 개선과 업데이트가 가능하게 되었으며 Cloud 기반의 플랫폼으로 다양한 영역으로 사업을 확대할 수 있는 계기가 되었습니다.</p>
+                    <p>보안전문 회사인 SK쉴더스의 다양한 보안관련 시스템에 Public Cloud 및 Operation Modernization을 도입하여 비용 절감, 신속한 장애 대응, 빠른 개선과 업데이트가 가능하게 되었으며 Cloud 기반의 플랫폼으로 다양한 영역으로 사업을 확대할 수 있는 계기가 되었습니다.</p>
                   </div>
                 </div>
               </div>
@@ -737,6 +771,21 @@
         <li class="nav-item">
           <span>SK주식회사</span>
         </li>
+        <li class="nav-item">
+          <a href="https://mcmp.cloudz.co.kr/cloudzTerms" target="_blank">
+            <span>Cloud Z 이용약관</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="https://mcmp.cloudz.co.kr/serviceTerms" target="_blank">
+            <span>Cloud Z 서비스 이용 약관</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="https://mcmp.cloudz.co.kr/privacy" target="_blank">
+            <span class="text-red">개인정보처리방침</span>
+          </a>
+        </li>
         <li class="nav-item ml-auto">
           <div class="btn-group">
             <a href="https://www.facebook.com/skccsocial" target="facebook">
@@ -781,6 +830,7 @@
   <script src="/assets/common/custom.js"></script>
   <script src="/assets/lib/owl-carousel/owl.carousel.min.js"></script>
   <script src="/assets/js/home.js"></script>
+  <script src="/assets/js/cloudz.popup.js"></script>
   <script src="/assets/common/main.js"></script>
   <script defer src="/assets/js/search.total.js"></script>
 </body>

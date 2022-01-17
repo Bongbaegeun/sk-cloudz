@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
-<!-- build: 20211001-1430 -->
+<!-- build: 20220117-1347 -->
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -35,7 +35,7 @@
         </a>
       </li>
       <li class="nav-item" data-name="services" data-sid="2">
-        <a href="/services/cloud-transformation/sk-aws-landing-zone">
+        <a href="/services/cloud-transformation">
           <span class="label">서비스</span>
         </a>
       </li>
@@ -78,7 +78,10 @@
             <ul class="sub-list d1 has-items">
               <li class="nav-item n0" data-name="cloud-transformation" data-sid="2.1">
                 <div class="title">
-                  <span class="text">Cloud Transformation</span>
+                  <div data-init-page="/services/cloud-transformation/sk-aws-landing-zone.html">
+                    <a href="/services/cloud-transformation"> <span class="text">Cloud Transformation</span>
+                    </a>
+                  </div>
                 </div>
                 <ul class="sub-list d2 flex-col">
                   <li class="nav-item" data-name="sk-aws-landing-zone" data-sid="2.1.1">
@@ -107,7 +110,10 @@
             <ul class="sub-list d1 has-items">
               <li class="nav-item n1" data-name="app-modernization" data-sid="2.2">
                 <div class="title">
-                  <span class="text">Application Modernization</span>
+                  <div data-init-page="/services/app-modernization/app-modernization-factory.html">
+                    <a href="/services/app-modernization"> <span class="text">Application Modernization</span>
+                    </a>
+                  </div>
                 </div>
                 <ul class="sub-list d2 flex-col">
                   <li class="nav-item" data-name="app-modernization-factory" data-sid="2.2.1">
@@ -148,7 +154,10 @@
             <ul class="sub-list d1 has-items">
               <li class="nav-item n2" data-name="ops-modernization" data-sid="2.3">
                 <div class="title">
-                  <span class="text">Ops Modernization</span>
+                  <div data-init-page="/services/ops-modernization/cowork-notification.html">
+                    <a href="/services/ops-modernization"> <span class="text">Ops Modernization</span>
+                    </a>
+                  </div>
                 </div>
                 <ul class="sub-list d2 flex-col">
                   <li class="nav-item" data-name="mcmp" data-sid="2.3.1">
@@ -201,6 +210,11 @@
                       <span class="label">Azure Virtual Desktop</span>
                     </a>
                   </li>
+                  <li class="nav-item" data-name="private-cloud-daas" data-sid="2.3.11">
+                    <a href="/services/ops-modernization/private-cloud-daas">
+                      <span class="label">Private Cloud DaaS</span>
+                    </a>
+                  </li>
                 </ul>
               </li>
             </ul>
@@ -209,7 +223,10 @@
             <ul class="sub-list d1 has-items">
               <li class="nav-item n3" data-name="cloud-operation" data-sid="2.4">
                 <div class="title">
-                  <span class="text">Cloud Operation</span>
+                  <div data-init-page="/services/cloud-operation/iaas-msp.html">
+                    <a href="/services/cloud-operation"> <span class="text">Cloud Operation</span>
+                    </a>
+                  </div>
                 </div>
                 <ul class="sub-list d2 flex-col">
                   <li class="nav-item" data-name="iaas-msp" data-sid="2.4.1">
@@ -243,7 +260,10 @@
             <ul class="sub-list d1 has-items">
               <li class="nav-item n4" data-name="cloud-datacenter" data-sid="2.5">
                 <div class="title">
-                  <span class="text">Cloud Data Center</span>
+                  <div data-init-page="/services/cloud-datacenter/hybrid-zone-service.html">
+                    <a href="/services/cloud-datacenter"> <span class="text">Cloud Data Center</span>
+                    </a>
+                  </div>
                 </div>
                 <ul class="sub-list d2 flex-col">
                   <li class="nav-item" data-name="hybrid-zone-service" data-sid="2.5.1">
@@ -272,14 +292,22 @@
           </div>
           <div class="list-wrap d-flex">
             <ul class="sub-list d1 has-items">
-              <li class="nav-item n5" data-name="cloud-partners" data-sid="2.6">
+              <li class="nav-item n5" data-name="multi-cloud-partners" data-sid="2.6">
                 <div class="title">
-                  <span class="text">Cloud Partners</span>
+                  <div data-init-page="/services/multi-cloud-partners">
+                    <a href="/services/multi-cloud-partners"> <span class="text">Multi-Cloud Partners</span>
+                    </a>
+                  </div>
                 </div>
                 <ul class="sub-list d2 flex-col">
-                  <li class="nav-item" data-name="multi-cloud-partners" data-sid="2.6.1">
-                    <a href="/services/cloud-partners/multi-cloud-partners">
-                      <span class="label">Multi-Cloud Partners</span>
+                  <li class="nav-item" data-name="aws" data-sid="2.6.1">
+                    <a href="/services/multi-cloud-partners/aws">
+                      <span class="label">AWS</span>
+                    </a>
+                  </li>
+                  <li class="nav-item" data-name="azure" data-sid="2.6.2">
+                    <a href="/services/multi-cloud-partners/azure">
+                      <span class="label">Azure</span>
                     </a>
                   </li>
                 </ul>
@@ -512,14 +540,14 @@
                   <ul class="grid col-2">
                     <li>
                       <div class="fill-box">
-                        <span class="label">Needs Assessment </span>
+                        <span class="label">Needs Assessment</span>
                         <p>비즈니스 관점에서 운영의 요구사항 분석</p>
                       </div>
                     </li>
                     <li>
                       <div class="fill-box">
-                        <span class="label">Maturity Evaluation </span>
-                        <p>전반적인 Cloud 기반 IT 시스템의 운영 거버넌스 체계 점검 요청 대응 및 인지/전파/조치의 과정에 필요한 운영 환경 분석</p>
+                        <span class="label">Maturity Evaluation</span>
+                        <p>전략적인 Cloud 기반 IT 시스템의 운영 거버넌스 체계 점검<br>요청 대응 및 인지/전파/조치의 과정에 필요한 운영 환경 분석</p>
                       </div>
                     </li>
                   </ul>
@@ -534,14 +562,14 @@
                   <ul class="grid col-2">
                     <li>
                       <div class="fill-box">
-                        <span class="label">Operation Modeling </span>
+                        <span class="label">Operation Modeling</span>
                         <p>Cloud 서비스 운영 경험 기반의 최적화된 운영 모델 수립</p>
                       </div>
                     </li>
                     <li>
                       <div class="fill-box">
-                        <span class="label">Modern Ops Suggestion </span>
-                        <p>새로운 운영 모델을 수용하기 위한 운영 환경 제시 (Management / Monitoring / Collaboration / Integration)</p>
+                        <span class="label">Modern Ops Suggestion</span>
+                        <p>새로운 운영 모델을 수용하기 위한 운영 환경 제시<br>(Management / Monitoring / Collaboration / Integration)</p>
                       </div>
                     </li>
                   </ul>
@@ -556,14 +584,14 @@
                   <ul class="grid col-2">
                     <li>
                       <div class="fill-box">
-                        <span class="label">Prototyping </span>
+                        <span class="label">Prototyping</span>
                         <p>중요한 기능을 포함한 표준적인 기초 모델 구성</p>
                       </div>
                     </li>
                     <li>
                       <div class="fill-box">
-                        <span class="label">Prove of Concept </span>
-                        <p>일부 또는 주요 업무 및 시스템 적용을 통해 제시된 방안의 타당성 검증실제 운영 환경 구현을 위한 객관적 근거 확보</p>
+                        <span class="label">Prove of Concept</span>
+                        <p>일부 또는 주요 업무 및 시스템 적용을 통해 제시된 방안의 타당성 검증<br>실제 운영 환경 구현을 위한 객관적 근거 확보</p>
                       </div>
                     </li>
                   </ul>
@@ -647,6 +675,21 @@
       <ul class="navbar">
         <li class="nav-item">
           <span>SK주식회사</span>
+        </li>
+        <li class="nav-item">
+          <a href="https://mcmp.cloudz.co.kr/cloudzTerms" target="_blank">
+            <span>Cloud Z 이용약관</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="https://mcmp.cloudz.co.kr/serviceTerms" target="_blank">
+            <span>Cloud Z 서비스 이용 약관</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="https://mcmp.cloudz.co.kr/privacy" target="_blank">
+            <span class="text-red">개인정보처리방침</span>
+          </a>
         </li>
         <li class="nav-item ml-auto">
           <div class="btn-group">

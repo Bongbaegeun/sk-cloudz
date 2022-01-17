@@ -25,6 +25,17 @@
 					title like CONCAT('%',#{item},'%') or contents like CONCAT('%',#{item},'%')
 					</foreach>
 				)
+		<if test="Cate == 'support'">
+			UNION ALL
+			SELECT 'support' service, title, content, CONCAT('/support/detail/', idx) url
+			FROM CZ_notice
+			WHERE openYN = 'Y' AND delYN = 'N' AND start_date <![CDATA[<=]]> NOW()
+				and (
+					<foreach collection="Lists" item="item" index="index" separator=" or ">
+					title like CONCAT('%',#{item},'%') or content like CONCAT('%',#{item},'%')
+					</foreach>
+				)
+		</if>
 	</select>
 	
 	<select id="getKeyword" parameterType="map" resultType="com.sk.cloudz.service.KeywordVO">
@@ -37,5 +48,13 @@
 	
 	<select id="getKeywordAll" resultType="com.sk.cloudz.service.KeywordVO">
 		select keyword_txt, pair_code from search_keyword
+	</select>
+	
+	<select id="getPopupList" resultType="com.sk.cloudz.service.PopupListVO">
+		select idx, title, popupType, content, upload_file, page_link, openYN, start_date, end_date
+		from popup
+		where openYN = 'Y' and delYN = 'N'
+			and start_date <![CDATA[<=]]> now() and end_date <![CDATA[>=]]> now()
+		order by modify_dttm asc
 	</select>
 </mapper>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sk.cloudz.service.impl.BoardMapper">
+	<!-- group count query : select service, count(service) from search group by service -->
+	
+	<select id="getListTotalCnt" parameterType="com.sk.cloudz.service.BoardPageVO" resultType="int">
+		select count(idx)
+		from ${contents}
+		where delYN = 'N'
+			and openYN = 'Y'
+			and start_date <![CDATA[<=]]> now()
+	</select>
+	
+	<select id="getBoardList" parameterType="com.sk.cloudz.service.BoardPageVO" resultType="com.sk.cloudz.service.BoardVO">
+		select 
+			idx
+			, cate
+			, title
+			, content
+			, openYN
+			, DATE_FORMAT(start_date, '%Y-%m-%d %H:%i') start_date
+			, DATE_FORMAT(reg_dttm, '%Y-%m-%d %H:%i:%s') reg_dttm
+		from ${contents}
+		where 1=1
+			and delYN = 'N'
+			and openYN = 'Y'
+			and start_date <![CDATA[<=]]> now()
+		order by start_date desc, reg_dttm desc
+		
+		<if test="rows > 0 and page > 0">
+		limit #{offset}, #{rows}
+		</if>
+	</select>
+	
+	<select id="getBoardData" parameterType="com.sk.cloudz.service.BoardSearchVO" resultType="map">
+		SELECT convert(rowNum, int) rowNum
+			, idx, cate, title, content, openYN
+			, DATE_FORMAT(start_date, '%Y-%m-%d %H:%i') start_date
+			, reg_dttm
+		FROM (
+			SELECT @ROWNUM:=@ROWNUM-1 AS rowNum, n.*
+			FROM (
+				SELECT idx
+					, cate, title, content, openYN
+					, DATE_FORMAT(start_date, '%Y-%m-%d %H:%i') start_date
+					, reg_dttm
+				FROM ${contents}
+				WHERE openYN = 'Y' AND delYN = 'N' AND start_date <![CDATA[<=]]> NOW()
+			) n, (
+				SELECT @ROWNUM:=(
+					SELECT COUNT(idx) + 1 FROM ${contents}
+					WHERE openYN = 'Y' AND delYN = 'N' AND start_date <![CDATA[<=]]> NOW()
+					) AS R
+				) T
+			ORDER BY start_date DESC, reg_dttm DESC
+		) n
+		where idx = #{idx}
+	</select>
+	
+	<select id="getBoardPrev" parameterType="com.sk.cloudz.service.BoardSearchVO" resultType="map">
+		SELECT * FROM (
+			SELECT @ROWNUM:=@ROWNUM-1 AS rowNum, n.*
+			FROM (
+				SELECT idx
+					, cate, title, content, openYN
+					, DATE_FORMAT(start_date, '%Y-%m-%d %H:%i') start_date
+					, reg_dttm
+				FROM ${contents}
+				WHERE openYN = 'Y' AND delYN = 'N' AND start_date <![CDATA[<=]]> NOW()
+			) n, (
+				SELECT @ROWNUM:=(
+					SELECT COUNT(idx) + 1 FROM ${contents}
+					WHERE openYN = 'Y' AND delYN = 'N' AND start_date <![CDATA[<=]]> NOW()
+					) AS R
+				) T
+			ORDER BY start_date DESC, reg_dttm DESC
+		) n
+		WHERE rowNum <![CDATA[<]]> #{rowNum}
+		ORDER BY rowNum DESC
+		LIMIT 1
+	</select>
+	
+	<select id="getBoardNext" parameterType="com.sk.cloudz.service.BoardSearchVO" resultType="map">
+		SELECT * FROM (
+			SELECT @ROWNUM:=@ROWNUM-1 AS rowNum, n.*
+			FROM (
+				SELECT idx
+					, cate, title, content, openYN
+					, DATE_FORMAT(start_date, '%Y-%m-%d %H:%i') start_date
+					, reg_dttm
+				FROM ${contents}
+				WHERE openYN = 'Y' AND delYN = 'N' AND start_date <![CDATA[<=]]> NOW()
+			) n, (
+				SELECT @ROWNUM:=(
+					SELECT COUNT(idx) + 1 FROM ${contents}
+					WHERE openYN = 'Y' AND delYN = 'N' AND start_date <![CDATA[<=]]> NOW()
+					) AS R
+				) T
+			ORDER BY start_date DESC, reg_dttm DESC
+		) n
+		WHERE rowNum <![CDATA[>]]> #{rowNum}
+		ORDER BY rowNum ASC
+		LIMIT 1
+	</select>
+	
+</mapper>

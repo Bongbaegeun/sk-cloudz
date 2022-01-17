@@ -11,6 +11,7 @@ import org.apache.ibatis.exceptions.PersistenceException;
 import org.springframework.stereotype.Service;
 
 import com.sk.cloudz.service.KeywordVO;
+import com.sk.cloudz.service.PopupListVO;
 import com.sk.cloudz.service.SearchCategoryVO;
 import com.sk.cloudz.service.SearchService;
 import com.sk.cloudz.service.SearchVO;
@@ -76,4 +77,18 @@ public class SearchServiceImpl implements SearchService{
 		}
 		return getKeyword;
 	}
+	
+	@Override
+	public List<PopupListVO> getPopupList(){
+		
+		List<PopupListVO> getPopupList = null;
+		try {
+			getPopupList = searchMapper.getPopupList();
+		} catch (PersistenceException e) {
+			//System.out.println("impl error : " + e);
+			LOG.info("PersistenceException====>",e);
+		}
+		return getPopupList;
+	}
+	
 }

@@ -202,6 +202,13 @@
   line-height: 32px;
   margin-top: 40px;
 }
+.main-visuals .item .visual-content .inner-wrap img {
+  display: inline-block;
+  width: auto;
+}
+.main-visuals .item .visual-content .inner-wrap img + img {
+  margin-left: -26px;
+}
 .main-visuals .item .visual-img {
   position: relative;
   z-index: 1;

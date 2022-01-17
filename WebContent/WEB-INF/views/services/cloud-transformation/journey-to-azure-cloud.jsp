@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
-<!-- build: 20211001-1430 -->
+<!-- build: 20220117-1347 -->
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -35,7 +35,7 @@
         </a>
       </li>
       <li class="nav-item" data-name="services" data-sid="2">
-        <a href="/services/cloud-transformation/sk-aws-landing-zone">
+        <a href="/services/cloud-transformation">
           <span class="label">서비스</span>
         </a>
       </li>
@@ -78,7 +78,10 @@
             <ul class="sub-list d1 has-items">
               <li class="nav-item n0" data-name="cloud-transformation" data-sid="2.1">
                 <div class="title">
-                  <span class="text">Cloud Transformation</span>
+                  <div data-init-page="/services/cloud-transformation/sk-aws-landing-zone.html">
+                    <a href="/services/cloud-transformation"> <span class="text">Cloud Transformation</span>
+                    </a>
+                  </div>
                 </div>
                 <ul class="sub-list d2 flex-col">
                   <li class="nav-item" data-name="sk-aws-landing-zone" data-sid="2.1.1">
@@ -107,7 +110,10 @@
             <ul class="sub-list d1 has-items">
               <li class="nav-item n1" data-name="app-modernization" data-sid="2.2">
                 <div class="title">
-                  <span class="text">Application Modernization</span>
+                  <div data-init-page="/services/app-modernization/app-modernization-factory.html">
+                    <a href="/services/app-modernization"> <span class="text">Application Modernization</span>
+                    </a>
+                  </div>
                 </div>
                 <ul class="sub-list d2 flex-col">
                   <li class="nav-item" data-name="app-modernization-factory" data-sid="2.2.1">
@@ -148,7 +154,10 @@
             <ul class="sub-list d1 has-items">
               <li class="nav-item n2" data-name="ops-modernization" data-sid="2.3">
                 <div class="title">
-                  <span class="text">Ops Modernization</span>
+                  <div data-init-page="/services/ops-modernization/cowork-notification.html">
+                    <a href="/services/ops-modernization"> <span class="text">Ops Modernization</span>
+                    </a>
+                  </div>
                 </div>
                 <ul class="sub-list d2 flex-col">
                   <li class="nav-item" data-name="mcmp" data-sid="2.3.1">
@@ -201,6 +210,11 @@
                       <span class="label">Azure Virtual Desktop</span>
                     </a>
                   </li>
+                  <li class="nav-item" data-name="private-cloud-daas" data-sid="2.3.11">
+                    <a href="/services/ops-modernization/private-cloud-daas">
+                      <span class="label">Private Cloud DaaS</span>
+                    </a>
+                  </li>
                 </ul>
               </li>
             </ul>
@@ -209,7 +223,10 @@
             <ul class="sub-list d1 has-items">
               <li class="nav-item n3" data-name="cloud-operation" data-sid="2.4">
                 <div class="title">
-                  <span class="text">Cloud Operation</span>
+                  <div data-init-page="/services/cloud-operation/iaas-msp.html">
+                    <a href="/services/cloud-operation"> <span class="text">Cloud Operation</span>
+                    </a>
+                  </div>
                 </div>
                 <ul class="sub-list d2 flex-col">
                   <li class="nav-item" data-name="iaas-msp" data-sid="2.4.1">
@@ -243,7 +260,10 @@
             <ul class="sub-list d1 has-items">
               <li class="nav-item n4" data-name="cloud-datacenter" data-sid="2.5">
                 <div class="title">
-                  <span class="text">Cloud Data Center</span>
+                  <div data-init-page="/services/cloud-datacenter/hybrid-zone-service.html">
+                    <a href="/services/cloud-datacenter"> <span class="text">Cloud Data Center</span>
+                    </a>
+                  </div>
                 </div>
                 <ul class="sub-list d2 flex-col">
                   <li class="nav-item" data-name="hybrid-zone-service" data-sid="2.5.1">
@@ -272,14 +292,22 @@
           </div>
           <div class="list-wrap d-flex">
             <ul class="sub-list d1 has-items">
-              <li class="nav-item n5" data-name="cloud-partners" data-sid="2.6">
+              <li class="nav-item n5" data-name="multi-cloud-partners" data-sid="2.6">
                 <div class="title">
-                  <span class="text">Cloud Partners</span>
+                  <div data-init-page="/services/multi-cloud-partners">
+                    <a href="/services/multi-cloud-partners"> <span class="text">Multi-Cloud Partners</span>
+                    </a>
+                  </div>
                 </div>
                 <ul class="sub-list d2 flex-col">
-                  <li class="nav-item" data-name="multi-cloud-partners" data-sid="2.6.1">
-                    <a href="/services/cloud-partners/multi-cloud-partners">
-                      <span class="label">Multi-Cloud Partners</span>
+                  <li class="nav-item" data-name="aws" data-sid="2.6.1">
+                    <a href="/services/multi-cloud-partners/aws">
+                      <span class="label">AWS</span>
+                    </a>
+                  </li>
+                  <li class="nav-item" data-name="azure" data-sid="2.6.2">
+                    <a href="/services/multi-cloud-partners/azure">
+                      <span class="label">Azure</span>
                     </a>
                   </li>
                 </ul>
@@ -502,7 +530,7 @@
           <div class="section-body">
             <div class="content-box">
               <ul class="grid">
-                <li>
+                <li class="full-width">
                   <div class="content-item">
                     <div class="content-item-header">
                       <h4 class="label">Cloud 도입 전략 및 로드맵 수립</h4>
@@ -589,6 +617,7 @@
                         <li>12개 Question 기반 정성적 평가를 통해 Cloud로 전환 가능한 Workload 선정 및 전환 로드맵 수립</li>
                         <li>1 Day Workshop 포함하여 약 2주 내외 기간 소요</li>
                       </ul>
+                      <img src="/assets/imgs/sub/u0201/v04/05.png" alt="" class="mg-top-5x">
                     </div>
                   </div>
                 </li>
@@ -609,6 +638,7 @@
                         <li>Cloud 전환을 신속하고 체계적으로 실행하기 위해 활용하는 도구</li>
                         <li>방법론, 사례, Checklist, Tips로 구성</li>
                       </ul>
+                      <img src="/assets/imgs/sub/u0201/v04/06.png" alt="" class="mg-top-5x">
                     </div>
                   </div>
                 </li>
@@ -684,6 +714,21 @@
       <ul class="navbar">
         <li class="nav-item">
           <span>SK주식회사</span>
+        </li>
+        <li class="nav-item">
+          <a href="https://mcmp.cloudz.co.kr/cloudzTerms" target="_blank">
+            <span>Cloud Z 이용약관</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="https://mcmp.cloudz.co.kr/serviceTerms" target="_blank">
+            <span>Cloud Z 서비스 이용 약관</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="https://mcmp.cloudz.co.kr/privacy" target="_blank">
+            <span class="text-red">개인정보처리방침</span>
+          </a>
         </li>
         <li class="nav-item ml-auto">
           <div class="btn-group">

@@ -2,6 +2,7 @@
   "data": [
     {
       "id": 1,
+      "category": "client",
       "name": "SK네트웍스",
       "desc": "SK네트웍스는 SK계열의 종합상사로 통신 단말기 관련 정보통신 사업, 자동차 경정비, 화학소재/철강/자동차의 글로벌 트레이딩, 호텔&amp;리조트, 자동차/가전 렌털 등의 서비스를 기반으로 고객 중심의 가치를 찾아 다양한 영역으로 사업을 확장해 나가는 기업입니다.",
       "tags": [
@@ -64,6 +65,7 @@
     },
     {
       "id": 2,
+      "category": "client",
       "name": "SK실트론",
       "desc": "SK실트론은 일본, 독일 등 소수기업만이 제조 기술을 보유한 실리콘 웨이퍼를 제조하는 기업으로 국내 기업으로는 유일하게 글로벌 반도체 기업에 제품을 공급하고 있습니다.",
       "tags": [
@@ -103,6 +105,7 @@
     },
     {
       "id": 3,
+      "category": "client",
       "name": "삼양홀딩스",
       "desc": "삼양그룹은 2011년 11월 지주회사 체제 출범 이후 핵심 성장축인 화학, 식품, 의약바이오, 패키징 사업의 고도화 및 스페셜티화로 글로벌 경쟁력을 강화하기 위해 변화와 혁신을 추구하는 기업입니다.",
       "tags": [
@@ -163,6 +166,7 @@
     },
     {
       "id": 4,
+      "category": "client",
       "name": "아주대학교병원(의료정보학과)",
       "desc": "1994년에 3월에 오픈한 상급종합병원으로 1995년에 3차진료기관, 2000년 경기 남부권역의 응급의료센터로 지정되었습니다. 개원 이후 다양한 국책사업에 참여하고 국내 최초로 병원 중심의 산·학·연·병 융합 연구를 주도하면서 첨단기술을 선진적으로 도입하고 있습니다.",
       "tags": [
@@ -203,6 +207,7 @@
     },
     {
       "id": 5,
+      "category": "client",
       "name": "워커힐 NGS",
       "desc": "1963년 개관 이후 호텔, 숙박, 관광 산업 분야 비즈니스를 중심으로 사업영역을 확대하였으며 현재는 비스타워커힐, 그랜드워커힐, 다락휴, 포도호텔 등의 브랜드로 호텔리조트 부문 국가브랜드 대상을 5년 연속 수상하였습니다.",
       "tags": [
@@ -241,6 +246,7 @@
     },
     {
       "id": 6,
+      "category": "client",
       "name": "FSK L&amp;S",
       "desc": "FSK L&amp;S는 SK그룹과 Hon Hai그룹(Foxconn)의 공동투자로 설립되었으며 사물인터넷, 클라우드, 빅데이터, 인공지능 등의 ICT 역량과 다양한 Industry에서 얻은 물류 역량의 융합을 통해 고객에게 스마트 물류 서비스를 제공하는 기업입니다.",
       "tags": [
@@ -256,7 +262,7 @@
         { "label": "Microservice", "main": false }
       ],
       "banner": "img-u03-02-v06-02.png",
-      "bizOverview": "기존의 노후화 된 서버에 운영하였던 융합 물류 시스템을 Azure로 Migration하여, 물류량에 따라 Cloud 사용량을 탄력적으로 운영하여 비용을 절감하게 되었습니다.",
+      "bizOverview": "기존의 노후화 된 서버에 운영하였던 융합 물류 시스템을 AWS로 Migration하여, 물류량에 따라 Cloud 사용량을 탄력적으로 운영하여 비용을 절감하게 되었습니다.",
       "introBg": [
         "기존 서비스의 EOS에 따른 Common, Master 서비스를 단기간 내 안정적인 서비스로 이관이 필요함",
         "PaaS를 이용하면서 안정적인 운영이 필요함"
@@ -276,7 +282,7 @@
         "position": "",
         "youtube": "",
         "body": "",
-        "header": "Cloud Z CP on AWS를 통하면 클라우드 종류에 관계 없이 <br/>저희가 원하는 클라우드 컨테이너 서비스를 손쉽게 구축하고 통합 관리 할 수 있습니다.",
+        "header": "Cloud Modernization Platform on AWS를 통하면 클라우드 종류에 관계 없이 <br/>저희가 원하는 클라우드 컨테이너 서비스를 손쉽게 구축하고 통합 관리 할 수 있습니다.",
         "qna": [
           {
             "q": "'<strong>FSK L&amp;S</strong>'은 어떤 회사인가요?",
@@ -288,7 +294,7 @@
           },
           {
             "q": "FSK에서 해당 Migration을 <strong>추진하게 된 배경</strong>과 해결하고자 했던 Pain Point는 무엇이었나요? 해당 <strong>Pain Point</strong>를 해결하기 위해 어떤 서비스를 제안 받으셨나요?",
-            "a": "기존에 사용하고 있는 서비스가 EOS 됨에 따라 Common/Master 서비스를 기한 내 안정적으로 AWS로 이관이 필요하였으며, 기존 서비스와 같이 PaaS 를 이용하면서 안정적인 운영이 필요하여 프로젝트를 추진하게 되었습니다. SK C&amp;C로 부터 ZCP on AWS 로 Migration을 제안 받았습니다."
+            "a": "기존에 사용하고 있는 서비스가 EOS 됨에 따라 Common/Master 서비스를 기한 내 안정적으로 AWS로 이관이 필요하였으며, 기존 서비스와 같이 PaaS 를 이용하면서 안정적인 운영이 필요하여 프로젝트를 추진하게 되었습니다. SK C&amp;C로 부터 Modernization Platform on AWS 로 Migration을 제안 받았습니다."
           },
           {
             "q": "어떤<strong> AWS Service</strong>를 적용하셨나요?",
@@ -296,22 +302,23 @@
           },
           {
             "q": "'KEROL(케롤)'의 클라우드 컨테이너 서비스 <strong>구축 과정, 결과 </strong>및 <strong>기대효과</strong>는 어땠나요?",
-            "a": "SK㈜ C&amp;C는 SK텔레콤이 주사업자로 나선 이번 사업에서 'Cloud Z CP(Container Platform) on AWS'를 활용해 'KEROL(케롤)'의 클라우드 컨테이너 서비스 구축을 개발 돌입 후 2개월만에 완료했고, AWS와 전략적 파트너십을 바탕으로 안정적이고 경제적인 사업 수행을 뒷받침 했습니다. 기존에는 AWS 쿠버네티스를 활용해 개발·운영을 하려면 자체 기술 역량을 기반으로 여러 서비스들을 직접 구성해야 했습니다.  클라우드 컨테이너 서비스 구축으로 이제는 통합 장애 관리 환경도 구현하고,웹과 모바일을 이용해 대시보드 형태로 한 화면에서 KEROL(케롤)의 클라우드 서비스를 모니터링합니다. 장애 발생 시, 사람의 개입 없이 운영 담당자 및 분야별 기술전문인력들에게 전화, SNS, 이메일로 상황을 전파 가능하며, 장애 발생 후에도 고객과의 SLA기준에 따라 ▲장애원인 ▲조치내역 ▲재발방지 내용들이 포함된 RCA(Root Cause Analysis, 근본원인분석) 리포트를 제공할 수 있습니다.\r\n 또한 시스템 설정을 잘못 했을 경우도 자동으로 인지해 알람이 울리며, 갑작스런 물류 수요 증가에 따른 시스템 트래픽 폭증 문제도 해결했습니다. 컨테이너화된 구성 요소별 상태를 파악해 트래픽 분산 및 자동 복구 기능을 제공하고 서비스 수요에 따라 규모를 자동으로 늘리고 줄이는 오토스케일링 기능도 구현했습니다."
+            "a": "SK㈜ C&amp;C는 SK텔레콤이 주사업자로 나선 이번 사업에서 'Cloud Modernization Platform(Container Platform) on AWS'를 활용해 'KEROL(케롤)'의 클라우드 컨테이너 서비스 구축을 개발 돌입 후 2개월만에 완료했고, AWS와 전략적 파트너십을 바탕으로 안정적이고 경제적인 사업 수행을 뒷받침 했습니다. 기존에는 AWS 쿠버네티스를 활용해 개발·운영을 하려면 자체 기술 역량을 기반으로 여러 서비스들을 직접 구성해야 했습니다.  클라우드 컨테이너 서비스 구축으로 이제는 통합 장애 관리 환경도 구현하고,웹과 모바일을 이용해 대시보드 형태로 한 화면에서 KEROL(케롤)의 클라우드 서비스를 모니터링합니다. 장애 발생 시, 사람의 개입 없이 운영 담당자 및 분야별 기술전문인력들에게 전화, SNS, 이메일로 상황을 전파 가능하며, 장애 발생 후에도 고객과의 SLA기준에 따라 ▲장애원인 ▲조치내역 ▲재발방지 내용들이 포함된 RCA(Root Cause Analysis, 근본원인분석) 리포트를 제공할 수 있습니다.\r\n 또한 시스템 설정을 잘못 했을 경우도 자동으로 인지해 알람이 울리며, 갑작스런 물류 수요 증가에 따른 시스템 트래픽 폭증 문제도 해결했습니다. 컨테이너화된 구성 요소별 상태를 파악해 트래픽 분산 및 자동 복구 기능을 제공하고 서비스 수요에 따라 규모를 자동으로 늘리고 줄이는 오토스케일링 기능도 구현했습니다."
           },
           {
             "q": "'<strong>FSK L&amp;S</strong>'의 <strong>향후 계획</strong>은 무엇인가요? (사업 및 서비스 등)",
             "a": "'KEROL(케롤)'의 물류 서비스 전반에 걸쳐 AI를 통한 정형·비정형 데이터 분석, IoT, 블록체인을 통한 표준화, 물류 절차 간소화 및 효율화 등 디지털 혁신 기술 및 서비스 접목을 진행할 계획입니다."
           }
         ],
-        "footer": "<div class=\"btn-group\"><a class=\"button pill aqua has-arrow-right-icon\" href=\"https://www.cloudz.co.kr/cloudz/prcenter/detail/187\" target=\"detail_187\">\n<span class=\"label\">[관련기사]  SK㈜ C&amp;C, FSK L&amp;S 물류 시스템 클라우드 컨테이너로 전환</span>\n</a></div>"
+        "footer": "<div class=\"btn-group\"><a class=\"button pill aqua has-arrow-right-icon\" href=\"https://blog.skcc.com/4014\" target=\"_blank\">\n<span class=\"label\">[관련기사]  SK㈜ C&amp;C, FSK L&amp;S 물류 시스템 클라우드 컨테이너로 전환</span>\n</a></div>"
       }
     },
     {
       "id": 7,
-      "name": "ADT캡스",
-      "grpDesc": "보안전문 회사인 ADT 캡스의 다양한 보안관련 시스템에 Public Cloud 및 Operation Modernization을 도입하여 비용 절감, 신속한 장애 대응, 빠른 개선과 업데이트가 가능하게 되었으며 Cloud 기반의 플랫폼을 기반으로 다양한 영역으로 사업을 확대할 수 있는 계기가 되었습니다.",
+      "category": "client",
+      "name": "SK쉴더스",
+      "grpDesc": "보안전문 회사인 SK쉴더스의 다양한 보안관련 시스템에 Public Cloud 및 Operation Modernization을 도입하여 비용 절감, 신속한 장애 대응, 빠른 개선과 업데이트가 가능하게 되었으며 Cloud 기반의 플랫폼을 기반으로 다양한 영역으로 사업을 확대할 수 있는 계기가 되었습니다.",
       "subName": "빌딩 통합 보안관제 서비스",
-      "desc": "ADT캡스는 사이버 보안 및 물리보안 서비스를 전문으로 제공하는 회사로, 보안 컨설팅, 모의해킹 및 취약점 진단, 정보 보안, 무인 경비, 출입보안 등의 종합 서비스를 제공합니다.",
+      "desc": "SK쉴더스는 사이버 보안 및 물리보안 서비스를 전문으로 제공하는 회사로, 보안 컨설팅, 모의해킹 및 취약점 진단, 정보 보안, 무인 경비, 출입보안 등의 종합 서비스를 제공합니다.",
       "tags": [
         { "label": "보안", "main": true },
         { "label": "Azure", "main": true },
@@ -323,7 +330,7 @@
         { "label": "MachineLearning", "main": true }
       ],
       "banner": "img-u03-02-v07-t01-02.png",
-      "bizOverview": "코로나 시대에 건물 내의 혼잡도 관리, 외부인 출입통제 등을 포함한 빌딩의 물리 보안관제를 빠르고 효율적으로 제공하고자 함. 이를 위한 빌딩 통합 보안관제 서비스(*TSO)를 Public Cloud로 빠르게 구축하고, 안정적 운영 위해 Cloud Z Ops Modernization 서비스를 도입했으며, 이 플랫폼 기반으로 사업 영역을 확대해가고 있음. \r\n*TSO(Total Security Outsourcing) : 빌딩(건물) 통합 보안 관제/관리 서비스 플랫폼",
+      "bizOverview": "코로나 시대에 건물 내의 혼잡도 관리, 외부인 출입통제 등을 포함한 빌딩의 물리 보안관제를 빠르고 효율적으로 제공하고자 함. 이를 위한 빌딩 통합 보안관제 서비스(*TSO)를 Public Cloud로 빠르게 구축하고, 안정적 운영 위해 Cloud Z Ops Modernization 서비스를 도입했으며, 이 플랫폼 기반으로 사업 영역을 확대해가고 있음. <br>*TSO(Total Security Outsourcing) : 빌딩(건물) 통합 보안 관제/관리 서비스 플랫폼",
       "introBg": [
         "빌딩 보안관제 통합관리 플랫폼 필요",
         "코로나19 대응 위한 혼잡도 알람(식당, 헬스장), 사회적 거리두기, 외부인 출입, 침입탐지, 설비관리 등 중요",
@@ -356,10 +363,11 @@
     },
     {
       "id": 8,
-      "name": "ADT캡스",
-      "grpDesc": "보안전문 회사인 ADT 캡스의 다양한 보안관련 시스템에 Public Cloud 및 Operation Modernization을 도입하여 비용 절감, 신속한 장애 대응, 빠른 개선과 업데이트가 가능하게 되었으며 Cloud 기반의 플랫폼을 기반으로 다양한 영역으로 사업을 확대할 수 있는 계기가 되었습니다.",
+      "category": "client",
+      "name": "SK쉴더스",
+      "grpDesc": "보안전문 회사인 SK쉴더스의 다양한 보안관련 시스템에 Public Cloud 및 Operation Modernization을 도입하여 비용 절감, 신속한 장애 대응, 빠른 개선과 업데이트가 가능하게 되었으며 Cloud 기반의 플랫폼을 기반으로 다양한 영역으로 사업을 확대할 수 있는 계기가 되었습니다.",
       "subName": "모바일 출입통제 시스템",
-      "desc": "ADT캡스는 사이버 보안 및 물리보안 서비스를 전문으로 제공하는 회사로, 보안 컨설팅, 모의해킹 및 취약점 진단, 정보 보안, 무인 경비, 출입보안 등의 종합 서비스를 제공합니다.",
+      "desc": "SK쉴더스는 사이버 보안 및 물리보안 서비스를 전문으로 제공하는 회사로, 보안 컨설팅, 모의해킹 및 취약점 진단, 정보 보안, 무인 경비, 출입보안 등의 종합 서비스를 제공합니다.",
       "tags": [
         { "label": "보안", "main": true },
         { "label": "Cloud보안", "main": false },
@@ -398,10 +406,11 @@
     },
     {
       "id": 9,
-      "name": "ADT캡스",
-      "grpDesc": "보안전문 회사인 ADT 캡스의 다양한 보안관련 시스템에 Public Cloud 및 Operation Modernization을 도입하여 비용 절감, 신속한 장애 대응, 빠른 개선과 업데이트가 가능하게 되었으며 Cloud 기반의 플랫폼을 기반으로 다양한 영역으로 사업을 확대할 수 있는 계기가 되었습니다.",
+      "category": "client",
+      "name": "SK쉴더스",
+      "grpDesc": "보안전문 회사인 SK쉴더스의 다양한 보안관련 시스템에 Public Cloud 및 Operation Modernization을 도입하여 비용 절감, 신속한 장애 대응, 빠른 개선과 업데이트가 가능하게 되었으며 Cloud 기반의 플랫폼을 기반으로 다양한 영역으로 사업을 확대할 수 있는 계기가 되었습니다.",
       "subName": "포인트캠 서비스 Cloud Migration",
-      "desc": "ADT캡스는 사이버 보안 및 물리보안 서비스를 전문으로 제공하는 회사로, 보안 컨설팅, 모의해킹 및 취약점 진단, 정보 보안, 무인 경비, 출입보안 등의 종합 서비스를 제공합니다.",
+      "desc": "SK쉴더스는 사이버 보안 및 물리보안 서비스를 전문으로 제공하는 회사로, 보안 컨설팅, 모의해킹 및 취약점 진단, 정보 보안, 무인 경비, 출입보안 등의 종합 서비스를 제공합니다.",
       "tags": [
         { "label": "보안", "main": false },
         { "label": "IaaS", "main": false },
@@ -434,6 +443,7 @@
     },
     {
       "id": 10,
+      "category": "client",
       "name": "SK이노베이션",
       "desc": "SK이노베이션은 대표적인 에너지기업에서 배터리 사업을 필두로 하는 Green Energy &amp; Materials Company로 진화하고 있습니다.",
       "tags": [
@@ -460,6 +470,285 @@
       "results": [
         "장비 관리 부담 해소 및 안정성 확보",
         "평상시에는 Data복제 기능만 사용하고 복구 사유 발생 시에만 서버 및 자원 추가하여 TCO 절감"
+      ],
+      "interview": {
+        "name": "",
+        "position": "",
+        "youtube": "",
+        "body": "",
+        "header": "",
+        "qna": [],
+        "footer": ""
+      }
+    },
+    {
+      "id": 11,
+      "category": "industry",
+      "name": "A통신사 구독형 플랫폼 구축사업",
+      "desc": "B2C 및 B2B 외부 채널의 확대를 위한 Modernization 기반 Re-Architecturing 프로젝트로, 고객 요구에 대한 빠른 대응 체계를 마련하기 위해 추진 된 사례 입니다. Backend Legacy 시스템의 현대화를 위해 API 기반의 효율적인 관리 체계를 제공 했습니다.",
+      "tags": [
+        { "label": "AWS", "main": true },
+        { "label": "API", "main": true },
+        { "label": "APIM", "main": true },
+        { "label": "Container", "main": true },
+        { "label": "PaaS", "main": true }
+      ],
+      "banner": "img-u03-02-v09-02.png",
+      "bizOverview": "B2C 및 B2B 외부 채널의 확대를 위한 Modernization 기반 <span class=\"nowrap\">Re-Architecturing</span> 프로젝트로, 고객 요구에 대한 빠른 대응 체계를 마련하기 위해 추진 된 사례 입니다. Backend Legacy 시스템의 현대화를 위해 API 기반의 효율적인 관리 체계를 제공 했습니다.",
+      "introBg": [
+        "고객사 상품별 유통채널을 확대 하기 위한 API 기반의 시스템 개선과 B2B간 데이터 연동을 위한 커뮤니케이션 Cost 최소화를 위한 API 관리 체계 필요",
+        "채널 확대와 Marketing Platform으로 변경 시 예측하기 어려운 시스템적인 대응과 운영의 안정성 및 고객 요구에 따른 실시간 배포 체계의 확보 필요"
+      ],
+      "useCase": [
+        "Cloud Z APIM 도입으로 API 변화 및 정책을 관리하고 B2B간 API 상호 테스트 및 검토 기능을 제공하여, API 협력을 위한 커뮤니케이션 Cost를 최소화 하는 체계를 마련",
+        "API Version 별 무중단 배포 기능으로 시장 변화에 빠르게 대응 가능한 API 기반 업무 체계를 확보",
+        "Cloud Modernization Platform 기반의 Container 관리 기술의 도입으로 신속한 개발 착수와 운영을 위한 모니터링 로깅 체계를 확보"
+      ],
+      "results": [
+        "Container 기반의 시스템 구축을 통해 사용자 증가와 예측이 어려운 Event에 대응할 수 있는 안정적인 시스템을 구축하고, APIM을 통해 효율적인 API 관리 체계를 제공함"
+      ],
+      "interview": {
+        "name": "",
+        "position": "",
+        "youtube": "",
+        "body": "",
+        "header": "",
+        "qna": [],
+        "footer": ""
+      }
+    },
+    {
+      "id": 12,
+      "category": "industry",
+      "name": "B물류/서비스사 Cloud 비용 최적화",
+      "desc": "Cloud 운영관리 시스템(MCMP)을 통해 Cloud 비용과 자원의 비효율성 분석 및 미사용 자원을 식별하여 불필요 자원을 삭제하고, 적정자원의 Workload 분석을 통해 자원 최적화 및 RI 적용으로 고객에게 Cloud 비용 최적화 서비스를 수행 했습니다.",
+      "tags": [
+        { "label": "물류", "main": true },
+        { "label": "서비스", "main": true },
+        { "label": "AWS", "main": true },
+        { "label": "Azure", "main": true },
+        { "label": "최적화", "main": true },
+        { "label": "RI", "main": true },
+        { "label": "Scheduling", "main": true },
+        { "label": "Scaling", "main": true }
+      ],
+      "banner": "img-u03-02-v10-02.png",
+      "bizOverview": "Cloud 운영관리 시스템(MCMP)을 통해 Cloud 비용과 자원의 비효율성 분석 및 미사용 자원을 식별하여 불필요 자원을 삭제하고, 적정자원의 Workload 분석을 통해 자원 최적화 및 RI 적용으로 고객에게 Cloud 비용 최적화 서비스를 수행 했습니다.",
+      "introBg": [
+        "비즈니스 Agility 확보를 위해 구축된 Cloud 자원의 Spec. 적정성 검토 필요",
+        "Cloud 특성을 살린 유연한 자원 Scaling 적용 필요",
+        "Cloud 비용 절감을 위한 최적화 전략 적용 검토 필요"
+      ],
+      "useCase": [
+        "Cloud 계정에 등록된 자원의 상태 및 자원 연결상태를 분석하여 미연결상태의 자원 식별 및 제거",
+        "자원 사용량 패턴(Seasonal, Daily, Event 등) 분석을 통해 적정 Workload에 적합한 자원 타입 및 사이즈 변경",
+        "Biz. 특성에 따른 자원 사용 주기를 분석하여 자원의 Scheduling(On/Off) 적용으로 비용 최적화 수행 ",
+        "Right Sizing을 통한 RI 적용으로 Cloud 비용 절감액 산출 및 적용",
+        "주기적인 최적화 수행/추천 활동에 대해 고객사 보고 수행"
+      ],
+      "results": [
+        "총 29개 서비스/226개 리소스 대상으로 Scheduling, Right Sizing, RI 적용을 통한 Cloud 자원 최적화 수행",
+        "최적화 전 Cloud 사용료 대비 10% 절감"
+      ],
+      "interview": {
+        "name": "",
+        "position": "",
+        "youtube": "",
+        "body": "",
+        "header": "",
+        "qna": [],
+        "footer": ""
+      }
+    },
+    {
+      "id": 13,
+      "category": "industry",
+      "name": "A가스사 APM 도입을 통한 Modernized Ops 구축",
+      "desc": "On-Prem./Hybrid Cloud 환경에서 APM 전면 도입을 통해 Application부터 인프라까지 장애 원인 분석이 가능한 Hybrid 모니터링 체계를 구축했습니다.",
+      "grpDesc": "On-Prem./Hybrid Cloud 환경에서 APM 전면 도입을 통해 Application부터 인프라까지 장애 원인 분석이 가능한 Hybrid 모니터링 체계를 구축했습니다. 모니터링, Incident 자동 감지 그리고 적시 상황 관리가 가능한 전파 환경을 모두 자동화한 Modernized Ops의 구축 사례입니다.",
+      "tags": [
+        { "label": "APM", "main": true },
+        { "label": "Modernized_Ops", "main": true },
+        { "label": "Hybrid_Monitoring", "main": true },
+        { "label": "Cowork_Notification", "main": true },
+        { "label": "Hybrid_Incident_Management", "main": true }
+      ],
+      "banner": "img-u03-02-v11-02.png",
+      "bizOverview": "On-Prem./Hybrid Cloud 환경에서 APM* 전면 도입을 통해 Application부터 인프라까지 장애 원인 분석이 가능한 Hybrid 모니터링 체계를 구축했습니다. 모니터링, Incident 자동 감지 그리고 적시 상황 관리가 가능한 전파 환경을 모두 자동화한 Modernized Ops의 구축 사례입니다. <br>* APM : Application Performance Management",
+      "introBg": [
+        "On-Prem./Hybrid Cloud 환경 모두를 지원하는 자동화된 전사 표준 모니터링 환경 필요",
+        "다양한 업무와 인프라 간 실시간 연계분석을 통한 빠른 조치 환경 필요",
+        "Cloud 전환/운영을 위한 Right Sizing 참고 지표 필요"
+      ],
+      "useCase": [
+        "On-Prem./Hybrid Cloud환경에서 Infra, Application, Log, Network 등을 24X7 자동화된 실시간 모니터링 체계 마련",
+        "APM 전면 도입을 통해 Application Trace, Infrastructure Metric, Sys/Appl Log간 실시간 연계 분석으로 신속한 문제 해결 환경 구축",
+        "Cowork & Notification 플랫폼을 통해 적시 상황 관리를 위한 협업/전파 환경 마련",
+        "Hybrid Cloud의 사용량 모니터링 분석을 통한 Right Sizing 참고 환경 구성"
+      ],
+      "results": [
+        "Infra Only 모니터링 도구와 수동 장애 전파 한계를 극복하고, 자동화된 전사 표준 모니터링과 장애 전파 환경을 구축한 Modernized Ops 구축"
+      ],
+      "interview": {
+        "name": "",
+        "position": "",
+        "youtube": "",
+        "body": "",
+        "header": "",
+        "qna": [],
+        "footer": ""
+      }
+    },
+    {
+      "id": 14,
+      "category": "industry",
+      "name": "B제조사 VDI 구축을 통한 스마트워크 확산",
+      "desc": "Public Cloud와 On-premise의 장점을 합친 Private Cloud DaaS를 도입하여 VDI 구성 최적화를 통한 성능 개선 및 안정성을 강화하여 고객의 만족도를 향상 시켰습니다.",
+      "tags": [
+        { "label": "VDI", "main": true },
+        { "label": "DaaS", "main": true },
+        { "label": "Private_Cloud", "main": true },
+        { "label": "Workspace", "main": true }
+      ],
+      "banner": "img-u03-02-v12-02.png",
+      "bizOverview": "스마트워크 시대에 일하는 방식 혁신을 위해 VDI 도입을 하였으며, 협업 툴 및 각종 오피스 프로그램의 요구 사항이 높아져 VDI의 성능 개선이 중요 고려 사항이 되었습니다. 이에 Public Cloud와 On-premise의 장점을 합쳐 VDI 구성에 최적화한 Private Cloud DaaS를 도입하여 성능 개선과 함께 안정성도 대폭 향상시켜 사용자 만족도를 높였습니다.",
+      "introBg": [
+        "일하는 방식의 혁신 도구로 VDI를 도입한 이후, 사용자별 성능 향상과 적용 범위 확산을 위한 증설 검토",
+        "다수의 사용자가 활용하는 VDI 의 특성상 검증된 호환성과 최적의 성능 제공이 필요",
+        "각 부서별 사용량 확인 및 입사/퇴사자 현황에 맞춰 유연한 자원 Scaling "
+      ],
+      "useCase": [
+        "VDI 운영 경험에 기반한 아키텍처 제공으로 안정적 서비스 사용 가능",
+        "OS 백업을 기본 제공하여 사용자 데이터 유실의 경우에도 복구 지원 가능",
+        "사용자 유형(일반 사용자, Heavy 사용자, GPU 3D 작업자)에 따라 차등화한 VDI 머신 제공",
+        "사용량 Base에 따른 월 과금 형태로 탄력적인 자원 관리"
+      ],
+      "results": [
+        "기존 VDI 대비 최대 50% 이상 사용자 성능 향상",
+        "안정적인 아키텍처 구성으로 사용량 Base에 따른 월 과금 형태로 CAPEX 절감 및 OPEX 최적화"
+      ],
+      "interview": {
+        "name": "",
+        "position": "",
+        "youtube": "",
+        "body": "",
+        "header": "",
+        "qna": [],
+        "footer": ""
+      }
+    },
+    {
+      "id": 15,
+      "category": "industry",
+      "name": "A제조사 B2C 차량관리 플랫폼 구축",
+      "desc": "B2C 서비스의 신규 고객 증가와 요구사항의 신속한 대응을 위해 Container, Kubernetes 플랫폼과 MSA 기반으로 유연하게 확장 가능한 차량관리 플랫폼을 확보했습니다.",
+      "tags": [
+        { "label": "Azure", "main": true },
+        { "label": "AKS", "main": true },
+        { "label": "DevOps", "main": true },
+        { "label": "MSA", "main": true },
+        { "label": "Container", "main": true },
+        { "label": "PaaS", "main": true }
+      ],
+      "banner": "img-u03-02-v13-02.png",
+      "bizOverview": "고객용 앱 채널을 통해 대고객 세차 서비스를 제공하고, 서비스 관리를 위한 세차원용 앱과 관리자 웹 시스템을 구축한 프로젝트입니다. Container, Kubernetes 플랫폼과 MSA 기반으로 빠른 시장의 변화와 고객 요구에 신속한 대응을 위한 인프라 플랫폼을 확보했습니다.",
+      "introBg": [
+        "B2C 차량관리 플랫폼 기반으로 New Biz를 발굴하여 새로운 수익 창출 및 고객 가치를 혁신 하는 것을 목표",
+        "시스템 운영의 안정성 및 고객 요구에 따른 실시간 배포 체계와 B2C를 위한 서비스의 신속한 확장이 가능한 인프라 플랫폼 필요"
+      ],
+      "useCase": [
+        "Azure AKS/ACR 및 RDS for MariaDB, Cache for Redis 등 Native Service로 구축하여 고가용성과 확장 가능한 플랫폼 확보",
+        "Cloud Modernization Platform 기반의 Container 운영을 위한 모니터링, 로깅 체계 확보"
+      ],
+      "results": [
+        "Azure Native Service 기반으로 인프라의 안정적인 성능을 제공",
+        "Container, Kubernetes 그리고 MSA 기반의 현대화 된 Application으로 B2C 서비스의 신규 고객 증가 및 요구사항에 유연하게 대응 가능"
+      ],
+      "interview": {
+        "name": "",
+        "position": "",
+        "youtube": "",
+        "body": "",
+        "header": "",
+        "qna": [],
+        "footer": ""
+      }
+    },
+    {
+      "id": 16,
+      "category": "industry",
+      "name": "B가전/렌탈사 Hybrid Cloud 구축",
+      "desc": "고객사 업무/지원 시스템의 Digital 추진을 위해 MSA 및 Container 기반 환경과 Hybrid Cloud를 도입하여  보다 신속하고 유연한 시스템을 확보하였고, 운영 효율성을 제고하였습니다.",
+      "tags": [
+        { "label": "Retail", "main": true },
+        { "label": "렌탈", "main": true },
+        { "label": "AWS_EKS", "main": true },
+        { "label": "차세대구축", "main": true },
+        { "label": "차세대VPC", "main": true },
+        { "label": "Hybrid_Cloud", "main": true },
+        { "label": "SAP_on_AWS", "main": true }
+      ],
+      "banner": "img-u03-02-v14-02.png",
+      "bizOverview": "고객사의 Digital Company 추진을 위한 보다 유연하고 민첩한 시스템을 확보 하기 위해 고객/채널/인프라/거버넌스 등 총 24개 시스템에 대해  Hybrid Cloud를 구축했습니다.",
+      "introBg": [
+        "Biz. Agility 지원을 위한 Cloud 기반 IT 인프라 구축",
+        "BM혁신에 유연하고 민첩하게 대응가능한 시스템 구조 변경",
+        "제품/모델/채널 별 손익 관리 등 데이터 기반 분석력 강화",
+        "시스템 통합과 프로세스 연계를 통한 운영 효율성 제고"
+      ],
+      "useCase": [
+        "VPC Sharing, Multi-Account를 활용한 리소스 낭비 최소화 및 서비스별 비용분리",
+        "가용성 보장을 위하 Instance 포함한 주요 자원의 HA(High Availability) 아키텍처, Multi-Availability Zone, Auto-scale 적용",
+        "Application Modernization 최적화를 위해 컨테이너기반으로 구성하고, 세션 관리 및 이력 데이터 적재를 위해 Elastic Cache Redis 및 DynamoDB 활용.",
+        "Data Driven 체계를 중심으로 Redshift , AccuInsight+, BI 솔루션 구축을 통해 고객사 및 외부 Data의 수집/분석/활용체계 구축"
+      ],
+      "results": [
+        "MSA/Container 기반 환경으로 서비스의 유연한 확장성 및 안정성 제공 가능",
+        "인스턴스 타입 별 표준화된 기술사용 및 유연한 자원 확장으로 사업의 변화에 신속하게 대응가능",
+        "Application 배포 체계 표준화를 통한 빌드/배포를 자동화하여 효율적 운영 가능",
+        "ZMON 대시보드를 통해 AWS Cloud 에서 제공하는 metric을 표준화하고 통합 모니터링 활용 가능",
+        "고객사 데이터의 공유/활용을 강화하기 위한 솔루션을 도입하여, 구성원들이 데이터를 사용하기 쉬운 분석 환경을 제공"
+      ],
+      "interview": {
+        "name": "",
+        "position": "",
+        "youtube": "",
+        "body": "",
+        "header": "",
+        "qna": [],
+        "footer": ""
+      }
+    },
+    {
+      "id": 17,
+      "category": "industry",
+      "name": "A유통사 통합계정 관리체계 및 Container PaaS 구축",
+      "grpDesc": "Cloud 다중 계정을 효율적으로 관리 할 수 있는 AWS 통합계정 관리 솔루션을 도입하고, 당사 Container PaaS 솔루션을 적용하여 서비스 변화에 신속 대응 할 수 있는 체계를 성공적으로 구축했습니다.",
+      "desc": "Cloud 다중 계정을 효율적으로 관리 할 수 있는 AWS 통합계정 관리 솔루션을 도입하고, 당사 Container PaaS 솔루션을 적용하여 서비스 변화에 신속 대응 할 수 있는 체계를 성공적으로 구축했습니다.",
+      "tags": [
+        { "label": "AWS", "main": true },
+        { "label": "Container", "main": true },
+        { "label": "Kubernetes", "main": true },
+        { "label": "AWS_Landing_Zone", "main": true },
+        { "label": "Modernization_Platform", "main": true }
+      ],
+      "banner": "img-u03-02-v15-02.png",
+      "bizOverview": "Enterprise 기업의 통합 계정 관리체계인 ‘SK AWS Landing Zone’을 도입하여 Cloud Infra를 멀티 계정으로 관리/운영 가능한 기반을 마련하였고, 당사에서 개발한 EKS(Amazon Elastic Kubernetes Service) 기반의 PaaS 솔루션을 성공적으로 적용한 프로젝트입니다.",
+      "introBg": [
+        "Biz 환경 변화를 고려한 프로세스 통합 및 다양한 Front 채널 연계 필요",
+        "서비스 확장성을 고려한 AWS 기반 Cloud 시스템 필요",
+        "비즈니스의 지속적인 혁선과 개발/운영 효율화를 달성할 수 있도록 Container PaaS 환경으로 Appl. 개발, 운영, 실행 환경의 현대화 필요"
+      ],
+      "useCase": [
+        "프로세스 및 관리 시스템 파편화로 운영/확장 비효율화 증대",
+        "Global 확장을 위한 시스템 Reuse 한계",
+        "중복된 시스템으로 인한 사용자 편의성 저하"
+      ],
+      "results": [
+        "상품의 매입에서 판매까지 Biz 프로세스 시스템 통합 및 통합 DB 구축을 통한 데이터 Governance 정립",
+        "멀티 계정 구성을 통하여 Network, Security, Account 등의 관리를 일원화하고, 확장성 있는 Cloud Infra 구성",
+        "Modernization Platform 서비스를 통하여 개발, 빌드, 검증, 배포, 운영 프로세스를 효율화",
+        "DevOps 환경 구축을 통한 서비스 변화에 신속 대응 할 수 있는 체계 구축"
       ],
       "interview": {
         "name": "",

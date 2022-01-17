@@ -85,7 +85,9 @@ function initHomeCardSlider () {
     items: 1,
     nav: false,
     dots: false,
-    loop: true
+    loop: true,
+    mouseDrag: false,
+    touchDrag: false
   })
   $('.card-controls .left-page').on('click', function () {
     if ($(this).hasClass('is-disabled')) return

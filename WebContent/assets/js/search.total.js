@@ -205,6 +205,26 @@ $(function(){
 		$( '.search:button' ).trigger("click");
 	});
 	
+	function XSSCheck(str, level) {
+		if (level == undefined || level == 0) {
+			str = str.replace(/\<|\>|\"|\'|\%|\;|\(|\)|\&|\+|\-|\=/g,"");
+			//str = str.replace(/script|javascript|location.href/g, "");
+		} else if (level != undefined && level == 1) {
+			str = str.replace(/\</g, "&lt;");
+			str = str.replace(/\>/g, "&gt;");
+		}
+		
+		return str;
+	}
+	
+	$(document).on("keyup", "#search_keyword", function(){
+		$("#search_keyword").val(XSSCheck($("#search_keyword").val()));
+	});
+	
+	$(document).on("keyup", "#GnbSearchInput", function(){
+		$("#GnbSearchInput").val(XSSCheck($("#GnbSearchInput").val()));
+	});
+	
 	// 검색
 	//$(document).on("click", "#submitSearch", function(){
 	$( '.search:button' ).eq(0).on("click", function(){
@@ -214,8 +234,12 @@ $(function(){
 			return false;
 		}
 		
+		var searchKeyword = XSSCheck($("#GnbSearchInput").val(), 0);
+		
+		$("#GnbSearchInput").val(searchKeyword);
+		
 		// 검색어 저장
-		saveStorage($("#GnbSearchInput").val());
+		saveStorage(searchKeyword);
 	});
 	
 	$( '.search:button' ).eq(1).on("click", function(){
@@ -225,8 +249,12 @@ $(function(){
 			return false;
 		}
 		
+		var searchKeyword = XSSCheck($("#search_keyword").val(), 0);
+		
+		$("#GnbSearchInput").val(searchKeyword);
+		
 		// 검색어 저장
-		saveStorage($("#search_keyword").val());
+		saveStorage(searchKeyword);
 	});
 	
 	// 검색어 전체 삭제
@@ -270,16 +298,22 @@ $(function(){
 	{
 		var randList = new Array();
 		
-		for(var i=0; i<4; i++)
+		for(var i=0; i<10; i++)
 		{
+			if(randList.length == 4)
+			{
+				break;
+			}
+			
 			var rand = Math.floor(Math.random() * data.length);
 			var isRand = true;
 			
 			for(var r=0; r<randList.length; r++)
 			{
-				if(rand == randList[r])
+				if(data[rand] == randList[r])
 				{
 					isRand = false;
+					break;
 				}
 			}
 			
@@ -385,66 +419,10 @@ $(function(){
 		$( "#search_keyword" ).val("");
 	});
 	
-	function getCKNotice()
-	{
-		var date = new Date();
-		var yy = date.getFullYear();
-		var mm = (date.getMonth()+1);
-		var dd = date.getDate();
-		
-		var today = new Date(yy, parseInt(mm)-1, dd);
-		var chkDay = new Date(2021, parseInt(11)-1, 1);
-		
-		if(today.getTime() >= chkDay.getTime())
-		{
-			return false;
-		}
-		
-		var cookieName = "NOTICE";
-		
-		// 테스트용 쿠키 삭제
-		//$.removeCookie(cookieName);
-		
-		var ck = $.cookie(cookieName);
-		
-		if(!ck)
-		{
-			$(".popup-container").css("display", "block");
-		}
-	}
-	
-	$(document).on("click", ".btn_popup_close", function(){
-		ClosePop();
-	});
-	
-	/*
-	$(document).on("change", "input:checkbox[name=isCheck]", function(){
-		ClosePop();
-	});
-	*/
-	
-	function ClosePop()
-	{
-		var cookieName = "NOTICE";
-		
-		if($("input:checkbox[name=isCheck]").is(":checked") == true)
-		{
-			$.cookie(cookieName, "Y", {expires:7});
-		}
-		
-		$(".popup-container").css("display", "none");
-	}
-	
 	// 검색어 목록 불러오기
 	var bProduction = getGlobalOption('env.production');
 	
 	if (bProduction) {
     	getKeyword();
-
-		// 공지 팝업
-		if(window.location.pathname == "/")
-		{
-			getCKNotice();
-		}  
 	}
 });

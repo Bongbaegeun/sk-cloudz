@@ -15,6 +15,9 @@ import java.util.Properties;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.commons.collections.bag.SynchronizedSortedBag;
+import org.apache.commons.io.FileUtils;
+import org.apache.tomcat.util.codec.binary.Base64;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -29,7 +32,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.sk.cloudz.service.BoardPageVO;
+import com.sk.cloudz.service.BoardSearchVO;
+import com.sk.cloudz.service.BoardService;
+import com.sk.cloudz.service.BoardVO;
 import com.sk.cloudz.service.KeywordVO;
+import com.sk.cloudz.service.PopupListVO;
 import com.sk.cloudz.service.SearchCategoryVO;
 import com.sk.cloudz.service.SearchService;
 import com.sk.cloudz.service.SearchVO;
@@ -60,7 +68,13 @@ public class SearchApiController {
 	@Resource(name="searchService")
 	SearchService searchService;
 
-	
+	@Resource(name="boardService")
+	BoardService boardService;
+
+	private String getRequestParam(HttpServletRequest request, String name){
+		return request.getParameter(name);
+	}
+
 	private Object getJsonFile(String kind) {
 		JSONObject resultJson = null;
 		resultJson = new JSONObject();
@@ -144,11 +158,18 @@ public class SearchApiController {
 			case "privacy":
 				serviceNm = "privacy";
 				break;
+			case "support":
+				serviceNm = "고객지원";
+				break;
 			default:
 				serviceNm = "서비스";
 				break;
 		}
 		return serviceNm;
+	}
+
+	public static byte[] base64Enc(byte[] buffer) {
+	    return Base64.encodeBase64(buffer);
 	}
 
 	@RequestMapping(value = "/getDataPool/{kind}", method = RequestMethod.GET)
@@ -176,7 +197,11 @@ public class SearchApiController {
 		Map<String, Object> jsonMap = new HashMap<String, Object>();
 		ArrayList rtnLists = new ArrayList();
 		
-		//System.out.println("keyword = " + keyword);
+		HashMap<String, Object> serviceData = new HashMap<>();
+		HashMap<String, Object> supportData = new HashMap<>();
+		HashMap<String, Object> partnersData = new HashMap<>();
+		HashMap<String, Object> aboutusData = new HashMap<>();
+		HashMap<String, Object> customerInData = new HashMap<>();
 		
 		ArrayList keywordLists = new ArrayList();
 		
@@ -240,12 +265,29 @@ public class SearchApiController {
 				getData = searchService.getSearch(searchMap);
 				
 				HashMap<String, Object> inData = new HashMap<>();
-
-				service = getData.get(c).getService();
+				
+				service = getData.get(0).getService();
 				inData.put("category", getServiceName(service));
 				inData.put("items", getData);
+
+				if("support".equals(service))
+				{
+					supportData.put("data", inData);
+				}
+				else if("partners".equals(service))
+				{
+					partnersData.put("data", inData);
+				}
+				else if("about-us".equals(service))
+				{
+					aboutusData.put("data", inData);
+				}
+				else
+				{
+					serviceData.put("data", inData);
+				}
 				
-				rtnLists.add(inData);
+				//rtnLists.add(inData);
 			}
 			
 			// 고객 사례 검색
@@ -337,6 +379,14 @@ public class SearchApiController {
 						}
 					}
 					
+					if(!isData)
+					{
+						if(jsonObj.get("name").toString().toLowerCase().indexOf(keyword.toLowerCase()) != -1)
+						{
+							isData = true;
+						}
+					}
+					
 					if(isData)
 					{
 						HashMap<String, Object> items = new HashMap<>();
@@ -359,14 +409,47 @@ public class SearchApiController {
 				
 				if(customerItemsLists.size() > 0)
 				{
-					HashMap<String, Object> customerInData = new HashMap<>();
 					customerInData.put("category", "고객 사례");
 					customerInData.put("items", customerItemsLists);
 					
-					rtnLists.add(customerInData);
+					//rtnLists.add(customerInData);
 				}
 			}
 		}
+		
+//		System.out.println("rtnLists = " + rtnLists);
+//		System.out.println("serviceData = " + serviceData);
+//		System.out.println("supportData = " + supportData);
+//		System.out.println("partnersData = " + partnersData);
+//		System.out.println("aboutusData = " + aboutusData);
+//		System.out.println("customerInData = " + customerInData);
+		
+		if(serviceData.size() > 0)
+		{
+			rtnLists.add(serviceData.get("data"));
+		}
+		
+		if(customerInData.size() > 0)
+		{
+			rtnLists.add(customerInData);
+		}
+		
+		if(supportData.size() > 0)
+		{
+			rtnLists.add(supportData.get("data"));
+		}
+		
+		if(partnersData.size() > 0)
+		{
+			rtnLists.add(partnersData.get("data"));
+		}
+		
+		if(aboutusData.size() > 0)
+		{
+			rtnLists.add(aboutusData.get("data"));
+		}
+		
+		//System.out.println("rtnLists = " + rtnLists);
 		
 		//jsonMap.put("keyword", search_txt);
 		//jsonMap.put("category", getCategory);
@@ -376,6 +459,98 @@ public class SearchApiController {
 		results.put("results", rtnLists);
 		jsonMap.put("data", results);
 		
+		return jsonMap;
+	}
+	
+	@RequestMapping(value = "/getPopup", method = RequestMethod.GET)
+	@ResponseBody
+	public Map<String, Object> getPopup() throws IOException{
+
+		String filePath = sysProps.getProperty("file.home");
+		
+		List<PopupListVO> popupList = searchService.getPopupList();
+		
+		for(int b=0; b<popupList.size(); b++)
+		{
+			try {
+				byte[] filename = null;
+				String out = new String();
+				File file = new File(filePath + "/" + popupList.get(b).getUpload_file());
+				
+				out = new String(base64Enc(FileUtils.readFileToByteArray(file)));
+				//popupList.get(b).setUpload_file(out);
+				//popupList.get(b).setUpload_file(file.toString());
+			}catch (IOException e) {
+		        //System.out.println("Exception position : FileUtil - fileToString(File file)");
+		    }
+			
+		}
+		
+		Map<String, Object> jsonMap = new HashMap<String, Object>();
+		jsonMap.put("result", "success");
+		jsonMap.put("data", popupList);
+		
+		return jsonMap;
+	}
+
+	@RequestMapping("/getData")
+	@ResponseBody
+	public Map<String, Object> getData(HttpServletRequest request) {
+		
+		BoardPageVO boardPageVO = new BoardPageVO();
+		boardPageVO.setPage(getRequestParam(request, "page"));
+		boardPageVO.setRows(Integer.parseInt(getRequestParam(request, "rows")));
+		boardPageVO.setContents(getRequestParam(request, "contents"));
+		
+		int offset = (Integer.parseInt(boardPageVO.getPage()) - 1) * boardPageVO.getRows();
+		boardPageVO.setOffset(offset);
+		
+		int total = boardService.getListTotalCnt(boardPageVO);
+		boardPageVO.setRecords(total);
+		
+		List<BoardVO> getBoardList = boardService.getBoardList(boardPageVO);
+		
+		Map<String, Object> jsonMap = new HashMap<String, Object>();
+		jsonMap.put("total", boardPageVO.getTotal()); //전체 페이지 수
+		jsonMap.put("page", boardPageVO.getPage());  //현재 페이지 번호
+		jsonMap.put("records", boardPageVO.getRecords()); //총 레코드 수
+		jsonMap.put("rows", boardPageVO.getRows()); //목록
+		jsonMap.put("getBoardList", getBoardList);
+		
+		return jsonMap;
+	}
+
+	@RequestMapping("/detail/data/{idx}")
+	@ResponseBody
+	public Map<String, Object> detailData(@PathVariable int idx) throws IOException{
+		Map<String, Object> jsonMap = new HashMap<String, Object>();
+		
+		BoardSearchVO boardSearchVO = new BoardSearchVO();
+		boardSearchVO.setIdx(idx);
+		boardSearchVO.setContents("CZ_notice");
+		
+		Map<String, Object> getData = boardService.getBoardData(boardSearchVO);
+		
+		String rowNum = "";
+		if(!"".equals(getData.get("rowNum")))
+		{
+			rowNum = getData.get("rowNum").toString();
+		}
+		
+		//System.out.println("rowNum = " + rowNum);
+		
+		boardSearchVO.setRowNum(Integer.parseInt(rowNum));
+		boardSearchVO.setStart_date(getData.get("start_date").toString());
+		boardSearchVO.setReg_dttm(getData.get("reg_dttm").toString());
+		
+		Map<String, Object> getPrev = boardService.getBoardPrev(boardSearchVO);
+		Map<String, Object> getNext = boardService.getBoardNext(boardSearchVO);
+		
+		jsonMap.put("result", "success");
+		jsonMap.put("data", getData);
+		jsonMap.put("prev", getPrev);
+		jsonMap.put("next", getNext);
+
 		return jsonMap;
 	}
 }

@@ -38,6 +38,7 @@ function getGlobalObject (paths) {
 
   // 고객사례 고객사 데이터
   var CSTORY_DATA_API_GET_URL = '/assets/data/cstory-data.json'
+  // var CSTORY_INDU_DATA_API_GET_URL = '/assets/data/cstory-industry-data.json'
 
   // 고객사례 태그 데이터
   var CSTORY_TAGS_API_GET_URL = '/assets/data/cstory-tags.json'
@@ -71,6 +72,7 @@ function getGlobalObject (paths) {
   setGlobalOption('api.search', SEARCH_API_GET_URL)
   setGlobalOption('api.customerstory', {
     data: CSTORY_DATA_API_GET_URL,
+    // data2: CSTORY_INDU_DATA_API_GET_URL,
     tags: CSTORY_TAGS_API_GET_URL
   })
   setGlobalOption('certs.data.url', CERTS_DATA_API_GET_URL)
@@ -241,6 +243,33 @@ function familySelectbox () {
   })
 }
 
+// 스크롤바 넓이 구하기
+function getScrollbarWidth() {
+  let inner = document.createElement('p');
+  inner.style.width = "100%";
+  inner.style.height = "200px";
+
+  let outer = document.createElement('div');
+  outer.style.position = "absolute";
+  outer.style.top = "0px";
+  outer.style.left = "0px";
+  outer.style.visibility = "hidden";
+  outer.style.width = "200px";
+  outer.style.height = "150px";
+  outer.style.overflow = "hidden";
+  outer.appendChild (inner);
+
+  document.body.appendChild (outer);
+  let w1 = inner.offsetWidth;
+  outer.style.overflow = 'scroll';
+  let w2 = inner.offsetWidth;
+  if (w1 == w2) w2 = outer.clientWidth;
+
+  document.body.removeChild (outer);
+
+  return (w1 - w2);
+}
+
 $(function () {
   // TODO: remove log message
   console.log('* script: common/custom.js')
@@ -248,5 +277,139 @@ $(function () {
   initRouterElements()
   initGnbSearchLayer()
   familySelectbox()
+
+  /**
+   * 모바일 반응형 클래스 컨트롤
+   */
+  var currentPageWidth = $(window).innerWidth()
+  checkMobileWidth(currentPageWidth)
+  $(window).on('resize', function(){
+    currentPageWidth = $(window).innerWidth()
+    checkMobileWidth(currentPageWidth)
+  })
+  function checkMobileWidth(page_widtdh) {
+    var mobileWidth = 1280
+    if( page_widtdh <= mobileWidth ) {
+      $('body').addClass('mobile');
+      // console.log('mobile screen')
+    } else {
+      $('body').removeClass('mobile');
+      // console.log('pc screen')
+    }
+  }
+
+  // create mobile gnb
+  var mobileGnbDefaultSet = [
+    '<div id="MobileGnb">',
+    '<div class="mobile-header">',
+    '<h1 class="logo"><a href="/">Cloud Z</a></h1>',
+    '<button class="mobile-gnb-controller"><i class="xi-bars"></i></button>',
+    '</div>',
+    '<div class="mobile-menus-container">',
+    '<ul class="mobile-menus"></ul>',
+    '</div>',
+    '</div>'
+  ].join('')
+  $('#Header').after(mobileGnbDefaultSet)
+  var $mobileGnb = $('#MobileGnb')
+  $('#GNB li').each(function(){
+    var gnbDataName = $(this).data('name'),
+        gnbDataId = $(this).data('sid'),
+        $copiedElem = $(this).find('a').clone().addClass('menu-name').attr('data-name', gnbDataName)
+
+    if( gnbDataName != 'brand-logo' ) {
+      if( gnbDataName == 'search' || gnbDataName == 'mcmp' ) {
+        if( gnbDataName == 'search' ) {
+          $mobileGnb.find('.mobile-header .logo').after('<div class="' + gnbDataName + '"></div>')
+          $mobileGnb.find('.mobile-header .' + gnbDataName).append($copiedElem);
+        } else {
+          $mobileGnb.append('<div class="' + gnbDataName + '"></div>')
+          $mobileGnb.find('.' + gnbDataName).append('<p>주문하기, Billing, Cost, 자원관리 서비스는 Cloud Z MCMP를 사용해주시기 바랍니다.</p>').append($copiedElem);
+        }
+      } else {
+        $mobileGnb.find('.mobile-menus').append('<li class="menu-item" data-sid="' + gnbDataId + '"></li>')
+        $mobileGnb.find('.mobile-menus li').last().append($copiedElem)
+      }
+    }
+  })
+  $('#GnbSubMenu .tab-list > li').each(function(){
+    var gnbSubDataId = $(this).data('sid'),
+        $subCopiedElem = $(this).clone().contents()
+    $mobileGnb.find('.mobile-menus [data-sid="' + gnbSubDataId + '"]').append('<div class="sub-menu"></div>')
+    $mobileGnb.find('.mobile-menus [data-sid="' + gnbSubDataId + '"] .sub-menu').append($subCopiedElem)
+  })
+  // var scrollBarWidth = getScrollbarWidth();
+  // $mobileGnb.find('.mobile-menus').css('margin-right', -scrollBarWidth + 'px')
+  $mobileGnb.find('a:not([data-name="mcmp"])').on('click', function(e){
+    if( $(this).hasClass('menu-name') ) {
+      e.preventDefault();
+      if( !$(this).parent().hasClass('active') ) {
+        $mobileGnb.find('.menu-item').removeClass('active')
+        $(this).parent().addClass('active')
+      } else {
+        $(this).parent().removeClass('active')
+      }
+    }
+  })
+
+  $mobileGnb.find('.search a').on('click', function(){
+    if( !$(this).hasClass('active') ) {
+      $(this).addClass('active').find('i').removeAttr('class').addClass('xi-close')
+      $('#Header').addClass('active-poplayer')
+      $('#GnbSearch').addClass('active')
+      $('.mobile-header').addClass('active')
+      $('.mobile-gnb-controller').hide()
+    } else {
+      $(this).removeClass('active').find('i').removeAttr('class').addClass('xi-search')
+      $('#Header').removeClass('active-poplayer')
+      $('#GnbSearch').removeClass('active')
+      $('.mobile-header').removeClass('active')
+      $('.mobile-gnb-controller').show()
+    }
+  })
+
+  $('.mobile-gnb-controller').on('click', function(){
+    if( !$mobileGnb.hasClass('active') ) {
+      $(this).find('i').removeAttr('class').addClass('xi-close')
+      $mobileGnb.addClass('active')
+      $('.mobile-header').addClass('active')
+      $mobileGnb.find('.search a').hide()
+    } else {
+      $(this).find('i').removeAttr('class').addClass('xi-bars')
+      $mobileGnb.removeClass('active')
+      $('.mobile-header').removeClass('active')
+      $mobileGnb.find('.search a').show()
+    }
+  })
+
+  /**
+   * 임시 스크립트
+   */
+  // ***** 로컬용 페이지 링크 확인을 위해 인덱스 페이지 index 슬러그 추가 *****
+  // if( window.location.hostname != 'localhost' ) {
+  //   // gnb, main
+  //   $('#GnbSubMenu [data-init-page], .section.main.service .grid > li').each(function(){
+  //     var currentTempUrl = $(this).find('> a').attr('href')
+  //     var newLocalUrl = currentTempUrl + '/index'
+  //     // console.log('newLocalUrl => ', newLocalUrl)
+  //     $(this).find('> a').attr('href', newLocalUrl)
+  //   })
+  // }
+  // ***** END *****  
+
+  // ***** 리스트에 있는 페이지만 mobile 클래스 추가 *****
+  // var mobileSetPaths = [
+  //       '/', 
+  //       '/services/cloud-transformation/',
+  //       '/services/cloud-transformation/sk-aws-landing-zone.html',
+  //       '/services/cloud-transformation/sk-azure-landing-zone.html',
+  //       '/services/cloud-transformation/journey-to-aws-cloud.html',
+  //       '/services/cloud-transformation/journey-to-azure-cloud.html',
+  //       '/services/ops-modernization/private-cloud-daas.html'
+  //     ],
+  //     currentPath = window.location.pathname;
+  // console.log( 'path => ', window.location.pathname );
+  // if( mobileSetPaths.indexOf(currentPath) > -1 ) $('body').addClass('mobile')
+
 })
 // -------------------- [  DOM 초기화 :: END ] --------------------

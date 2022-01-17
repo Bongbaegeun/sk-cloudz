@@ -30,24 +30,39 @@ $(function () {
   var aNavItemList = []
 
   // ---
-  function resetHelpMsg (sHtml) {
+  function resetHelpMsg(sHtml) {
     if (_.isArray(sHtml)) sHtml = sHtml.join(' ')
     $message.html(sHtml)
   }
-  function getSearchKeyword () {
+
+  function XSSCheck(str, level) {
+    if (level == undefined || level == 0) {
+      str = str.replace(/\<|\>|\"|\'|\%|\;|\(|\)|\&|\+|\-|\=/g,"");
+      //str = str.replace(/script|javascript|location.href/g, "");
+    } else if (level != undefined && level == 1) {
+      str = str.replace(/\</g, "&lt;");
+      str = str.replace(/\>/g, "&gt;");
+    }
+    
+    return str;
+  }
+
+  function getSearchKeyword() {
     var urlParams = getUrlParams()
-    var keyword = urlParams.get('keyword')
+    var keyword = XSSCheck(urlParams.get('keyword'))
     if (keyword == null) return
     return _.trim(keyword)
   }
 
-  function getSearchReqURL (keyword) {
+  function getSearchReqURL(keyword) {
     var url = getGlobalOption('api.search')
-    url += '?' + $.param({ keyword: keyword })
+    url += '?' + $.param({
+      keyword: keyword
+    })
     return url
   }
 
-  function setActiveFormControls (bool) {
+  function setActiveFormControls(bool) {
     if (bool == null) bool = true
     $('#search_form').children().each(function (_ndx, el) {
       // console.log(el)
@@ -56,7 +71,7 @@ $(function () {
     })
   }
 
-  function setContainerStatus (status) {
+  function setContainerStatus(status) {
     switch (status) {
       case LOADING:
         $container.addClass(LOADING)
@@ -80,34 +95,29 @@ $(function () {
   var createResultSection = function (data, aKeywords) {
     var label = _.get(data, 'category', 'undefined')
     var items = _.get(data, 'items', [])
+    var alist = new Array();
+    var blist = new Array();
 
-	var alist = new Array();
-	var blist = new Array();
-	
-	for(var i=0; i<items.length; i++)
-	{
-		var isChk = false
-		
-		for(var b=0; b<aKeywords.length; b++)
-		{
-			if(items[i].content.toLowerCase().indexOf(aKeywords[b].toLowerCase()) != -1)
-			{
-				alist.push(items[i])
-				isChk = true
-				break
-			}
-		}
-		
-		if(!isChk)
-		{
-			blist.push(items[i])
-		}
-	}
-	
-	var newArray = $.merge(alist, blist)
-	
-	items = newArray
-	
+    for (var i = 0; i < items.length; i++) {
+      var isChk = false
+
+      for (var b = 0; b < aKeywords.length; b++) {        
+        if(items[i].content.toLowerCase().indexOf(aKeywords[b].toLowerCase()) != -1) {
+          alist.push(items[i])
+          isChk = true
+          break
+        }
+      }
+
+      if (!isChk) {
+        blist.push(items[i])
+      }
+    }
+
+    var newArray = $.merge(alist, blist)
+
+    items = newArray
+
     if (!items.length) return
     var $items = _.map(items, function (item, ndx) {
       return createResultItem(item, ndx, aKeywords)
@@ -156,13 +166,17 @@ $(function () {
   }
 
   var createResultItem = function (data, _ndx, aKeywords) {
-    var $title = $('<div/>', { class: 'title has-arrow-up-icon rotate-45' })
+    var $title = $('<div/>', {
+        class: 'title has-arrow-up-icon rotate-45'
+      })
       .append($('<p/>', {
         class: 'text',
         html: _.get(data, 'title')
       }))
 
-    var $content = $('<div/>', { class: 'content' })
+    var $content = $('<div/>', {
+        class: 'content'
+      })
       .append($('<p/>', {
         class: 'text',
         html: _.get(data, 'content')
@@ -242,7 +256,7 @@ $(function () {
     aNavItemList.push($li)
   }
 
-  function initContainer (keyword) {
+  function initContainer(keyword) {
     if (keyword == null || !keyword.length) {
       setContainerStatus(NO_RESULT)
       return
@@ -289,12 +303,18 @@ $(function () {
           var label = _.get(sectionData, 'label')
           var count = $items.length
           nTotal += count
-          addNavItem({ label: label, count: count })
+          addNavItem({
+            label: label,
+            count: count
+          })
           return $section
         })
 
         $resultNav.empty().append(_.concat([
-          createNavItem({ label: '전체', count: nTotal })
+          createNavItem({
+            label: '전체',
+            count: nTotal
+          })
         ], aNavItemList))
 
         // console.log($sectionList.length)

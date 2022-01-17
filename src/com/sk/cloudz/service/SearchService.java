@@ -18,4 +18,6 @@ public interface SearchService {
 	List<SearchVO> getSearch(HashMap<String, Object> searchMap);
 	
 	List<KeywordVO> getKeywordAll();
+	
+	List<PopupListVO> getPopupList();
 }

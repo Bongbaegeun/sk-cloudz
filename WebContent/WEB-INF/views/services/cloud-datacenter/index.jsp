@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
-<!-- build: 20211001-1430 -->
+<!-- build: 20220117-1347 -->
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -35,7 +35,7 @@
         </a>
       </li>
       <li class="nav-item" data-name="services" data-sid="2">
-        <a href="/services/cloud-transformation/sk-aws-landing-zone">
+        <a href="/services/cloud-transformation">
           <span class="label">서비스</span>
         </a>
       </li>
@@ -78,7 +78,10 @@
             <ul class="sub-list d1 has-items">
               <li class="nav-item n0" data-name="cloud-transformation" data-sid="2.1">
                 <div class="title">
-                  <span class="text">Cloud Transformation</span>
+                  <div data-init-page="/services/cloud-transformation/sk-aws-landing-zone.html">
+                    <a href="/services/cloud-transformation"> <span class="text">Cloud Transformation</span>
+                    </a>
+                  </div>
                 </div>
                 <ul class="sub-list d2 flex-col">
                   <li class="nav-item" data-name="sk-aws-landing-zone" data-sid="2.1.1">
@@ -107,7 +110,10 @@
             <ul class="sub-list d1 has-items">
               <li class="nav-item n1" data-name="app-modernization" data-sid="2.2">
                 <div class="title">
-                  <span class="text">Application Modernization</span>
+                  <div data-init-page="/services/app-modernization/app-modernization-factory.html">
+                    <a href="/services/app-modernization"> <span class="text">Application Modernization</span>
+                    </a>
+                  </div>
                 </div>
                 <ul class="sub-list d2 flex-col">
                   <li class="nav-item" data-name="app-modernization-factory" data-sid="2.2.1">
@@ -148,7 +154,10 @@
             <ul class="sub-list d1 has-items">
               <li class="nav-item n2" data-name="ops-modernization" data-sid="2.3">
                 <div class="title">
-                  <span class="text">Ops Modernization</span>
+                  <div data-init-page="/services/ops-modernization/cowork-notification.html">
+                    <a href="/services/ops-modernization"> <span class="text">Ops Modernization</span>
+                    </a>
+                  </div>
                 </div>
                 <ul class="sub-list d2 flex-col">
                   <li class="nav-item" data-name="mcmp" data-sid="2.3.1">
@@ -201,6 +210,11 @@
                       <span class="label">Azure Virtual Desktop</span>
                     </a>
                   </li>
+                  <li class="nav-item" data-name="private-cloud-daas" data-sid="2.3.11">
+                    <a href="/services/ops-modernization/private-cloud-daas">
+                      <span class="label">Private Cloud DaaS</span>
+                    </a>
+                  </li>
                 </ul>
               </li>
             </ul>
@@ -209,7 +223,10 @@
             <ul class="sub-list d1 has-items">
               <li class="nav-item n3" data-name="cloud-operation" data-sid="2.4">
                 <div class="title">
-                  <span class="text">Cloud Operation</span>
+                  <div data-init-page="/services/cloud-operation/iaas-msp.html">
+                    <a href="/services/cloud-operation"> <span class="text">Cloud Operation</span>
+                    </a>
+                  </div>
                 </div>
                 <ul class="sub-list d2 flex-col">
                   <li class="nav-item" data-name="iaas-msp" data-sid="2.4.1">
@@ -243,7 +260,10 @@
             <ul class="sub-list d1 has-items">
               <li class="nav-item n4" data-name="cloud-datacenter" data-sid="2.5">
                 <div class="title">
-                  <span class="text">Cloud Data Center</span>
+                  <div data-init-page="/services/cloud-datacenter/hybrid-zone-service.html">
+                    <a href="/services/cloud-datacenter"> <span class="text">Cloud Data Center</span>
+                    </a>
+                  </div>
                 </div>
                 <ul class="sub-list d2 flex-col">
                   <li class="nav-item" data-name="hybrid-zone-service" data-sid="2.5.1">
@@ -272,14 +292,22 @@
           </div>
           <div class="list-wrap d-flex">
             <ul class="sub-list d1 has-items">
-              <li class="nav-item n5" data-name="cloud-partners" data-sid="2.6">
+              <li class="nav-item n5" data-name="multi-cloud-partners" data-sid="2.6">
                 <div class="title">
-                  <span class="text">Cloud Partners</span>
+                  <div data-init-page="/services/multi-cloud-partners">
+                    <a href="/services/multi-cloud-partners"> <span class="text">Multi-Cloud Partners</span>
+                    </a>
+                  </div>
                 </div>
                 <ul class="sub-list d2 flex-col">
-                  <li class="nav-item" data-name="multi-cloud-partners" data-sid="2.6.1">
-                    <a href="/services/cloud-partners/multi-cloud-partners">
-                      <span class="label">Multi-Cloud Partners</span>
+                  <li class="nav-item" data-name="aws" data-sid="2.6.1">
+                    <a href="/services/multi-cloud-partners/aws">
+                      <span class="label">AWS</span>
+                    </a>
+                  </li>
+                  <li class="nav-item" data-name="azure" data-sid="2.6.2">
+                    <a href="/services/multi-cloud-partners/azure">
+                      <span class="label">Azure</span>
                     </a>
                   </li>
                 </ul>
@@ -391,7 +419,149 @@
     </div>
   </header>
   <div class="container">
-    <h1>Cloud Datacenter</h1>
+    <div class="entry-header">
+      <header class="sub-header">
+        <div class="inner-wrap">
+          <h2>Cloud Data Center</h2>
+        </div>
+        <div class="sub-bg">
+          <img src="/assets/imgs/sub/u0205/header.png" alt="">
+        </div>
+      </header>
+    </div>
+    <div class="entry-content">
+      <div class="section">
+        <div class="inner-wrap">
+          <header class="section-header mg-0">
+            <h2 class="title">국내외 Top 수준의 IT Infra 품질로 Multi/Hybrid Cloud에 최적화 된 서비스를 제공합니다.</h2>
+            <p>다년간의 판교 및 대덕 Data Center 운영 경험을 통해 On-Premise 뿐만 아니라 Cloud 환경에서도 최적의 Infra, Network, 회선 등<br>관련 서비스를 제공하고 있으며, ESG 기반의 친환경 Data Center로 진화하고 있습니다.</p>
+          </header>
+        </div>
+      </div>
+      <div class="section">
+        <div class="inner-wrap">
+          <div class="section-body">
+            <ul class="grid col-2 sub-index" data-map="cloud-datacenter">
+              <li>
+                <div class="card guide-card hybrid-zon-service">
+                  <div class="guide-header">
+                    <h3>Hybrid Zone Service</h3>
+                  </div>
+                  <div class="guide-body">
+                    <div class="guide-detail">
+                      <p>SK Data Center의 전용 상면공간 및 Hybrid Cloud 환경 제공</p>
+                      <div class="detail-link">
+                        <a href="__subpage_url" class="button round">자세히보기</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="card guide-card neutral-interconnection">
+                  <div class="guide-header">
+                    <h3>Neutral Interconnection</h3>
+                  </div>
+                  <div class="guide-body">
+                    <div class="guide-detail">
+                      <p>SK 판교/대덕의 망 중립적 데이터센터를 통한 인터넷 서비스 사업자(ISP) 선택 가능</p>
+                      <div class="detail-link">
+                        <a href="__subpage_url" class="button round">자세히보기</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="card guide-card interconnection-plus">
+                  <div class="guide-header">
+                    <h3>Interconnection +</h3>
+                  </div>
+                  <div class="guide-body">
+                    <div class="guide-detail">
+                      <p>VPN, Cloud WAN 가속 등을 통해 보안과 효율성을 높일 수 있는 서비스</p>
+                      <div class="detail-link">
+                        <a href="__subpage_url" class="button round">자세히보기</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="card guide-card cloud-exchange">
+                  <div class="guide-header">
+                    <h3>Cloud eXchange</h3>
+                  </div>
+                  <div class="guide-body">
+                    <div class="guide-detail">
+                      <p>CSP 업체와 Single/Multi 전용선 연동 및 Hybrid Zone과 CSP간 연동 서비스 제공</p>
+                      <div class="detail-link">
+                        <a href="__subpage_url" class="button round">자세히보기</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="inner-wrap">
+          <header class="section-label">
+            <h3 class="label">특장점</h3>
+          </header>
+          <div class="section-body">
+            <div class="key-visual">
+              <div class="key-copy">
+                <h4 class="copy">Cloud Data Center</h4>
+              </div>
+              <div class="key-img">
+                <img src="/assets/imgs/sub/u0205/index/05.png" alt="">
+              </div>
+            </div>
+            <ul class="list big-step grid">
+              <li>
+                <h4 class="label">신뢰성</h4>
+                <div class="content">
+                  <p>국가전략 클러스터인 판교 테크노밸리내 위치한 우수한 입지</p>
+                  <p>154kV 수전, 모듈형 UPS를 통한 중단없는 대용량 전원 공급</p>
+                  <p>공조설비 UPS 적용으로 안정성 강화</p>
+                  <p>주요 설비 이중화 및 예비 설비 확보로 데이터센터 무중단 운영</p>
+                  <p>재해로부터의 안정성 확보(지진 및 폭우 대응)</p>
+                </div>
+              </li>
+              <li>
+                <h4 class="label">효율성</h4>
+                <div class="content">
+                  <p>에너지 절약형 설비 도입</p>
+                  <p>- 고효율 UPS, Free Cooling 냉동기 운용</p>
+                  <p>- 지열, 태양광 등 신재생 에너지 활용</p>
+                  <p>열복도/냉복도 구분 및 컨테인먼트 설치를 통한 공조 효율 최적화</p>
+                  <p>DCIM을 통한 기반설비 및 전산실 환경 실시간 감시, 효율 분석</p>
+                </div>
+              </li>
+              <li>
+                <h4 class="label">확장성</h4>
+                <div class="content">
+                  <p>모듈 단위 전산실 구성으로 수요에 따라 단계적 확장 가능</p>
+                  <p>대형 전산실 단일공간 구성으로 대규모/연속 상면 제공 가능</p>
+                  <p>기반 설비 증설 공간 사전 확보</p>
+                </div>
+              </li>
+              <li>
+                <h4 class="label">연결성</h4>
+                <div class="content">
+                  <p>중립적 회선 연동을 통한 고객 NW Ownership 보장</p>
+                  <p>Cloud eXchange 서비스를 제공하여 다수의 Cloud Platform과손쉽게 연동</p>
+                  <p>신속하고 탄력적인 Bandwidth 사용으로 효율적인 회선 과금</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <footer id="Footer">
     <div class="section customer-support">
@@ -409,6 +579,21 @@
       <ul class="navbar">
         <li class="nav-item">
           <span>SK주식회사</span>
+        </li>
+        <li class="nav-item">
+          <a href="https://mcmp.cloudz.co.kr/cloudzTerms" target="_blank">
+            <span>Cloud Z 이용약관</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="https://mcmp.cloudz.co.kr/serviceTerms" target="_blank">
+            <span>Cloud Z 서비스 이용 약관</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="https://mcmp.cloudz.co.kr/privacy" target="_blank">
+            <span class="text-red">개인정보처리방침</span>
+          </a>
         </li>
         <li class="nav-item ml-auto">
           <div class="btn-group">

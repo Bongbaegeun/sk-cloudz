@@ -3,8 +3,8 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>cloudz-web-r1</groupId>
-	<artifactId>cloudz-web-r1</artifactId>
+	<groupId>cloudz-web-r2</groupId>
+	<artifactId>cloudz-web-r2</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	
@@ -17,6 +17,7 @@
 		<!-- <org.springframework-version>4.3.3.RELEASE</org.springframework-version> -->
 		<egovframework.rte.version>3.5.0</egovframework.rte.version>
 		<jackson.version>2.6.0</jackson.version>
+		<org.slf4j-version>1.7.25</org.slf4j-version>
 	</properties>
 	
 	<repositories>
@@ -64,6 +65,20 @@
 			<groupId>egovframework.rte</groupId>
 			<artifactId>egovframework.rte.psl.dataaccess</artifactId>
 			<version>${egovframework.rte.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.apache.logging.log4j</groupId>
+					<artifactId>log4j-core</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.apache.logging.log4j</groupId>
+					<artifactId>log4j-slf4j-impl</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.slf4j</groupId>
+					<artifactId>log4j-over-slf4j</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>egovframework.rte</groupId>
@@ -84,19 +99,14 @@
 			<groupId>egovframework.rte</groupId>
 			<artifactId>egovframework.rte.fdl.crypto</artifactId>
 			<version>2.0.0</version>
-		</dependency>
-		
-		<dependency>
-			<groupId>com.googlecode.log4jdbc</groupId>
-			<artifactId>log4jdbc</artifactId>
-			<version>1.2</version>
 			<exclusions>
 				<exclusion>
-					<artifactId>slf4j-api</artifactId>
-					<groupId>org.slf4j</groupId>
+					<groupId>log4j</groupId>
+					<artifactId>log4j</artifactId>
 				</exclusion>
 			</exclusions>
 		</dependency>
+		
 		
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -162,7 +172,7 @@
 			<artifactId>httpclient</artifactId>
 			<version>4.5.9</version>
 		</dependency>
-
+		
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-compress</artifactId>
@@ -218,6 +228,36 @@
 			<groupId>org.mariadb.jdbc</groupId>
 			<artifactId>mariadb-java-client</artifactId>
 			<version>1.7.4</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${org.slf4j-version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.2.9</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>ch.qos.logback</groupId>
+		    <artifactId>logback-core</artifactId>
+		    <version>1.2.9</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jcl-over-slf4j</artifactId>
+			<version>${org.slf4j-version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.codehaus.janino</groupId>
+			<artifactId>janino</artifactId>
+			<version>3.0.14</version>
 		</dependency>
 		
 	</dependencies>

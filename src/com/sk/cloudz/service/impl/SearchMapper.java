@@ -10,6 +10,7 @@ import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.exceptions.PersistenceException;
 
 import com.sk.cloudz.service.KeywordVO;
+import com.sk.cloudz.service.PopupListVO;
 import com.sk.cloudz.service.SearchCategoryVO;
 import com.sk.cloudz.service.SearchVO;
 
@@ -25,4 +26,6 @@ public interface SearchMapper {
 	List<KeywordVO> getKeyword(@Param("search_txt") String search_txt) throws PersistenceException;
 	
 	List<KeywordVO> getKeywordAll() throws PersistenceException;
+	
+	List<PopupListVO> getPopupList() throws PersistenceException;
 }

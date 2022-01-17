@@ -174,6 +174,7 @@ body > .container.main > .entry-content .container.list-view > .content-outer > 
 body > .container.main > .entry-content .container.list-view > .content-outer > .article-list > .list-item.bordered > .route-link {
   width: 616px;
   min-height: 400px;
+  height: 100%;
 }
 body > .container.main > .entry-content .container.list-view > .content-outer > .article-list > .list-item.bordered > .route-link::before {
   content: "";
@@ -202,7 +203,8 @@ body > .container.main > .entry-content .container.list-view > .content-outer > 
   font-size: 32px;
   letter-spacing: -0.26px;
   font-weight: bold;
-  height: 120px;
+  min-height: 120px;
+  padding-top: 20px;
   padding-bottom: 20px;
   border-bottom: 1px solid #DDD;
 }
@@ -306,6 +308,36 @@ body > .container.main > .entry-content .container.list-view > .content-outer > 
 
 body > .container.main > .entry-content .container.list-view > .content-outer {
   margin-top: 120px;
+}
+body > .container.main > .entry-content .container.list-view > .content-outer > .header .header-tabs {
+  display: flex;
+}
+body > .container.main > .entry-content .container.list-view > .content-outer > .header .header-tabs li {
+  position: relative;
+}
+body > .container.main > .entry-content .container.list-view > .content-outer > .header .header-tabs li:not(.active) {
+  cursor: pointer;
+}
+body > .container.main > .entry-content .container.list-view > .content-outer > .header .header-tabs li.active {
+  color: #38A1DB;
+}
+body > .container.main > .entry-content .container.list-view > .content-outer > .header .header-tabs li .count::before {
+  content: "(";
+}
+body > .container.main > .entry-content .container.list-view > .content-outer > .header .header-tabs li .count::after {
+  content: ")";
+}
+body > .container.main > .entry-content .container.list-view > .content-outer > .header .header-tabs li + li {
+  margin-left: 1rem;
+  padding-left: 1rem;
+}
+body > .container.main > .entry-content .container.list-view > .content-outer > .header .header-tabs li + li::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 0;
+  bottom: 4px;
+  border-left: 1px solid #555;
 }
 body > .container.main > .entry-content .container.list-view > .content-outer > hr {
   margin: 12px 0 40px;

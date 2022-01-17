@@ -4395,7 +4395,7 @@ require("core-js/modules/es.string.includes.js");
 
 var _searchTags = _interopRequireDefault(require("../search-tags"));
 
-var template = "<div class=\"container list-view\"><!-- 로딩 --><template v-if=\"loading\"><div class=\"landing loading\"><div class=\"icon-wrap pd-0\"><i class=\"xi-spinner-5 xi-spin\"></i></div><div class=\"text-wrap\"><p class=\"text-center\">잠시만 기다려 주세요.</p></div></div></template><template v-else><!-- 태그필터 컨트롤바 --><cs-search-tags :filterLayer=\"filterLayer\"></cs-search-tags><div class=\"content-outer inner-wrap\"><!-- 일반 뷰 --><template v-if=\"(!selectedTagList.length || filterLayer.active)\"><div class=\"header\"><!-- 타이틀 --><div class=\"title-wrap has-text-count\"><span class=\"label\">고객사례</span><span class=\"count\">{{ mainArticleList.length }}</span></div></div><!-- 리스트 --><ul class=\"article-list flex-wrap mg-top-3x\"><li class=\"list-item bordered\" v-for=\"(article, ndx1) in mainArticleList\" :key=\"ndx1\"><router-link class=\"route-link\" :to=\"{ name: 'detail_view', params: { id: article.id }}\"><div class=\"title\"><span class=\"label\" v-html=\"article.name\"></span></div><div class=\"content mg-top-6x\"><ul class=\"tag-list d-flex\"><li v-for=\"(tag, ndx2) in article.tags\" :key=\"ndx2\" v-if=\"tag.main\"><span class=\"tag-label\" v-html=\"tag.label\"></span></li></ul><div class=\"desc mg-top-2x\"><p class=\"text\" v-html=\"article.grpDesc ? article.grpDesc : article.bizOverview\"></p></div></div><div class=\"corner-arrow-icon\"><i class=\"xi-arrow-up\"></i></div></router-link></li></ul></template><!-- 태그검색 결과 뷰 --><template v-else><div class=\"header\"><!-- 태그검색 타이틀 --><div class=\"selected-tags-outer has-text-count d-flex\"><div class=\"flex-item label\">태그:</div><ul class=\"flex-item filter tag-list d-flex\"><li v-for=\"(tag, index) in selectedTagList\" :key=\"index\"><span class=\"tag-label\" v-html=\"tag.label\"></span></li></ul><div class=\"flex-item count\">{{ filteredArticleList.length }}</div><!--<div class=\"flex-item ml-auto btn-controls\"><router-link class=\"cancel button\" :to=\"{ name: 'list_view' }\"><span>필터 초기화</span></router-link></div>--></div></div><hr><!-- 태그검색 결과 리스트 --><template v-if=\"filteredArticleList.length\"><ul class=\"article-list filtered mg-top-4x\"><li class=\"list-item\" v-for=\"(article, ndx1) in filteredArticleList\" :key=\"ndx1\"><router-link class=\"route-link\" :to=\"{ name: 'detail_view', params: { id: article.id }}\"><div class=\"title\"><p class=\"label\"><span v-html=\"article.name\"></span><span v-html=\"' - ' + article.subName\" v-if=\"article.subName\"></span></p></div><div class=\"content\"><ul class=\"tag-list d-flex has-arrow-up-icon rotate-45\"><template v-for=\"(tag, ndx2) in article.tags\" :key=\"ndx2\"><li class=\"tag-item\" :class=\"{ 'active': $tagFilter.has(tag) }\"><span class=\"tag-label\" v-html=\"tag.label\"></span></li></template></ul><div class=\"desc\" v-html=\"mark(article.desc)\"></div></div></router-link></li></ul></template><template v-else><!-- 태그검색 결과 없음 --><div class=\"landing no-result\"><div class=\"icon-wrap pd-0\"><i class=\"xi-info\"></i></div><div class=\"text-wrap\"><p class=\"text-center\">일치하는 검색 결과가 없습니다.</p></div></div></template></template></div></template></div>";
+var template = "<div class=\"container list-view\"><!-- 로딩 --><template v-if=\"loading\"><div class=\"landing loading\"><div class=\"icon-wrap pd-0\"><i class=\"xi-spinner-5 xi-spin\"></i></div><div class=\"text-wrap\"><p class=\"text-center\">잠시만 기다려 주세요.</p></div></div></template><template v-else><!-- 태그필터 컨트롤바 --><cs-search-tags :filterLayer=\"filterLayer\"></cs-search-tags><div class=\"content-outer inner-wrap\"><!-- 일반 뷰 --><template v-if=\"(!selectedTagList.length || filterLayer.active)\"><div class=\"header\"><!-- 타이틀 --><div class=\"title-wrap has-text-count\"><ul class=\"header-tabs\"><li :class=\"{ active: this.selectedCategory === 'client' }\"><a class=\"route-link\" @click=\"selectCategory('client')\"><span class=\"label\">고객사별</span><span class=\"count\">{{ articleData.client.count }}</span></a></li><li :class=\"{ active: this.selectedCategory === 'industry' }\"><a class=\"route-link\" @click=\"selectCategory('industry')\"><span class=\"label\">산업군별</span><span class=\"count\">{{ articleData.industry.count }}</span></a></li></ul></div></div><!-- 리스트 --><ul class=\"article-list flex-wrap mg-top-3x\"><li class=\"list-item bordered\" v-for=\"(article, ndx1) in selectedCatList\" :key=\"ndx1\"><router-link class=\"route-link\" :to=\"{ name: 'detail_view', params: { id: article.id }}\"><div class=\"title\"><span class=\"label\" v-html=\"article.name\"></span></div><div class=\"content mg-top-6x\"><ul class=\"tag-list d-flex\"><li v-for=\"(tag, ndx2) in article.tags\" :key=\"ndx2\" v-if=\"tag.main\"><span class=\"tag-label\" v-html=\"tag.label\"></span></li></ul><div class=\"desc mg-top-2x\"><p class=\"text\" v-html=\"article.grpDesc ? article.grpDesc : article.bizOverview\"></p></div></div><div class=\"corner-arrow-icon\"><i class=\"xi-arrow-up\"></i></div></router-link></li></ul></template><!-- 태그검색 결과 뷰 --><template v-else><div class=\"header\"><!-- 태그검색 타이틀 --><div class=\"selected-tags-outer has-text-count d-flex\"><div class=\"flex-item label\">태그:</div><ul class=\"flex-item filter tag-list d-flex\"><li v-for=\"(tag, index) in selectedTagList\" :key=\"index\"><span class=\"tag-label\" v-html=\"tag.label\"></span></li></ul><div class=\"flex-item count\">{{ filteredArticleList.length }}</div><!--<div class=\"flex-item ml-auto btn-controls\"><router-link class=\"cancel button\" :to=\"{ name: 'list_view' }\"><span>필터 초기화</span></router-link></div>--></div></div><hr><!-- 태그검색 결과 리스트 --><template v-if=\"filteredArticleList.length\"><ul class=\"article-list filtered mg-top-4x\"><li class=\"list-item\" v-for=\"(article, ndx1) in filteredArticleList\" :key=\"ndx1\"><router-link class=\"route-link\" :to=\"{ name: 'detail_view', params: { id: article.id }}\"><div class=\"title\"><p class=\"label\"><span v-html=\"article.name\"></span><span v-html=\"' - ' + article.subName\" v-if=\"article.subName\"></span></p></div><div class=\"content\"><ul class=\"tag-list d-flex has-arrow-up-icon rotate-45\"><template v-for=\"(tag, ndx2) in article.tags\" :key=\"ndx2\"><li class=\"tag-item\" :class=\"{ 'active': $tagFilter.has(tag) }\"><span class=\"tag-label\" v-html=\"tag.label\"></span></li></template></ul><div class=\"desc\" v-html=\"mark(article.desc)\"></div></div></router-link></li></ul></template><template v-else><!-- 태그검색 결과 없음 --><div class=\"landing no-result\"><div class=\"icon-wrap pd-0\"><i class=\"xi-info\"></i></div><div class=\"text-wrap\"><p class=\"text-center\">일치하는 검색 결과가 없습니다.</p></div></div></template></template></div></template></div>";
 var MarkJsOptions = {
   caseSensitive: false,
   separateWordSearch: false
@@ -4404,8 +4404,17 @@ var _default = {
   data: function data() {
     return {
       errors: null,
-      articleList: [],
-      mainArticleList: [],
+      articleData: {
+        allList: [],
+        mainList: [],
+        client: {
+          count: 0
+        },
+        industry: {
+          count: 0
+        }
+      },
+      selectedCategory: 'client',
       filterLayer: {
         name: 'recommended-tags',
         instance: null,
@@ -4428,27 +4437,37 @@ var _default = {
       this.$dataStore.ready().then(function (_ref) {
         var customers = _ref.customers,
             tags = _ref.tags;
-        _this.articleList = customers;
-
-        _this.articleList.forEach(function (o) {
-          var article = _this.mainArticleList.find(function (_ref2) {
+        _this.articleData.allList = customers;
+        var _this$articleData = _this.articleData,
+            allList = _this$articleData.allList,
+            mainList = _this$articleData.mainList;
+        allList.forEach(function (o) {
+          var article = mainList.find(function (_ref2) {
             var name = _ref2.name;
             return name === o.name;
           });
-
           if (article != null) return;
+          mainList.push(o);
 
-          _this.mainArticleList.push(o);
+          var cat = _.get(o, 'category', 'client');
+
+          _this.articleData[cat].count += 1;
         });
-
         _this.tagList = tags;
 
-        if (_this.$route.name === 'search_view') {
-          var keywords = _.get(_this.$route, 'query.keyword');
+        switch (_this.$route.name) {
+          case 'search_view':
+            _this.resetKeyword(_.get(_this.$route, 'query.keyword'));
 
-          if (keywords != null && keywords.length) {
-            _this.$tagFilter.reset(keywords);
-          }
+            break;
+
+          case 'client_list_view':
+            _this.selectedCategory = 'client';
+            break;
+
+          case 'industry_list_view':
+            _this.selectedCategory = 'industry';
+            break;
         }
       });
     },
@@ -4458,11 +4477,22 @@ var _default = {
         html: html
       }).mark(this.selectedTagLabels, MarkJsOptions);
       return $el[0].outerHTML;
+    },
+    resetKeyword: function resetKeyword(keywords) {
+      if (keywords == null || !keywords.length) return;
+      this.$tagFilter.reset(keywords);
+    },
+    selectCategory: function selectCategory(cat) {
+      if (cat === this.selectedCategory) return;
+      this.selectedCategory = cat;
+      this.$router.push({
+        name: cat + '_list_view'
+      });
     }
   },
   computed: {
     loading: function loading() {
-      return !this.articleList.length;
+      return !this.articleData.allList.length;
     },
     selectedTagList: function selectedTagList() {
       return this.tagList.filter(function (_ref3) {
@@ -4478,7 +4508,7 @@ var _default = {
     },
     filteredArticleList: function filteredArticleList() {
       var list = this.selectedTagLabels;
-      return this.articleList.filter(function (_ref5) {
+      return this.articleData.allList.filter(function (_ref5) {
         var tags = _ref5.tags;
         var bool = false;
         tags.forEach(function (tag) {
@@ -4486,6 +4516,14 @@ var _default = {
           if (!bool && tag.active) bool = true;
         });
         return bool;
+      });
+    },
+    selectedCatList: function selectedCatList() {
+      var _this2 = this;
+
+      return this.articleData.mainList.filter(function (_ref6) {
+        var category = _ref6.category;
+        return category === _this2.selectedCategory;
       });
     }
   },
@@ -4598,7 +4636,7 @@ var _default = {
     goSearch: function goSearch() {
       if (!this.$tagFilter.length) {
         return this.$router.push({
-          name: 'list_view'
+          name: 'client_list_view'
         });
       }
 
@@ -4702,6 +4740,8 @@ var _default = {
           break;
 
         case 'list_view':
+        case 'client_list_view':
+        case 'industry_list_view':
           this.$tagFilter.reset();
           break;
 
@@ -4728,10 +4768,18 @@ var _components = require("../components");
 var routes = [{
   path: '/',
   name: 'home',
-  redirect: '/list'
+  redirect: '/list/client'
 }, {
   path: '/list',
   name: 'list_view',
+  redirect: '/list/client'
+}, {
+  path: '/list/client',
+  name: 'client_list_view',
+  component: _components.CsListView
+}, {
+  path: '/list/industry',
+  name: 'industry_list_view',
   component: _components.CsListView
 }, {
   path: '/search',
@@ -4840,6 +4888,11 @@ var DataStore = function (_CustomEventEmitter) {
     key: "articleList",
     get: function get() {
       return this._articleList;
+    }
+  }, {
+    key: "industryList",
+    get: function get() {
+      return this._industryList;
     }
   }, {
     key: "tagList",
@@ -4953,6 +5006,7 @@ var DataStore = function (_CustomEventEmitter) {
     value: function getData() {
       return {
         customers: this.articleList,
+        industries: this.industryList,
         tags: this.tagList
       };
     }

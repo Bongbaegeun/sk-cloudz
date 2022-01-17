@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
-<!-- build: 20211001-1430 -->
+<!-- build: 20220117-1347 -->
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -36,7 +36,7 @@
         </a>
       </li>
       <li class="nav-item" data-name="services" data-sid="2">
-        <a href="/services/cloud-transformation/sk-aws-landing-zone">
+        <a href="/services/cloud-transformation">
           <span class="label">서비스</span>
         </a>
       </li>
@@ -79,7 +79,10 @@
             <ul class="sub-list d1 has-items">
               <li class="nav-item n0" data-name="cloud-transformation" data-sid="2.1">
                 <div class="title">
-                  <span class="text">Cloud Transformation</span>
+                  <div data-init-page="/services/cloud-transformation/sk-aws-landing-zone.html">
+                    <a href="/services/cloud-transformation"> <span class="text">Cloud Transformation</span>
+                    </a>
+                  </div>
                 </div>
                 <ul class="sub-list d2 flex-col">
                   <li class="nav-item" data-name="sk-aws-landing-zone" data-sid="2.1.1">
@@ -108,7 +111,10 @@
             <ul class="sub-list d1 has-items">
               <li class="nav-item n1" data-name="app-modernization" data-sid="2.2">
                 <div class="title">
-                  <span class="text">Application Modernization</span>
+                  <div data-init-page="/services/app-modernization/app-modernization-factory.html">
+                    <a href="/services/app-modernization"> <span class="text">Application Modernization</span>
+                    </a>
+                  </div>
                 </div>
                 <ul class="sub-list d2 flex-col">
                   <li class="nav-item" data-name="app-modernization-factory" data-sid="2.2.1">
@@ -149,7 +155,10 @@
             <ul class="sub-list d1 has-items">
               <li class="nav-item n2" data-name="ops-modernization" data-sid="2.3">
                 <div class="title">
-                  <span class="text">Ops Modernization</span>
+                  <div data-init-page="/services/ops-modernization/cowork-notification.html">
+                    <a href="/services/ops-modernization"> <span class="text">Ops Modernization</span>
+                    </a>
+                  </div>
                 </div>
                 <ul class="sub-list d2 flex-col">
                   <li class="nav-item" data-name="mcmp" data-sid="2.3.1">
@@ -202,6 +211,11 @@
                       <span class="label">Azure Virtual Desktop</span>
                     </a>
                   </li>
+                  <li class="nav-item" data-name="private-cloud-daas" data-sid="2.3.11">
+                    <a href="/services/ops-modernization/private-cloud-daas">
+                      <span class="label">Private Cloud DaaS</span>
+                    </a>
+                  </li>
                 </ul>
               </li>
             </ul>
@@ -210,7 +224,10 @@
             <ul class="sub-list d1 has-items">
               <li class="nav-item n3" data-name="cloud-operation" data-sid="2.4">
                 <div class="title">
-                  <span class="text">Cloud Operation</span>
+                  <div data-init-page="/services/cloud-operation/iaas-msp.html">
+                    <a href="/services/cloud-operation"> <span class="text">Cloud Operation</span>
+                    </a>
+                  </div>
                 </div>
                 <ul class="sub-list d2 flex-col">
                   <li class="nav-item" data-name="iaas-msp" data-sid="2.4.1">
@@ -244,7 +261,10 @@
             <ul class="sub-list d1 has-items">
               <li class="nav-item n4" data-name="cloud-datacenter" data-sid="2.5">
                 <div class="title">
-                  <span class="text">Cloud Data Center</span>
+                  <div data-init-page="/services/cloud-datacenter/hybrid-zone-service.html">
+                    <a href="/services/cloud-datacenter"> <span class="text">Cloud Data Center</span>
+                    </a>
+                  </div>
                 </div>
                 <ul class="sub-list d2 flex-col">
                   <li class="nav-item" data-name="hybrid-zone-service" data-sid="2.5.1">
@@ -273,14 +293,22 @@
           </div>
           <div class="list-wrap d-flex">
             <ul class="sub-list d1 has-items">
-              <li class="nav-item n5" data-name="cloud-partners" data-sid="2.6">
+              <li class="nav-item n5" data-name="multi-cloud-partners" data-sid="2.6">
                 <div class="title">
-                  <span class="text">Cloud Partners</span>
+                  <div data-init-page="/services/multi-cloud-partners">
+                    <a href="/services/multi-cloud-partners"> <span class="text">Multi-Cloud Partners</span>
+                    </a>
+                  </div>
                 </div>
                 <ul class="sub-list d2 flex-col">
-                  <li class="nav-item" data-name="multi-cloud-partners" data-sid="2.6.1">
-                    <a href="/services/cloud-partners/multi-cloud-partners">
-                      <span class="label">Multi-Cloud Partners</span>
+                  <li class="nav-item" data-name="aws" data-sid="2.6.1">
+                    <a href="/services/multi-cloud-partners/aws">
+                      <span class="label">AWS</span>
+                    </a>
+                  </li>
+                  <li class="nav-item" data-name="azure" data-sid="2.6.2">
+                    <a href="/services/multi-cloud-partners/azure">
+                      <span class="label">Azure</span>
                     </a>
                   </li>
                 </ul>
@@ -407,33 +435,55 @@
         <div class="inner-wrap">
           <div class="notice list">
             <ul class="notice-list">
-              <li>
-                <div class="notice-date">
-                  <span class="date">2021.09</span>
-                  <span class="day">30</span>
+              <!--
+            <li>
+              <div class="notice-date">
+                <span class="date">2021.09</span>
+                <span class="day">30</span>
+              </div>
+              <div class="notice-content">
+                <a href="/support/notice-02"></a>
+                <div class="notice-header">
+                  <h3><span class="tag blue">안내</span> Cloud Z 홈페이지 지원 인터넷 브라우저 안내</h3>
                 </div>
-                <div class="notice-content">
-                  <a href="/support/notice-02"></a>
-                  <div class="notice-header">
-                    <h3><span class="tag blue">안내</span> Cloud Z 홈페이지 지원 인터넷 브라우저 안내</h3>
-                  </div>
-                  <p>안녕하세요. Cloud Z입니다. Cloud Z 사이트는 Chrome(구글 크롬), Edge(마이크로소프트 엣지), Safari(애플 사파리)에 최적화되어 있습니다. IE(인터넷 익스플로러) 브라우저에서는 정상적으로 작동하지 않을 수 있으므로, 화면이 온전하지 않은 경우 Chrome 또는 Edge로 접속하시면 원활히 보실 수 있습니다. 사용 중 문의사항..</p>
+                <p>안녕하세요. Cloud Z입니다. Cloud Z 사이트는 Chrome(구글 크롬), Edge(마이크로소프트 엣지), Safari(애플 사파리)에 최적화되어 있습니다. IE(인터넷 익스플로러) 브라우저에서는 정상적으로 작동하지 않을 수 있으므로, 화면이 온전하지 않은 경우 Chrome 또는 Edge로 접속하시면 원활히 보실 수 있습니다. 사용 중 문의사항..</p>
+              </div>
+            </li>
+            <li>
+              <div class="notice-date">
+                <span class="date">2021.09</span>
+                <span class="day">30</span>
+              </div>
+              <div class="notice-content">
+                <a href="/support/notice-01"></a>
+                <div class="notice-header">
+                  <h3><span class="tag">공지</span> Cloud Z 홈페이지 개편에 따른 일부 기능 변경 안내</h3>
                 </div>
-              </li>
-              <li>
-                <div class="notice-date">
-                  <span class="date">2021.09</span>
-                  <span class="day">30</span>
-                </div>
-                <div class="notice-content">
-                  <a href="/support/notice-01"></a>
-                  <div class="notice-header">
-                    <h3><span class="tag">공지</span> Cloud Z 홈페이지 개편에 따른 일부 기능 변경 안내</h3>
-                  </div>
-                  <p>안녕하세요. Cloud Z입니다. Cloud Z 홈페이지가 개편되어, 제공 중인 일부 기능이 아래와 같이 변경됩니다. - 해당 기능: Cloud Z 상품의 주문, Billing 및 Cost, Asset 및Tag, CSP 계정 및 사용자관리 - 변경일: 2021년 9월 30일 - 변경 내용: 해당 기능은 Cloud Z MCMP(https://mcmp.cloudz.co.kr)에서 제공되며, 기존 로그인..</p>
-                </div>
-              </li>
+                <p>안녕하세요. Cloud Z입니다. Cloud Z 홈페이지가 개편되어, 제공 중인 일부 기능이 아래와 같이 변경됩니다.  - 해당 기능: Cloud Z 상품의 주문, Billing 및 Cost, Asset 및Tag, CSP 계정 및 사용자관리 - 변경일: 2021년 9월 30일 - 변경 내용: 해당 기능은 Cloud Z MCMP(https://mcmp.cloudz.co.kr)에서 제공되며, 기존 로그인..</p>
+              </div>
+            </li>
+            -->
             </ul>
+          </div>
+          <div class="paging" id="paging" class="paging">
+            <!--
+          <button class="paging-button first"><i class="xi-backward"></i></button>
+          <button class="paging-button prev"><i class="xi-play"></i></button>
+          <ul class="page-nums">
+            <li><span class="paging-button  current">1</span></li>
+            <li><button class="paging-button">2</button></li>
+            <li><button class="paging-button">3</button></li>
+            <li><button class="paging-button">4</button></li>
+            <li><button class="paging-button">5</button></li>
+            <li><button class="paging-button">6</button></li>
+            <li><button class="paging-button">7</button></li>
+            <li><button class="paging-button">8</button></li>
+            <li><button class="paging-button">9</button></li>
+            <li><button class="paging-button">10</button></li>
+          </ul>
+          <button class="paging-button next"><i class="xi-play"></i></button>
+          <button class="paging-button last"><i class="xi-forward"></i></button>
+          -->
           </div>
         </div>
       </div>
@@ -455,6 +505,21 @@
       <ul class="navbar">
         <li class="nav-item">
           <span>SK주식회사</span>
+        </li>
+        <li class="nav-item">
+          <a href="https://mcmp.cloudz.co.kr/cloudzTerms" target="_blank">
+            <span>Cloud Z 이용약관</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="https://mcmp.cloudz.co.kr/serviceTerms" target="_blank">
+            <span>Cloud Z 서비스 이용 약관</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="https://mcmp.cloudz.co.kr/privacy" target="_blank">
+            <span class="text-red">개인정보처리방침</span>
+          </a>
         </li>
         <li class="nav-item ml-auto">
           <div class="btn-group">
@@ -499,6 +564,7 @@
   <script src="/assets/lib/jquery.cookie.js"></script>
   <script src="/assets/common/custom.js"></script>
   <script src="/assets/common/sub-page.js"></script>
+  <script src="/assets/js/cloudz.board.js" data-pageNum="${pageNum}"></script>
   <script src="/assets/common/main.js"></script>
   <script defer src="/assets/js/search.total.js"></script>
 </body>
